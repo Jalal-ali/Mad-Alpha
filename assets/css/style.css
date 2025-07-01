@@ -2846,21 +2846,21 @@ textarea.is-invalid {
 
 .th-btn:before,
 .th-btn:after {
-  content: "";
-  position: absolute;
-  background-color: var(--title-color);
-  z-index: -1;
-  -webkit-transition: all 0.4s ease-out;
-  transition: all 0.4s ease-out;
-  top: 5px;
-  left: 5px;
-  width: 16px;
-  height: calc(100% - 10px);
-  border-radius: 0;
-  transition: -webkit-clip-path 0.2s ease;
-  -webkit-transition: -webkit-clip-path 0.2s ease;
-  transition: clip-path 0.2s ease;
-  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+  content: "" ;
+  position: absolute ;
+  background-color: var(--title-color) ;
+  z-index: -1 ;
+  -webkit-transition: all 0.4s ease-out ;
+  transition: all 0.4s ease-out ;
+  top: 5px ;
+  left: 5px ;
+  width: 16px ;
+  height: calc(100% - 10px) ;
+  border-radius: 0 ;
+  transition: -webkit-clip-path 0.2s ease ;
+  -webkit-transition: -webkit-clip-path 0.2s ease ;
+  transition: clip-path 0.2s ease ;
+  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease ;
   -webkit-clip-path: polygon(
     85% 0,
     100% 0,
@@ -2868,16 +2868,16 @@ textarea.is-invalid {
     100% 100%,
     85% 100%,
     0% 50%
-  );
-  clip-path: polygon(85% 0, 100% 0, 15% 50%, 100% 100%, 85% 100%, 0% 50%);
+  ) ;
+  clip-path: polygon(85% 0, 100% 0, 15% 50%, 100% 100%, 85% 100%, 0% 50%) ;
 }
 
 .th-btn:after {
-  right: 5px;
-  left: auto;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+  right: 5px ;
+  left: auto ;
+  -webkit-transform: rotate(180deg) ;
+  -ms-transform: rotate(180deg) ;
+  transform: rotate(180deg) ;
 }
 
 .th-btn i {
@@ -25096,8 +25096,14 @@ span.select2-selection.select2-selection--single:focus {
 }
 .widget .quantity{
   color: var(--theme-color);
+}
+.get-quote {
+  color: var(--theme-color) !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
 
 }
+
 
 .widget ul li span {
   color: #666;
