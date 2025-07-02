@@ -25179,3 +25179,7 @@ span.select2-selection.select2-selection--single:focus {
   /* box-shadow: 0 0 10px var(--theme-color); */
 }
 
+.self-center{
+  align-self: center;
+}
+
