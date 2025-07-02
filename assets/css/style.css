@@ -6077,27 +6077,32 @@ a.text-theme:hover,
   transition: 0.4s;
 }
 
-.widget_nav_menu li:before,
-.widget_meta li:before,
-.widget_pages li:before,
-.widget_archive li:before,
-.widget_categories li:before,
-.wp-block-categories li:before {
+.widget_nav_menu li,
+.widget_meta li,
+.widget_pages li,
+.widget_archive li,
+.widget_categories li,
+.wp-block-categories li {
+  position: relative;
+  z-index: 1; /* makes sure text stays above ::before */
+}
+
+
+.widget_nav_menu li::before,
+.widget_meta li::before,
+.widget_pages li::before,
+.widget_archive li::before,
+.widget_categories li::before,
+.wp-block-categories li::before {
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   height: 56px;
   width: 100%;
-  background: var(--white-color);
-  -webkit-transition: 0.4s;
+  /* background: var(--white-color); */
   transition: 0.4s;
-  -webkit-clip-path: polygon(
-    30px 0%,
-    calc(100% - 30px) 0%,
-    100% 50%,
-    calc(100% - 30px) 100%,
-    30px 100%,
-    0% 50%
-  );
+  z-index: -1;
   clip-path: polygon(
     30px 0%,
     calc(100% - 30px) 0%,
@@ -6126,14 +6131,34 @@ a.text-theme:hover,
   text-align: right;
 }
 
-.widget_nav_menu li:hover:has(> a:hover):before,
+/* .widget_nav_menu li:hover:has(> a:hover):before,
 .widget_meta li:hover:has(> a:hover):before,
 .widget_pages li:hover:has(> a:hover):before,
 .widget_archive li:hover:has(> a:hover):before,
 .widget_categories li:hover:has(> a:hover):before,
 .wp-block-categories li:hover:has(> a:hover):before {
   background: var(--theme-color);
+    box-shadow: 0 0 15px #0ff,
+              0 0 30px #0ff,
+              0 0 50px #0ff;
+  border: 20px outset var(--theme-color);
+} */
+
+.widget_nav_menu li:hover::before,
+.widget_meta li:hover::before,
+.widget_pages li:hover::before,
+.widget_archive li:hover::before,
+.widget_categories li:hover::before,
+.wp-block-categories li:hover::before {
+  background: var(--theme-color);
+  border: 28px solid var(--theme-color);
+  padding: 2px;
+  /* transition: 0ms; */
+  
+ 
 }
+
+
 
 .widget_nav_menu .menu > li:last-child,
 .widget_nav_menu > ul > li:last-child,
@@ -6178,6 +6203,8 @@ a.text-theme:hover,
 .wp-block-categories a:hover:before,
 .wp-block-categories a:hover:after {
   background: var(--theme-color);
+
+
 }
 
 .widget_nav_menu a:hover::before,
@@ -25088,6 +25115,8 @@ span.select2-selection.select2-selection--single:focus {
   margin-bottom: 8px;
   font-size: 15px;
   text-decoration: none;
+  color: #00a1f6 !important;
+
 }
 
 .widget ul li a {
