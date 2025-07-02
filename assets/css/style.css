@@ -6150,9 +6150,9 @@ a.text-theme:hover,
 .widget_archive li:hover::before,
 .widget_categories li:hover::before,
 .wp-block-categories li:hover::before {
-  background: var(--theme-color);
-  border: 28px solid var(--theme-color);
-  padding: 2px;
+  /* background: var(--theme-color); */
+  border: 28px solid #01ff8de8;
+  padding: 1px;
   /* transition: 0ms; */
   
  
