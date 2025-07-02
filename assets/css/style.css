@@ -6152,7 +6152,7 @@ a.text-theme:hover,
 .wp-block-categories li:hover::before {
   /* background: var(--theme-color); */
   border: 28px solid #01ff8de8;
-  padding: 1px;
+  /* padding: 1px; */
   /* transition: 0ms; */
   
  
