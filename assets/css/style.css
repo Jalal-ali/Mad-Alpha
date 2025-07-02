@@ -25088,6 +25088,21 @@ span.select2-selection.select2-selection--single:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
+/* Half width on tablets (768px to 1023px) */
+@media (max-width: 1023px) {
+  .widget {
+    width: 48%;
+  }
+}
+
+/* Full width on mobile (less than 768px) */
+@media (max-width: 767px) {
+  .widget {
+    width: 100%;
+  }
+}
+
+
 .widget_title {
   font-size: 24px;
   margin-bottom: 12px;
