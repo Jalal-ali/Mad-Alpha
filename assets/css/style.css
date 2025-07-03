@@ -18371,8 +18371,15 @@ span.select2-selection.select2-selection--single:focus {
   background-size: 100% 100%;
 }
 
-.brand-box:hover .brand-box-shape2 {
-  opacity: 1;
+.shadow-bg:hover  {
+  /* opacity: 1; */
+  border-radius: 12px; /* or your desired shape */
+  filter: drop-shadow(0 2px 9px var(--theme-color));
+}
+.shadow-list:hover  {
+  /* opacity: 1; */
+  border-radius: 100%; /* or your desired shape */
+  filter: drop-shadow(0 0.9px 2.7px var(--theme-color));
 }
 
 .brand-sec2-shape {
@@ -25129,9 +25136,9 @@ span.select2-selection.select2-selection--single:focus {
 }
 .widget ul li a:hover {
   text-shadow:
-    0 0 1px #01ff8e,
-    0 0 2px #01ff8e,
-    0 0 3px #01ff8e;
+    0 0 0.9px #01ff8e,
+    0 0 1.2px #01ff8e,
+    0 0 1.5px #01ff8e;
     /* transition: 0.9ms; */
 }
 .widget .quantity{
@@ -25152,7 +25159,7 @@ span.select2-selection.select2-selection--single:focus {
 
 /* scroller style  */
 .scrollable-list {
-  max-height: 30rem;
+  max-height: 29rem;
   overflow-y: auto;
   padding: 10px;
   /* border: 1px solid #ccc; */
