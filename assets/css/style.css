@@ -34,6 +34,7 @@
   --war-font: "warPriest";
   --war-font2: "warPriest3d";
   --goldman-font: "Goldman", sans-serif;
+   --microsport-font: "MicrosportBold", sans-serif;
   --icon-font: "Font Awesome 6 Pro";
   --main-container: 1225px;
   --container-gutters: 24px;
@@ -3830,6 +3831,35 @@ hr.title-line {
   margin: -30px 0 -0.45em -199px;
   position: absolute;
   top: 0;
+}
+.fancy-title {
+  font-family: 'Russo One', sans-serif;
+  font-size: 11.3rem;
+  color: transparent;
+  -webkit-text-stroke: 1.8px #ffffff;
+  background-color: transparent;
+  line-height: 1;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .fancy-title {
+    font-size: 10rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fancy-title {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fancy-title {
+    font-size: 6rem;
+    letter-spacing: 3px;
+  }
 }
 
 .shadow-title.color2 {
@@ -13438,10 +13468,18 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child
   margin-bottom: 0;
   border-radius: 20px;
 }
+.contact-form{
+  padding: 35px 40px 35px 40px;
+  background-color: var(--black-color3);
+  box-shadow: 0px 6px 30px rgba(1, 15, 28, 0.1);
+  margin-bottom: 0;
+  border-radius: 0px;
+}
 
 @media (max-width: 575px) {
   .woocommerce-form-register,
   .woocommerce-form-coupon,
+  .contact-form,
   .woocommerce-form-login {
     padding: 40px 20px;
     border-radius: 10px;
@@ -13450,18 +13488,21 @@ ul.comment-list:has(> .th-comment-item ~ .th-comment-item):first-child
 
 .woocommerce-form-register .form-group,
 .woocommerce-form-coupon .form-group,
+.contact-form .form-group,
 .woocommerce-form-login .form-group {
   margin-bottom: 20px;
 }
 
 .woocommerce-form-register .form-group label,
 .woocommerce-form-coupon .form-group label,
+.contact-form .form-group label,
 .woocommerce-form-login .form-group label {
   color: var(--white-color);
 }
 
 .woocommerce-form-register .form-group:last-child,
 .woocommerce-form-coupon .form-group:last-child,
+.contact-form .form-group:last-child,
 .woocommerce-form-login .form-group:last-child {
   margin-bottom: 0;
 }
@@ -15733,6 +15774,11 @@ button.tinvwl_button_view.th-btn .ftinvwl.ftinvwl-heart-o {
 .woocommerce-form-coupon .form-control,
 .woocommerce-form-coupon .select2,
 .woocommerce-form-coupon .select2-container,
+.contact-form select,
+.contact-form .form-select,
+.contact-form .form-control,
+.contact-form .select2,
+.contact-form .select2-container,
 .woocommerce-checkout select,
 .woocommerce-checkout .form-select,
 .woocommerce-checkout .form-control,
