@@ -592,10 +592,10 @@
     t(".color-switch-btns button").each(function () {
       const e = t(this),
         a = e.data("color");
-      e.css("--theme-color3", a),
+      e.css("--theme-color", a),
         e.on("click", function () {
           const e = t(this).data("color");
-          t(":root").css("--theme-color3", e);
+          t(":root").css("--theme-color", e);
         });
     }),
     t(document).on("click", ".switchIcon", function () {
