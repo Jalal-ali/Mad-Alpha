@@ -6333,6 +6333,7 @@ a.text-theme:hover,
   font-family: var(--title-font);
 }
 
+
 .widget_title:before {
   content: "";
   height: 2px;
@@ -25261,6 +25262,16 @@ span.select2-selection.select2-selection--single:focus {
   font-weight: bold;
 
 }
+.policy.themed-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--th-border-color2);
+  font: var(--title-font);
+  font-weight: light;
+
+}
 
 .themed-list li::before {
   content: "";
@@ -25289,4 +25300,5 @@ span.select2-selection.select2-selection--single:focus {
     flex: 1 1 100%;
   }
 }
+
 
