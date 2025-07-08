@@ -121,6 +121,12 @@ $(document).ready(function() {
     }, 500);
   });
 });
+
+// scrollable list func 
+document.querySelector('.scrollable-list').addEventListener('mouseleave', function() {
+  this.style.overflowY = 'hidden';
+  setTimeout(() => this.style.overflowY = 'auto', 10);
+});
 </script>
 <style>
   .game-card-img-mask {
@@ -1023,24 +1029,24 @@ $(document).ready(function() {
       <div class="container z-index-common">
         <div class="cta-wrap2">
           <div
-            class="cta-border-shape"
+            class="cta-border-shape bg-mask"
             style="
-              background-image: url('assets/img/bg/cta-wrap2-bg-shape2.png');
-              background-repeat: no-repeat;
-              background-size: contain;
+              mask-image: url('assets/img/bg/cta-wrap2-bg-shape2.png');
+              /* background-repeat: no-repeat;
+              background-size: contain; */
             "
           ></div>
           <div
-            class="cta-wrap-content"
+            class="cta-wrap-content bg-mask"
             style="
-              background-image: url(assets/img/bg/cta-wrap2-bg-shape.png);
-              background-repeat: no-repeat;
-              background-size: contain;
+              mask-image: url(assets/img/bg/cta-wrap2-bg-shape.png);
+              /* background-repeat: no-repeat;
+              background-size: contain; */
             "
             data-mask-src="assets/img/bg/cta-wrap2-bg-shape.png"
           >
             <div
-              class="cta-border-shape2"
+              class="cta-border-shape2 background-image"
               data-bg-src="assets/img/theme-img/cta-wrap2-border-shape.svg"
             ></div>
             <div
