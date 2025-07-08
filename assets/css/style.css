@@ -2062,7 +2062,7 @@ textarea.is-invalid {
     background-color: var(--theme-color);
     color: var(--title-color);
     position: absolute;
-    top: 50%;
+    top: 100%;
     border: none;
     left: var(--pos-x, -120px);
     width: var(--icon-size, 56px);
@@ -2080,7 +2080,7 @@ textarea.is-invalid {
   background-color: var(--theme-color);
   color: var(--title-color);
   position: absolute;
-  top: 60%;
+  top: 67% !important;
   border: none;
   left: var(--pos-x, -120px);
   width: var(--icon-size, 56px);
