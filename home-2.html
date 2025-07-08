@@ -101,77 +101,47 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-     $(document).ready(function () {
-  const swipers = {};
-  const initialized = {};
-
-  // Hide all sliders and show only slider-1
-  $("[id^=slider-]").hide();
-  $("#slider-1").show();
-
-  // Initialize slider-1
-  swipers["1"] = new Swiper("#featureGameSlider1", {
-    slidesPerView: 1,
-    breakpoints: {
-      576: { slidesPerView: 1 },
-      768: { slidesPerView: 2 },
-      992: { slidesPerView: 3 },
-      1200: { slidesPerView: 3 },
-    },
-    navigation: {
-      nextEl: '[data-slider-next="#featureGameSlider1"]',
-      prevEl: '[data-slider-prev="#featureGameSlider1"]',
-    },
-  });
-  initialized["1"] = true;
-
-  // Handle tab clicks
-  $("[id^=tab]").click(function () {
-    const sliderNumber = $(this).attr("id").replace("tab", "").replace("-btn", "");
-
-    // Hide all sliders
-    $("[id^=slider-]").hide();
-
-    // Show selected
-    $("#slider-" + sliderNumber).show();
-
-    // Init Swiper if not already
-    if (!initialized[sliderNumber]) {
-      swipers[sliderNumber] = new Swiper(`#featureGameSlider${sliderNumber}`, {
-        slidesPerView: 1,
-        breakpoints: {
-          576: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          992: { slidesPerView: 3 },
-          1200: { slidesPerView: 3 },
-        },
-        navigation: {
-          nextEl: `[data-slider-next="#featureGameSlider${sliderNumber}"]`,
-          prevEl: `[data-slider-prev="#featureGameSlider${sliderNumber}"]`,
-        },
-      });
-      initialized[sliderNumber] = true;
-    } else {
-      // If already initialized, just update and reset to slide 0
-      swipers[sliderNumber].update();
-      swipers[sliderNumber].slideTo(0);
-    }
+  $(document).ready(function() {
+  $('.filter-active').isotope({ filter: '.logo' });
+});
+// heading funcs 
+$(document).ready(function() {
+  // When a filter button is clicked
+  $('.tab-btn').click(function() {
+    // Get the heading text from data attribute
+    var newHeading = $(this).data('heading');
+    
+    // Update the heading text
+    $('.main-heading').text(newHeading);
+    
+    // Optional: Add animation
+    $('.sec-title').addClass('animate__animated animate__fadeIn');
+    setTimeout(function() {
+      $('.sec-title').removeClass('animate__animated animate__fadeIn');
+    }, 500);
   });
 });
-
-    </script>
-    <style>
-      .swiper-wrapper {
-  gap: 5px;
-}
-
-@media (max-width: 576px) {
-  .swiper-wrapper {
-    gap: 24px;
+</script>
+<style>
+  .game-card-img-mask {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Adjust based on your mask aspect ratio */
+    overflow: hidden;
   }
-}
-
-    </style>
+  
+  .masked-img {
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: url('assets/img/game/game_card3_bg.jpg');
+    -webkit-mask-image: url('assets/img/game/game_card3_bg.jpg');
+    mask-size: 100% 100%;
+    -webkit-mask-size: 100% 100%;
+  }
+</style>
   </head>
 
   <body>
@@ -636,13 +606,13 @@
             </div>
           </div>
         </div>
-       
       </div>
     </section>
 
-    <!-- new slider section  -->
+    <!-- slider section -->
+    <!-- sliders  -->
     <!-- tab buttons -->
-    <div
+    <!-- <div
       class="row justify-content-center align-items-center text-lg-start text-center"
     >
       <div class="col-lg-auto">
@@ -697,550 +667,121 @@
           </button>
         </div>
       </div>
-    </div>
-    <!-- sliders  -->
-    <section class="feature-game-">
-      <div class="container">
-        <!-- Slider 1 -->
-         <div id="slider-1" class="slider-area">
-          <div
-            class="swiper th-slider"
-            id="featureGameSlider1"
-            data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"3"},"1200":{"slidesPerView":"3"}}}'
-          >
-            <h1 class="text-theme text-center sec-title">LOGO DESIGN</h1>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-            
-            </div>
+    </div> -->
+
+    <!-- projs section  -->
+   <section class="game-area-3 overflow-hidden">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-auto">
+        <div class="title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+          <!-- tab buttons -->
+          <div style="border-radius: 2px;" class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+            <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Logo Design">
+              Logo Design
+            </button>
+            <button data-filter=".web" class="tab-btn" type="button" data-heading="Web development">
+              Web Development
+            </button>
+            <button data-filter=".design" class="tab-btn" type="button" data-heading="UI/UX Design">
+              UI/UX Design
+            </button>
+            <button data-filter=".branding" class="tab-btn" type="button" data-heading="Brandings">
+              Branding
+            </button>
           </div>
-          <button
-            data-slider-prev="#featureGameSlider1"
-            class="slider-arrow style3 slider-prev"
-          >
-            <i class="fas fa-angle-left"></i>
-          </button>
-          <button
-            data-slider-next="#featureGameSlider1"
-            class="slider-arrow style3 slider-next"
-          >
-            <i class="fas fa-angle-right"></i>
-          </button>
-        </div>
-        <!-- Slider 2 -->
-        <div id="slider-2" class="slider-area">
-          <div
-            class="swiper th-slider"
-            id="featureGameSlider2"
-            data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":3}}}'
-          >
-            <h1 class="text-theme text-center sec-title">WEB DEVELOPMENT</h1>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-2.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-2.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-2.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-2.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-2.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- Add more swiper-slide items here if needed -->
-            </div>
-          </div>
-          <button
-            data-slider-prev="#featureGameSlider2"
-            class="slider-arrow style3 slider-prev"
-          >
-            <i class="fas fa-angle-left"></i>
-          </button>
-          <button
-            data-slider-next="#featureGameSlider2"
-            class="slider-arrow style3 slider-next"
-          >
-            <i class="fas fa-angle-right"></i>
-          </button>
-        </div>
-        <!-- Slider 3 -->
-        <div id="slider-3" class="slider-area">
-          <div
-            class="swiper th-slider"
-            id="featureGameSlider3"
-            data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":3}}}'
-          >
-            <h1 class="text-theme text-center sec-title">UI/UX DESIGN</h1>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-3.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-3.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-3.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-3.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-3.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- Add more swiper-slide items here if needed -->
-            </div>
-          </div>
-          <button
-            data-slider-prev="#featureGameSlider3"
-            class="slider-arrow style3 slider-prev"
-          >
-            <i class="fas fa-angle-left"></i>
-          </button>
-          <button
-            data-slider-next="#featureGameSlider3"
-            class="slider-arrow style3 slider-next"
-          >
-            <i class="fas fa-angle-right"></i>
-          </button>
-        </div>
-        <!-- Slider 4 -->
-        <div id="slider-4" class="slider-area">
-          <div
-            class="swiper th-slider"
-            id="featureGameSlider4"
-            data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":1},"768":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":3}}}'
-          >
-            <h1 class="text-theme text-center sec-title">BRANDING</h1>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div  class="feature-game-card">
-                  <div style="width: 90%;" class="feature-game-card-img self-center">
-                    <a href="game-details.html"
-                      ><div class="feature-card-img-shape icon-masking">
-                        <span
-                          class="mask-icon"
-                          data-mask-src="assets/img/feature/feature-card-bg.png"
-                        ></span>
-                        <img
-                          src="assets/img/feature/feature-card-bg.png"
-                          alt="img"
-                        />
-                      </div>
-                      <img
-                        src="assets/img/feature/feature1-1.png"
-                        alt="game image"
-                      /> </a
-                    >
-                  </div>
-                  
-                </div>
-              </div>
-              <!-- Add more swiper-slide items here if needed -->
-            </div>
-          </div>
-          <button
-            data-slider-prev="#featureGameSlider4"
-            class="slider-arrow style3 slider-prev"
-          >
-            <i class="fas fa-angle-left"></i>
-          </button>
-          <button
-            data-slider-next="#featureGameSlider4"
-            class="slider-arrow style3 slider-next"
-          >
-            <i class="fas fa-angle-right"></i>
-          </button>
+          <h2 class="sec-title main-heading">Logo Design</h2>
         </div>
       </div>
-    </section>
-
+    </div>
+    <div class="row gy-4 filter-active">
+      <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/1.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/2.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/3.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/4.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/5.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/1.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/2.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/3.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/4.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/5.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/3.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
+          <div>
+            <img  src="assets/img/Projects/1.png" alt="game image" class="masked-img"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     <!-- pricing section  -->
     <section
       class="pricing-sec-v2 space-bottom"
@@ -1594,241 +1135,6 @@
       </div>
     </section>
 
-    <section
-      class="blog-area-2 overflow-hidden space"
-      id="blog-sec"
-      data-bg-src="assets/img/bg/blog-sec2-bg.png"
-    >
-      <div class="container">
-        <div
-          class="title-area text-center custom-anim-top wow animated"
-          data-wow-duration="1.5s"
-          data-wow-delay="0.2s"
-        >
-          <span class="sub-title style2"># Latest News</span>
-          <h2 class="sec-title">
-            Stay Updated With Our Blog <span class="text-theme">!</span>
-          </h2>
-        </div>
-        <!-- slider  -->
-        <div class="slider-area">
-          <div
-            class="swiper th-slider has-shadow"
-            id="blogSlider2"
-            data-slider-options='{"breakpoints":{"0":{"slidesPerView":1},"576":{"slidesPerView":"1"},"768":{"slidesPerView":"2"},"992":{"slidesPerView":"2"},"1200":{"slidesPerView":"3"}}}'
-          >
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  style="
-                    background-image: url(assets/img/blog/blog_card2_bg.jpg);
-                  "
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    style="
-                      background-image: url(assets/img/blog/blog_card2_img-shape.jpg);
-                    "
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_1.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>30 Nov, 2024</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Strategies for Dominating Your Favorite Game</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_2.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>16 March, 2024</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Influential Figures in the History of Gaming</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_3.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>17 June, 2024555555</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Must-Visit Gaming Events Worldwide</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_1.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>30 Nov, 2024</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Strategies for Dominating Your Favorite Game</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_2.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>16 March, 2024</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Influential Figures in the History of Gaming</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div
-                  class="blog-card style2"
-                  data-mask-src="assets/img/blog/blog_card2_bg.jpg"
-                >
-                  <div
-                    class="blog-img"
-                    data-mask-src="assets/img/blog/blog_card2_img-shape.jpg"
-                  >
-                    <a href="blog-details.html"
-                      ><img src="assets/img/blog/blog_2_3.jpg" alt="blog image"
-                    /></a>
-                  </div>
-                  <div class="blog-content">
-                    <div class="blog-meta">
-                      <a href="#"><i class="far fa-user"></i>By Jonson</a>
-                      <a href="#"
-                        ><i class="far fa-calendar"></i>17 June, 2024</a
-                      >
-                    </div>
-                    <h3 class="box-title">
-                      <a href="blog-details.html">
-                        Must-Visit Gaming Events Worldwide</a
-                      >
-                    </h3>
-                    <a href="blog-details.html" class="link-btn style2"
-                      >READ MORE <i class="fa-solid fa-arrow-right ms-2"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button
-            data-slider-prev="#blogSlider2"
-            class="slider-arrow slider-prev"
-          >
-            <i class="far fa-arrow-left"></i>
-          </button>
-          <button
-            data-slider-next="#blogSlider2"
-            class="slider-arrow slider-next"
-          >
-            <i class="far fa-arrow-right"></i>
-          </button>
-        </div>
-        <!-- slider area ended  -->
-      </div>
-    </section>
     <!-- insta scrollable sect  -->
     <!-- <section
       class="instagram-area-1 overflow-hidden space-bottom"
@@ -2017,7 +1323,7 @@
 
     <!-- feedback section  -->
     <section
-      class="testi-sec-1 overflow-hidden space"
+      class="testi-sec-1 overflow-hidden space-top"
       id="testi-sec"
       data-opacity="9"
       data-overlay="title"
@@ -2033,7 +1339,7 @@
                     class="mask-icon"
                     data-mask-src="assets/img/bg/section-title-bg.svg"
                   ></span> </span
-                >REVIEWS</span
+                >Customer Feedback</span
               >
               <h2 class="sec-title mb-0">Loved by our customer worldwide</h2>
             </div>
