@@ -25331,7 +25331,20 @@ span.select2-selection.select2-selection--single:focus {
     transform: translateY(-8px); /* Moves upward (negative Y value) */
   }
 }
-.logo-img{
+.logo-img {
+  max-width: 55% !important; /* Default (mobile-first) */
+}
+
+/* Tablet (e.g., 768px and up) */
+@media (min-width: 768px) {
+  .logo-img {
+    max-width: 60% !important;
+  }
+}
+
+/* Desktop (if needed, e.g., 992px and up) */
+@media (min-width: 992px) {
+  .logo-img {
     max-width: 70% !important;
-    /* height: auto; */
+  }
 }
