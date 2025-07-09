@@ -324,7 +324,7 @@
       </div>
       <div class="col-xl-5">
         <div class="img ">
-          <img class="animated-img" style="width: 90%;" src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png" alt="team image" />
+          <img class="animated-img" src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png" alt="team image" />
         </div>
       </div>
     </div>

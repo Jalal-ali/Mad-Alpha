@@ -17849,6 +17849,7 @@ span.select2-selection.select2-selection--single:focus {
     flex-wrap: wrap;
     position: relative;
     gap: 40px 0;
+    text-align: center;
   }
 }
 
