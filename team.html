@@ -117,6 +117,13 @@
       width: 85%;
     }
   }
+  .bg-opacity {
+  --border-color: $black-color3;
+  position: relative;
+  z-index: 2;
+  background-color: #232f3624;
+  overflow: hidden;
+}
 </style>
   </head>
   <body>
@@ -508,7 +515,8 @@
       </div>
     </div>
     <!-- images section  -->
-    <section class="space-top space-extra2-bottom">
+    <section class="space-top space-extra2-bottom bg-opacity background-image"
+    data-bg-src="assets/img/bg/footer2-bg.png">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-12">
@@ -521,6 +529,7 @@
             </div>
           </div>
         </div>
+        <!-- TESTIMONIALS cards  -->
         <div style="justify-content: center;" class="row gy-4">
           <div class="col-lg-4 col-sm-5">
             <div  class="th-team team-card">
@@ -692,7 +701,7 @@
     </section>
     <!-- form  -->
     <div
-      class="row self-center space-bottom responsive-width"
+      class="row self-center space responsive-width"
       
     >
       <div class="col-12">

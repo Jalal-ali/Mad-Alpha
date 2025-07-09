@@ -1963,7 +1963,7 @@ textarea.is-invalid {
   height: 100%;
   width: 100%;
   mix-blend-mode: color;
-  background: var(--theme-color);
+  /* background: var(--theme-color); */
   position: absolute;
   top: 0;
 }
@@ -7023,7 +7023,7 @@ ol.wp-block-rss {
   height: 100%;
   width: 100%;
   mix-blend-mode: color;
-  background: var(--theme-color);
+  /* background: var(--theme-color); */
   position: absolute;
   top: 0;
 }
@@ -7456,7 +7456,7 @@ ol.wp-block-rss {
   height: 100%;
   width: 100%;
   mix-blend-mode: color;
-  background: var(--theme-color);
+  /* background: var(--theme-color); */
   position: absolute;
   top: 0;
 }
@@ -8608,7 +8608,7 @@ ol.wp-block-rss {
   height: 100%;
   width: 100%;
   mix-blend-mode: color;
-  background: var(--theme-color);
+  /* background: var(--theme-color); */
   position: absolute;
   top: 0;
 }
