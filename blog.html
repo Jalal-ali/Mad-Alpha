@@ -98,6 +98,111 @@
     <link rel="stylesheet" href="assets/css/app.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .flex {
+        /* position: absolute !important; */
+        left: 0px !important;
+        top: 0px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        text-align: center;
+      }
+      .tournament-card.style4 .tournament-player-wrap2 .card-title-wrap,
+      .tournament-card.style4 .tournament-player-wrap .card-title-wrap {
+        padding: 14px 0 14px 0 !important;
+      }
+      .tournament-card.style4 .tournament-card-img {
+        padding: 0px !important;
+        margin: 0 auto;
+        border: 0 !important;
+        margin-top: -50px !important;
+        -webkit-align-self: flex-end !important;
+        -ms-flex-item-align: end !important;
+        align-self: flex-end !important;
+        -webkit-box-flex: 0 !important;
+        -webkit-flex: none !important;
+        -ms-flex: none !important;
+        flex: none !important;
+      }
+      .tournament-card.style4 .tournament-card-img {
+        padding: 0;
+        margin: 0 auto;
+        border: 0;
+        margin-top: -57px;
+        /* -webkit-align-self: flex-end; */
+        /* -ms-flex-item-align: end; */
+        /* align-self: flex-end; */
+        -webkit-box-flex: 0;
+        -webkit-flex: none;
+        -ms-flex: none;
+        flex: none;
+      }
+      .tournament-card .tournament-card-img {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 25px;
+        border-right: 2px solid var(--theme-color);
+        padding-right: 100px;
+        margin-right: 100px;
+      }
+      *,
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+      .tournament-card.style4 .tournament-player-wrap {
+        display: -webkit-inline-box;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        flex-direction: column-reverse;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-align: center;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        -webkit-box-flex: 1;
+        -webkit-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        -webkit-clip-path: polygon(
+          0 -285px,
+          100% 0,
+          100% calc(100% - 45px),
+          calc(100% - 45px) 100%,
+          45px 100%,
+          0% calc(100% - 45px)
+        );
+        clip-path: polygon(
+          0 -285px,
+          100% 0,
+          100% calc(100% - 45px),
+          calc(100% - 45px) 100%,
+          45px 100%,
+          0% calc(100% - 45px)
+        );
+        margin-top: 57px;
+      }
+      @media (min-width: 992px) {
+        .col-lg-25 {
+          width: 29%;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="cursor-animation cursor-image"></div>
@@ -385,16 +490,16 @@
           /></a>
         </div>
         <div class="th-mobile-menu">
-         <ul>
-                    <li><a href="home-2.html">HOME</a></li>
-                    <li><a href="tournament.html">PORTFOLIO</a></li>
-                    <li><a href="team-details.html">PACKAGES</a></li>
-                    <li><a href="team.html">TESTIMONIALS</a></li>
-                    <li><a href="blog.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="game-details.html">POLICY</a></li>
-                    <li><a href="game.html">BLOG</a></li>
-                  </ul>
+          <ul>
+            <li><a href="home-2.html">HOME</a></li>
+            <li><a href="tournament.html">PORTFOLIO</a></li>
+            <li><a href="team-details.html">PACKAGES</a></li>
+            <li><a href="team.html">TESTIMONIALS</a></li>
+            <li><a href="blog.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="game-details.html">POLICY</a></li>
+            <li><a href="game.html">BLOG</a></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -524,7 +629,7 @@
         <div class="col-xl-5">
           <div class="img">
             <img
-            class="animated-img"
+              class="animated-img"
               src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png"
               alt="team image"
             />
@@ -534,10 +639,11 @@
     </section>
     <!-- cards img section  -->
     <div class="space position-relative">
-      <div
+      <!-- doted bg  -->
+      <!-- <div
         class="brand-sec2-shape"
         data-bg-src="assets/img/brand/brand_sec2_bg.png"
-      ></div>
+      ></div> -->
       <div class="container th-container5">
         <div class="team-about-card text-center">
           <div class="title-area mb-0">
@@ -562,80 +668,103 @@
           </p>
         </div>
         <!-- images  -->
-        <div class="row gy-4 justify-content-center">
-          <div class="col-xxl-auto col-xl-3 col-lg-4 col-sm-6">
-            <a href="#" class="brand-box shadow-bg"
-              ><div
-                class="brand-box-shape"
-                data-bg-src="assets/img/brand/brand_2_bg.png"
-              ></div>
-              <div
-                class="brand-box-shape2"
-                data-bg-src="assets/img/brand/brand_2_1_bg.png"
-              ></div>
-              <img src="assets/img/brand/brand_2_1.png" alt="Brand Logo"
-            /></a>
+        <div class="py-50 position-relative">
+          <!-- doted bg  -->
+          <div
+            class="brand-sec2-shape"
+            data-bg-src="assets/img/brand/brand_sec2_bg.png"
+          ></div>
+          <div class="container th-container5">
+            <div class="flex gy-4 justify-content-center">
+              <!-- card  -->
+              <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
+                <div class="tournament-player-wrap">
+                  <div class="card-title-wrap">
+                    <h3 class="tournament-card-title">
+                      Constant Client Coordination
+                    </h3>
+                  </div>
+                  <div class="tournament-card-img">
+                    <img
+                      src="assets/img/about-pics/img-4.png"
+                      alt="tournament image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
+                <div class="tournament-player-wrap">
+                  <div class="card-title-wrap">
+                    <h3 class="tournament-card-title">
+                      Supreme Customer Satifaction
+                    </h3>
+                  </div>
+                  <div class="tournament-card-img">
+                    <img
+                      src="assets/img/about-pics/img-8.png"
+                      alt="tournament image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
+                <div class="tournament-player-wrap">
+                  <div class="card-title-wrap">
+                    <h3 class="tournament-card-title">100% Ownership <br> rights</h3>
+                  </div>
+                  <div class="tournament-card-img">
+                    <img
+                      src="assets/img/about-pics/img-1.png"
+                      alt="tournament image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
+                <div class="tournament-player-wrap">
+                  <div class="card-title-wrap">
+                    <h3 class="tournament-card-title">Secure Money Back
+Guarantee</h3>
+                  </div>
+                  <div class="tournament-card-img">
+                    <img
+                      src="assets/img/about-pics/img-6.png"
+                      alt="tournament image"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
+                <div class="tournament-player-wrap">
+                  <div class="card-title-wrap">
+                    <h3 class="tournament-card-title">
+                      Industry Proven Professionals
+                    </h3>
+                  </div>
+                  <div class="tournament-card-img">
+                    <img
+                      src="assets/img/about-pics/img-2.png"
+                      alt="tournament image"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex items-center self-center mt-30">
+              <a
+                style="width: 20%; margin: 0 auto"
+                href="contact.html"
+                class="th-btn"
+              >
+                LIVE CHAT</a
+              >
+            </div>
           </div>
-          <div class="col-xxl-auto col-xl-3 col-lg-4 col-sm-6">
-            <a href="#" class="brand-box shadow-bg"
-              ><div
-                class="brand-box-shape"
-                data-bg-src="assets/img/brand/brand_2_bg.png"
-              ></div>
-              <div
-                class="brand-box-shape2"
-                data-bg-src="assets/img/brand/brand_2_1_bg.png"
-              ></div>
-              <img src="assets/img/brand/brand_2_2.png" alt="Brand Logo"
-            /></a>
-          </div>
-          <div class="col-xxl-auto col-xl-3 col-lg-4 col-sm-6">
-            <a href="#" class="brand-box shadow-bg"
-              ><div
-                class="brand-box-shape"
-                data-bg-src="assets/img/brand/brand_2_bg.png"
-              ></div>
-              <div
-                class="brand-box-shape2"
-                data-bg-src="assets/img/brand/brand_2_1_bg.png"
-              ></div>
-              <img src="assets/img/brand/brand_2_3.png" alt="Brand Logo"
-            /></a>
-          </div>
-          <div class="col-xxl-auto col-xl-3 col-lg-4 col-sm-6">
-            <a href="#" class="brand-box shadow-bg"
-              ><div
-                class="brand-box-shape"
-                data-bg-src="assets/img/brand/brand_2_bg.png"
-              ></div>
-              <div
-                class="brand-box-shape2"
-                data-bg-src="assets/img/brand/brand_2_1_bg.png"
-              ></div>
-              <img src="assets/img/brand/brand_2_4.png" alt="Brand Logo"
-            /></a>
-          </div>
-          <div class="col-xxl-auto col-xl-3 col-lg-4 col-sm-6">
-            <a href="#" class="brand-box shadow-bg"
-              ><div
-                class="brand-box-shape"
-                data-bg-src="assets/img/brand/brand_2_bg.png"
-              ></div>
-              <div
-                class="brand-box-shape2"
-                data-bg-src="assets/img/brand/brand_2_1_bg.png"
-              ></div>
-              <img src="assets/img/brand/brand_2_4.png" alt="Brand Logo"
-            /></a>
-          </div>
-        </div>
-        <div class="d-flex self-center mt-30">
-          <a href="contact.html" class="th-btn"> LIVE CHAT</a>
         </div>
       </div>
     </div>
     <!-- who we are section 1-->
-    <section class="container space-top mb-30">
+    <section class="container space-to mb-30">
       <div class="row no-gutters gy-80">
         <div class="col-xl-5">
           <div class="img">
@@ -764,46 +893,44 @@
       </div>
     </section>
 
-
-
-
-<!-- img with content section lft/ryt  -->
-    <section class="container  space">
-        <div class="row no-gutters gy-80">
-          
-          <div class="col-xl-6 self-center">
-            <div class="team-about-card">
-              <div class="title-area mb-0">
-                <h2 class="sec-title">
-                  WE EXCEL AT WHAT WE DO & TAKE PRIDE IN HOW WE DO IT
-                  <span class="text-theme">!</span>
-                </h2>
-              </div>
-              <p class="about-card_text mt-30 mb-25">
-                We are one of US's technology driven company and do our best to
-                enable quality
-                <span class="text-theme">solutions</span>. Staying ahead of the
-                competition is no easy feat. and we have invested years in
-                acquiring the <span class="text-theme">knowledge</span> and
-                <span class="text-theme">expertise</span> that have enabled us
-                to become one of a market kinds.
-              </p>
-              <a href="contact.html" class="th-btn">
-                Talk to our experts<i class="fa-solid fa-arrow-right ms-2"></i
-              ></a>
-             
+    <!-- img with content section lft/ryt  -->
+    <section class="container space">
+      <div class="row no-gutters gy-80">
+        <div class="col-xl-6 self-center">
+          <div class="team-about-card">
+            <div class="title-area mb-0">
+              <h2 class="sec-title">
+                WE EXCEL AT WHAT WE DO & TAKE PRIDE IN HOW WE DO IT
+                <span class="text-theme">!</span>
+              </h2>
             </div>
+            <p class="about-card_text mt-30 mb-25">
+              We are one of US's technology driven company and do our best to
+              enable quality
+              <span class="text-theme">solutions</span>. Staying ahead of the
+              competition is no easy feat. and we have invested years in
+              acquiring the <span class="text-theme">knowledge</span> and
+              <span class="text-theme">expertise</span> that have enabled us to
+              become one of a market kinds.
+            </p>
+            <a href="contact.html" class="th-btn">
+              Talk to our experts<i class="fa-solid fa-arrow-right ms-2"></i
+            ></a>
           </div>
-          <div class="col-xl-5">
-            <div class="img">
-              <img src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png" alt="team image" />
-            </div>
+        </div>
+        <div class="col-xl-5">
+          <div class="img">
+            <img
+              src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png"
+              alt="team image"
+            />
           </div>
-        </div>    
+        </div>
+      </div>
     </section>
 
-<!-- icon with sub-title section  -->
- <div class="overflow-hidden space-bottom" id="about-sec">
+    <!-- icon with sub-title section  -->
+    <div class="overflow-hidden space-bottom" id="about-sec">
       <div class="about-bg-img shape-mockup" data-top="0" data-left="0">
         <img src="assets/img/bg/about-bg1.png" alt="img" />
       </div>
@@ -822,8 +949,7 @@
           </div>
           <div class="col-xl-6">
             <div class="about-wrap1">
-              <div class="about-title-wrap mb-n1">
-              </div>
+              <div class="about-title-wrap mb-n1"></div>
               <div class="about-grid">
                 <div
                   class="icon custom-anim-top wow animated"
@@ -837,9 +963,7 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="widget_title h5 text-theme">
-                  STRATEGY
-                  </h3>
+                  <h3 class="widget_title h5 text-theme">STRATEGY</h3>
                   <p class="about-grid_text">
                     Keep users informed about the gaming industry with news
                     articles on releases, updates, and events.
@@ -859,11 +983,10 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="widget_title h5 text-theme">
-                  DESIGN
-                  </h3>
+                  <h3 class="widget_title h5 text-theme">DESIGN</h3>
                   <p class="about-grid_text">
-                    We provide our clients with innovative design solutions tailored to their needs, industry trends, and our expertise.
+                    We provide our clients with innovative design solutions
+                    tailored to their needs, industry trends, and our expertise.
                   </p>
                 </div>
               </div>
@@ -880,11 +1003,11 @@
                   data-wow-duration="1.5s"
                   data-wow-delay="0.2s"
                 >
-                  <h3 class="widget_title h5 text-theme">
-                  RESULTS
-                  </h3>
+                  <h3 class="widget_title h5 text-theme">RESULTS</h3>
                   <p class="about-grid_text">
-                    As a results-driven company, we pride ourselves on our track record of facilitating some of the world’s most successful and functional products!
+                    As a results-driven company, we pride ourselves on our track
+                    record of facilitating some of the world’s most successful
+                    and functional products!
                   </p>
                 </div>
               </div>
@@ -894,207 +1017,206 @@
       </div>
     </div>
 
-
-
-
-
-       <!-- contact section  -->
-     <section class="space-extra2-bottom">
-    <div
-      class="contact-sec-1 bg-repeat overflow-hidden space"
-      data-bg-src="assets/img/bg/jiji-bg2.png"
-    >
-      <div class="container-fluid p-0">
-        <div class="contact-wrap-1">
-          <div class="row justify-content-between">
-            <div class="col-xxl-5 col-xl-6">
-              <div
-                class="title-area custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s"
-              >
-                <h2 class="sec-title text-white">
-                  READY TO TAKE YOUR STREAMS IN THE RIGHT DIRECTION
-                  <span class="text-theme">?</span>
-                </h2>
-                <span class="sub-title style2"
-                  >Our design consultants will provide a comprehensive approach
-                  to help drive your business success.</span
+    <!-- contact section  -->
+    <section class="space-extra2-bottom">
+      <div
+        class="contact-sec-1 bg-repeat overflow-hidden space"
+        data-bg-src="assets/img/bg/jiji-bg2.png"
+      >
+        <div class="container-fluid p-0">
+          <div class="contact-wrap-1">
+            <div class="row justify-content-between">
+              <div class="col-xxl-5 col-xl-6">
+                <div
+                  class="title-area custom-anim-left wow animated"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.2s"
                 >
+                  <h2 class="sec-title text-white">
+                    READY TO TAKE YOUR STREAMS IN THE RIGHT DIRECTION
+                    <span class="text-theme">?</span>
+                  </h2>
+                  <span class="sub-title style2"
+                    >Our design consultants will provide a comprehensive
+                    approach to help drive your business success.</span
+                  >
+                </div>
+                <form
+                  action="https://html.themeholy.com/bame/demo/mail.php"
+                  method="POST"
+                  class="ajax-contact pb-xl-0 space-bottom custom-anim-left wow animated"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.2s"
+                >
+                  <div class="row">
+                    <div class="form-group style-border2 col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="name"
+                        placeholder="Your Name"
+                      />
+                      <i class="fal fa-user"></i>
+                    </div>
+                    <div class="form-group style-border2 col-md-6">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        placeholder="Email Address"
+                      />
+                      <i class="fal fa-envelope"></i>
+                    </div>
+                    <div class="form-group style-border2 col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="number"
+                        id="number"
+                        placeholder="Phone Number"
+                      />
+                      <i class="fal fa-phone"></i>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group style-border2">
+                        <select
+                          class="form-select"
+                          aria-label="Default select example"
+                        >
+                          <option selected="selected">Subject</option>
+                          <option value="1">Esports</option>
+                          <option value="2">Tournament</option>
+                          <option value="3">Sports</option>
+                        </select>
+                        <i class="fal fa-angle-down"></i>
+                      </div>
+                    </div>
+                    <div class="col-12 form-group style-border2">
+                      <textarea
+                        placeholder="Write Massage...."
+                        class="form-control"
+                      ></textarea>
+                      <i class="far fa-pencil"></i>
+                    </div>
+                    <div class="form-btn col-12">
+                      <button class="th-btn">
+                        Send Message
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="form-messages mb-0 mt-3"></p>
+                </form>
               </div>
-              <form
-                action="https://html.themeholy.com/bame/demo/mail.php"
-                method="POST"
-                class="ajax-contact pb-xl-0 space-bottom custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s"
-              >
-                <div class="row">
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      id="name"
-                      placeholder="Your Name"
-                    />
-                    <i class="fal fa-user"></i>
-                  </div>
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Email Address"
-                    />
-                    <i class="fal fa-envelope"></i>
-                  </div>
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="number"
-                      id="number"
-                      placeholder="Phone Number"
-                    />
-                    <i class="fal fa-phone"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group style-border2">
-                      <select
-                        class="form-select"
-                        aria-label="Default select example"
+              <div class="col-xxl-5 col-xl-6">
+                <div
+                  class="title-area custom-anim-left wow animated"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.2s"
+                >
+                  <span class="sub-title style2"
+                    ># Common Questions About Our Company</span
+                  >
+                  <h2 class="sec-title text-white">
+                    Frequently Asked Questions About Our Esports & Gaming Site
+                    <span class="text-theme">!</span>
+                  </h2>
+                </div>
+                <div
+                  class="accordion custom-anim-left wow animated"
+                  data-wow-duration="1.5s"
+                  data-wow-delay="0.2s"
+                  id="faqAccordion"
+                >
+                  <div class="accordion-card">
+                    <div class="accordion-header" id="collapse-item-1">
+                      <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-1"
+                        aria-expanded="true"
+                        aria-controls="collapse-1"
                       >
-                        <option selected="selected">Subject</option>
-                        <option value="1">Esports</option>
-                        <option value="2">Tournament</option>
-                        <option value="3">Sports</option>
-                      </select>
-                      <i class="fal fa-angle-down"></i>
+                        What game are you currently obsessed with, and why?
+                      </button>
+                    </div>
+                    <div
+                      id="collapse-1"
+                      class="accordion-collapse collapse show"
+                      aria-labelledby="collapse-item-1"
+                      data-bs-parent="#faqAccordion"
+                    >
+                      <div class="accordion-body">
+                        <p class="faq-text">
+                          The current meta in [popular game] heavily favors
+                          [specific characters/weapons/strategies]. This has led
+                          to a shift in gameplay dynamics, with players adapting
+                          their strategies to stay competitive.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-12 form-group style-border2">
-                    <textarea
-                      placeholder="Write Massage...."
-                      class="form-control"
-                    ></textarea>
-                    <i class="far fa-pencil"></i>
-                  </div>
-                  <div class="form-btn col-12">
-                    <button class="th-btn">
-                      Send Message <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </button>
-                  </div>
-                </div>
-                <p class="form-messages mb-0 mt-3"></p>
-              </form>
-            </div>
-            <div class="col-xxl-5 col-xl-6">
-              <div
-                class="title-area custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s"
-              >
-                <span class="sub-title style2"
-                  ># Common Questions About Our Company</span
-                >
-                <h2 class="sec-title text-white">
-                  Frequently Asked Questions About Our Esports & Gaming Site
-                  <span class="text-theme">!</span>
-                </h2>
-              </div>
-              <div
-                class="accordion custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s"
-                id="faqAccordion"
-              >
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-1">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-1"
-                      aria-expanded="true"
-                      aria-controls="collapse-1"
+                  <div class="accordion-card">
+                    <div class="accordion-header" id="collapse-item-2">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-2"
+                        aria-expanded="false"
+                        aria-controls="collapse-2"
+                      >
+                        How do professional esports players train for
+                        tournaments?
+                      </button>
+                    </div>
+                    <div
+                      id="collapse-2"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="collapse-item-2"
+                      data-bs-parent="#faqAccordion"
                     >
-                      What game are you currently obsessed with, and why?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-1"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="collapse-item-1"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
+                      <div class="accordion-body">
+                        <p class="faq-text">
+                          The current meta in [popular game] heavily favors
+                          [specific characters/weapons/strategies]. This has led
+                          to a shift in gameplay dynamics, with players adapting
+                          their strategies to stay competitive.
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-2"
-                      aria-expanded="false"
-                      aria-controls="collapse-2"
-                    >
-                      How do professional esports players train for tournaments?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="collapse-item-2"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
+                  <div class="accordion-card">
+                    <div class="accordion-header" id="collapse-item-3">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-3"
+                        aria-expanded="false"
+                        aria-controls="collapse-3"
+                      >
+                        What distinguishes a successful esports team from the
+                        rest?
+                      </button>
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-3">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-3"
-                      aria-expanded="false"
-                      aria-controls="collapse-3"
+                    <div
+                      id="collapse-3"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="collapse-item-3"
+                      data-bs-parent="#faqAccordion"
                     >
-                      What distinguishes a successful esports team from the
-                      rest?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-3"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="collapse-item-3"
-                    data-bs-parent="#faqAccordion"
-                  >
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
+                      <div class="accordion-body">
+                        <p class="faq-text">
+                          The current meta in [popular game] heavily favors
+                          [specific characters/weapons/strategies]. This has led
+                          to a shift in gameplay dynamics, with players adapting
+                          their strategies to stay competitive.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1103,8 +1225,7 @@
           </div>
         </div>
       </div>
-    </div>
-   </section>
+    </section>
 
     <!-- footer  -->
     <footer class="footer-wrapper footer-layout1">

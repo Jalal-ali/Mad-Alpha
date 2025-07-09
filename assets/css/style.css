@@ -20552,13 +20552,13 @@ span.select2-selection.select2-selection--single:focus {
   margin-bottom: 7px;
 }
 
-.tournament-card .tournament-card-title a {
+.tournament-card .tournament-card-title {
   color: var(--white-color);
 }
 
-.tournament-card .tournament-card-title a:hover {
+/* .tournament-card .tournament-card-title a:hover {
   color: var(--theme-color);
-}
+} */
 
 .tournament-card .tournament-card-date {
   font-size: 18px;
