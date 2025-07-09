@@ -340,8 +340,8 @@
               <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
                 <div class="tournament-player-wrap">
                   <div class="card-title-wrap">
-                    <h3 class="card-sub">
-                      Constant Client Coordination
+                    <h3 class="card-sub line-br">
+                      Constant Client <br>Coordination
                     </h3>
                   </div>
                   <div class="tournament-card-img">
@@ -356,8 +356,8 @@
               <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
                 <div class="tournament-player-wrap">
                   <div class="card-title-wrap">
-                    <h3 class="card-sub">
-                      Supreme Customer Satifaction
+                    <h3 class="card-sub line-br">
+                      Supreme Customer<br> Satifaction
                     </h3>
                   </div>
                   <div class="tournament-card-img">
@@ -391,8 +391,8 @@
               <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
                 <div class="tournament-player-wrap">
                   <div class="card-title-wrap">
-                    <h3 class="card-sub">
-                      Secure Money Back Guarantee
+                    <h3 class="card-sub line-br">
+                      Secure Money Back <br> Guarantee
                     </h3>
                   </div>
                   <div class="tournament-card-img">
@@ -407,8 +407,8 @@
               <div class="tournament-card style4 shadow-bg col-lg-25 col-sm-6">
                 <div class="tournament-player-wrap">
                   <div class="card-title-wrap">
-                    <h3 class="card-sub">
-                      Industry Proven Professionals
+                    <h3 class="card-sub line-br">
+                      Industry Proven <br> Professionals
                     </h3>
                   </div>
                   <div class="tournament-card-img">
