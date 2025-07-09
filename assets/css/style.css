@@ -17350,11 +17350,7 @@ span.select2-selection.select2-selection--single:focus {
   }
 }
 
-@media (min-width: 1300px) {
-  .team-about-card {
-    margin-left: 55px;
-  }
-}
+
 
 .team-info-list ul {
   padding: 0;
@@ -21581,7 +21577,7 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .tournament-card.style4 .tournament-card-title {
-  margin-bottom: -0.2em;
+  /* margin-bottom: -0.2em; */
   margin-top: 5px;
 }
 
@@ -25199,6 +25195,12 @@ span.select2-selection.select2-selection--single:focus {
   font-weight: bold !important;
 
 }
+.card-sub {
+  color: var(--light-color) !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+
+}
 
 
 .widget ul li span {
@@ -25347,4 +25349,11 @@ span.select2-selection.select2-selection--single:focus {
   .logo-img {
     max-width: 70% !important;
   }
+}
+.about-png{
+  width: 100% !important;          /* Fixed width */
+  height: 150px !important;         /* Fixed height */
+  object-fit: cover !important;     /* Controls how image fills the space (see options below) */
+  object-position: center !important; /* Centers the image within the frame */
+  padding-top: 10px;
 }
