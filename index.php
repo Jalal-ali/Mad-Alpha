@@ -5,10 +5,10 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Mad-Alpha - Esports & Gaming HTML Template - Home Streaming</title>
+  <title>Mad-α | Home</title>
   <meta name="author" content="Mad-Alpha" />
-  <meta name="description" content="Mad-Alpha - Esports & Gaming HTML Template" />
-  <meta name="keywords" content="Mad-Alpha - Esports & Gaming HTML Template" />
+  <meta name="description" content="Mad-Alpha" />
+  <meta name="keywords" content="Mad-Alpha" />
   <meta name="robots" content="INDEX,FOLLOW" />
   <meta
     name="viewport"
@@ -16,64 +16,64 @@
   <link
     rel="apple-touch-icon"
     sizes="57x57"
-    href="assets/img/favicons/apple-icon-57x57.png" />
+    href="assets/img/favicons(1)/apple-icon-57x57.png" />
   <link
     rel="apple-touch-icon"
     sizes="60x60"
-    href="assets/img/favicons/apple-icon-60x60.png" />
+    href="assets/img/favicons(1)/apple-icon-60x60.png" />
   <link
     rel="apple-touch-icon"
     sizes="72x72"
-    href="assets/img/favicons/apple-icon-72x72.png" />
+    href="assets/img/favicons(1)/apple-icon-72x72.png" />
   <link
     rel="apple-touch-icon"
     sizes="76x76"
-    href="assets/img/favicons/apple-icon-76x76.png" />
+    href="assets/img/favicons(1)/apple-icon-76x76.png" />
   <link
     rel="apple-touch-icon"
     sizes="114x114"
-    href="assets/img/favicons/apple-icon-114x114.png" />
+    href="assets/img/favicons(1)/apple-icon-114x114.png" />
   <link
     rel="apple-touch-icon"
     sizes="120x120"
-    href="assets/img/favicons/apple-icon-120x120.png" />
+    href="assets/img/favicons(1)/apple-icon-120x120.png" />
   <link
     rel="apple-touch-icon"
     sizes="144x144"
-    href="assets/img/favicons/apple-icon-144x144.png" />
+    href="assets/img/favicons(1)/apple-icon-144x144.png" />
   <link
     rel="apple-touch-icon"
     sizes="152x152"
-    href="assets/img/favicons/apple-icon-152x152.png" />
+    href="assets/img/favicons(1)/apple-icon-152x152.png" />
   <link
     rel="apple-touch-icon"
     sizes="180x180"
-    href="assets/img/favicons/apple-icon-180x180.png" />
+    href="assets/img/favicons(1)/apple-icon-180x180.png" />
   <link
     rel="icon"
     type="image/png"
     sizes="192x192"
-    href="assets/img/favicons/android-icon-192x192.png" />
+    href="assets/img/favicons(1)/android-icon-192x192.png" />
   <link
     rel="icon"
     type="image/png"
     sizes="32x32"
-    href="assets/img/favicons/favicon-32x32.png" />
+    href="assets/img/favicons(1)/favicon-32x32.png" />
   <link
     rel="icon"
     type="image/png"
     sizes="96x96"
-    href="assets/img/favicons/favicon-96x96.png" />
+    href="assets/img/favicons(1)/favicon-96x96.png" />
   <link
     rel="icon"
     type="image/png"
     sizes="16x16"
-    href="assets/img/favicons/favicon-16x16.png" />
+    href="assets/img/favicons(1)/favicon-16x16.png" />
   <link rel="manifest" href="assets/img/favicons/manifest.json" />
   <meta name="msapplication-TileColor" content="#ffffff" />
   <meta
     name="msapplication-TileImage"
-    content="assets/img/favicons/ms-icon-144x144.png" />
+    content="assets/img/favicons(1)/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -322,7 +322,7 @@
       </div>
     </div>
   </section>
-  <!-- pricing section  -->
+ <!-- pricing section  -->
   <section
     class="pricing-sec-v2 space-bottom"
     data-bg-src="assets/img/bg/tournament-sec2-bg.png">
@@ -342,6 +342,31 @@
     </div>
     <div class="widget-grid">
       <!-- plan boxes  -->
+       
+       <!-- STANDARD PLAN  -->
+      <div class="widget widget_categories">
+        <h3 class="widget_title">
+          STANDARD <br />
+          <span class="widget_sub_title">Streaming Pack</span>
+        </h3>
+        <ul>
+          <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+          <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+          <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+          <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">CAMSCREEN</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
+        </ul>
+        <button
+          id="tab1-btn"
+          class="th-btn style-border"
+          style="margin-top: 20px; width: 90%">
+          <span class="btn-border get-quote">
+            GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
+          </span>
+        </button>
+      </div>
 
       <!-- SOLID PLAN  -->
       <div class="widget widget_categories">
@@ -349,31 +374,19 @@
           SOLID <br />
           <span class="widget_sub_title">Streaming Pack</span>
         </h3>
-        <div class="scrollable-list">
+        
           <ul>
-            <li class="shadow-list">
-              <a href="#">LOGO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SCREENS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ALERTS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">PANELS</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">HEADER</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
             <li class="shadow-list">
               <a href="#">CAMSCREEN</a> <span class="quantity">1X</span>
             </li>
-            <li class="shadow-list">
-              <a href="#">CHATBOX</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
           </ul>
-        </div>
+        
         <button
           id="tab1-btn"
           class="th-btn style-border"
@@ -392,30 +405,16 @@
         </h3>
         <div class="scrollable-list">
           <ul>
-            <li class="shadow-list">
-              <a href="#">LOGO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">BANNER</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SCREENS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ALERTS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">PANELS</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">HEADER</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">BANNER</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
             <li class="shadow-list">
               <a href="#">CAMSCREEN</a> <span class="quantity">1X</span>
             </li>
-            <li class="shadow-list">
-              <a href="#">CHATBOX</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
         <button
@@ -427,44 +426,7 @@
           </span>
         </button>
       </div>
-      <!-- STANDARD PLAN  -->
-      <div class="widget widget_categories">
-        <h3 class="widget_title">
-          STANDARD <br />
-          <span class="widget_sub_title">Streaming Pack</span>
-        </h3>
-        <ul>
-          <li class="shadow-list">
-            <a href="#">LOGO</a> <span class="quantity">1X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">SCREENS</a> <span class="quantity">3X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">ALERTS</a> <span class="quantity">3X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">PANELS</a> <span class="quantity">4X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">HEADER</a> <span class="quantity">1X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">CAMSCREEN</a> <span class="quantity">1X</span>
-          </li>
-          <li class="shadow-list">
-            <a href="#">CHATBOX</a> <span class="quantity">1X</span>
-          </li>
-        </ul>
-        <button
-          id="tab1-btn"
-          class="th-btn style-border"
-          style="margin-top: 20px; width: 90%">
-          <span class="btn-border get-quote">
-            GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
-          </span>
-        </button>
-      </div>
+      
       <!-- Professional PLAN  -->
 
       <div class="widget widget_categories">
@@ -474,43 +436,20 @@
         </h3>
         <div class="scrollable-list">
           <ul>
-            <li class="shadow-list">
-              <a href="#">LOGO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">BANNER</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SCREENS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ALERTS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">PANELS</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">HEADER</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">BANNER</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
             <li class="shadow-list">
               <a href="#">CAMSCREEN</a> <span class="quantity">1X</span>
             </li>
-            <li class="shadow-list">
-              <a href="#">CHATBOX</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">EMOTES</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SUB BADGES</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">INTRO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ANIMATED OVERLAY</a>
-              <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">EMOTES</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">SUB BADGES</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">INTRO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
         <button
@@ -531,55 +470,24 @@
         </h3>
         <div class="scrollable-list">
           <ul>
-            <li class="shadow-list">
-              <a href="#">LOGO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">BANNER</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SCREENS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ALERTS</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">PANELS</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">HEADER</a> <span class="quantity">1X</span>
-            </li>
+            <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">BANNER</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
             <li class="shadow-list">
               <a href="#">CAMSCREEN</a> <span class="quantity">1X</span>
             </li>
-            <li class="shadow-list">
-              <a href="#">CHATBOX</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">INTRO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">OUTRO</a> <span class="quantity">1X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">EMOTES</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">SUB BADGES</a> <span class="quantity">3X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ANIMATED LOGO</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ANIMATED BANNER</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ANIMATED EMOTES</a> <span class="quantity">4X</span>
-            </li>
-            <li class="shadow-list">
-              <a href="#">ANIMATED OVERLAY</a>
-              <span class="quantity">4X</span>
-            </li>
+            <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">INTRO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">OUTRO</a> <span class="quantity">1X</span></li>
+            <li class="shadow-list"><a href="#">EMOTES</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">SUB BADGES</a> <span class="quantity">3X</span></li>
+            <li class="shadow-list"><a href="#">ANIMATED LOGO</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">ANIMATED BANNER</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">ANIMATED EMOTES</a> <span class="quantity">4X</span></li>
+            <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">4X</span></li>
           </ul>
         </div>
         <button

@@ -128,6 +128,8 @@
       mask-size: 100% 100%;
       -webkit-mask-size: 100% 100%;
     }
+
+    /* tab buttons dropdown style  */
   </style>
 </head>
 
@@ -204,8 +206,14 @@
             <!-- tab buttons -->
             <div style="border-radius: 2px;" class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
               <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Logo Design">
-                Logo Design
-              </button>
+                Stream design
+              </button><ul style="position: absolute;" class="sub-menu">
+                <li><a href="tournament.html">Tournament</a></li>
+                <li>
+                  <a href="tournament-details.html">Tournament Details</a>
+                </li>
+              </ul>
+
               <button data-filter=".web" class="tab-btn" type="button" data-heading="Web development">
                 Web Development
               </button>
@@ -216,6 +224,57 @@
                 Branding
               </button>
             </div>
+            <!-- Tab buttons with dropdowns -->
+            <!-- <div style="border-radius: 2px;" class="tab-container game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+
+              <div class="tab-group">
+                <button class="tab-btn">Stream Design</button>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Overlay</a></li>
+                    <li><a href="#">Alerts</a></li>
+                    <li><a href="#">Screens</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-group">
+                <button class="tab-btn">Web Development</button>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Landing Page</a></li>
+                    <li><a href="#">E-commerce</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-group">
+                <button class="tab-btn">UI/UX Design</button>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Wireframe</a></li>
+                    <li><a href="#">Prototype</a></li>
+                    <li><a href="#">Figma</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="tab-group">
+                <button class="tab-btn">Branding</button>
+                <div class="dropdown">
+                  <ul>
+                    <li><a href="#">Logo</a></li>
+                    <li><a href="#">Color Palette</a></li>
+                    <li><a href="#">Typography</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div> -->
+
+
+            <!-- ....  -->
             <h2 class="sec-title main-heading">Logo Design</h2>
           </div>
         </div>
@@ -634,4 +693,5 @@
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

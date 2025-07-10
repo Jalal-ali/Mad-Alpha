@@ -138,6 +138,31 @@
     </div>
     <div class="widget-grid">
       <!-- plan boxes  -->
+       
+       <!-- STANDARD PLAN  -->
+      <div class="widget widget_categories">
+        <h3 class="widget_title">
+          STANDARD <br />
+          <span class="widget_sub_title">Streaming Pack</span>
+        </h3>
+        <ul>
+          <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
+          <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
+          <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
+          <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">CAMSCREEN</a> <span class="quantity">1X</span></li>
+          <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
+        </ul>
+        <button
+          id="tab1-btn"
+          class="th-btn style-border"
+          style="margin-top: 20px; width: 90%">
+          <span class="btn-border get-quote">
+            GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
+          </span>
+        </button>
+      </div>
 
       <!-- SOLID PLAN  -->
       <div class="widget widget_categories">
@@ -145,7 +170,7 @@
           SOLID <br />
           <span class="widget_sub_title">Streaming Pack</span>
         </h3>
-        <div class="scrollable-list">
+        
           <ul>
             <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
             <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
@@ -157,7 +182,7 @@
             </li>
             <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
           </ul>
-        </div>
+        
         <button
           id="tab1-btn"
           class="th-btn style-border"
@@ -197,30 +222,7 @@
           </span>
         </button>
       </div>
-      <!-- STANDARD PLAN  -->
-      <div class="widget widget_categories">
-        <h3 class="widget_title">
-          STANDARD <br />
-          <span class="widget_sub_title">Streaming Pack</span>
-        </h3>
-        <ul>
-          <li class="shadow-list"><a href="#">LOGO</a> <span class="quantity">1X</span></li>
-          <li class="shadow-list"><a href="#">SCREENS</a> <span class="quantity">3X</span></li>
-          <li class="shadow-list"><a href="#">ALERTS</a> <span class="quantity">3X</span></li>
-          <li class="shadow-list"><a href="#">PANELS</a> <span class="quantity">4X</span></li>
-          <li class="shadow-list"><a href="#">HEADER</a> <span class="quantity">1X</span></li>
-          <li class="shadow-list"><a href="#">CAMSCREEN</a> <span class="quantity">1X</span></li>
-          <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
-        </ul>
-        <button
-          id="tab1-btn"
-          class="th-btn style-border"
-          style="margin-top: 20px; width: 90%">
-          <span class="btn-border get-quote">
-            GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
-          </span>
-        </button>
-      </div>
+      
       <!-- Professional PLAN  -->
 
       <div class="widget widget_categories">
