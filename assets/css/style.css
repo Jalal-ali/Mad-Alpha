@@ -3777,7 +3777,7 @@ textarea.is-invalid {
 .title-area {
   margin-bottom: calc(var(--section-title-space) - 13px);
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 .title-area .sec-title {
