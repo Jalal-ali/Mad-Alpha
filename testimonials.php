@@ -543,14 +543,14 @@
         <div
           class="footer-logo bg-repeat"
           data-bg-src="assets/img/bg/jiji-bg.png">
-          <a href="index.html"><span
+          <a href="index.php"><span
               data-mask-src="assets/img/logo.svg"
               class="logo-mask"></span>
             <img src="assets/img/logo.svg" alt="Bame" /></a>
         </div>
         <div class="footer-links">
           <ul>
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="tournament.html">TOURNAMENT</a></li>
             <li><a href="blog.html">BLOG</a></li>
@@ -641,7 +641,7 @@
               class="copyright-text bg-repeat"
               data-bg-src="assets/img/bg/jiji-bg.png">
               <i class="fal fa-copyright"></i> Copyright 2024
-              <a href="index.html">Bame.</a> All Rights Reserved.
+              <a href="index.php">Bame.</a> All Rights Reserved.
             </p>
           </div>
         </div>

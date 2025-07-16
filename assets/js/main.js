@@ -401,15 +401,20 @@
           filter: "*",
           masonry: {},
         });
-        t(".filter-menu-active").on("click", "button", function () {
-          var a = t(this).attr("data-filter");
-          e.isotope({ filter: a });
-        }),
-          t(".filter-menu-active").on("click", "button", function (e) {
-            e.preventDefault(),
-              t(this).addClass("active"),
-              t(this).siblings(".active").removeClass("active");
-          });
+            t(".filter-menu-active").on("click", "button", function (ev) {
+      ev.preventDefault();
+
+      var $this = t(this);
+      var filter = $this.attr("data-filter");
+
+      // Filter isotope items
+      e.isotope({ filter: filter });
+
+      // Remove 'active' from all, then add to clicked button
+      t(".filter-menu-active button").removeClass("active");
+      $this.addClass("active");
+    });
+
       }
     }),
     t(".masonary-active, .woocommerce-Reviews .comment-list").imagesLoaded(
@@ -703,6 +708,102 @@
         void 0
       );
     });
+
+    // list filtering 
+    t(".filter-active").imagesLoaded(function () {
+  if (t(".filter-active").length > 0) {
+    var e = t(".filter-active").isotope({
+      itemSelector: ".filter-item",
+      filter: "*",
+      masonry: {},
+    });
+
+    // Combined click handler for both buttons and category links
+    t(".filter-menu-active, ul").on("click", "[data-filter]", function (ev) {
+      ev.preventDefault();
+
+      var $this = t(this);
+      var filter = $this.attr("data-filter");
+
+      // Apply Isotope filter
+      e.isotope({ filter: filter });
+
+      // Remove active class from all filter triggers, then set on clicked one
+      t("[data-filter]").removeClass("active");
+      $this.addClass("active");
+    });
+  }
+});
+// filter styling 
+// t(".filter-active").imagesLoaded(function () {
+//   if (t(".filter-active").length > 0) {
+//     var e = t(".filter-active").isotope({
+//       itemSelector: ".filter-item",
+//       filter: "*",
+//       masonry: {},
+//     });
+
+//     // Combined filter for both buttons and dropdown items
+//     t(".filter-menu-active, ul").on("click", "[data-filter]", function (ev) {
+//       ev.preventDefault();
+
+//       var $this = t(this);
+//       var filter = $this.attr("data-filter");
+
+//       // Apply Isotope filter
+//       e.isotope({ filter: filter });
+
+//       // Remove .active from all filter triggers
+//       t(".filter-menu-active button, ul .category, ul li.category").removeClass("active");
+
+//       // Add .active to clicked one
+//       $this.addClass("active");
+
+//       // If the click target is inside a <li>, also add active to the <li>
+//       if ($this.closest("li").length) {
+//         $this.closest("li").addClass("active");
+//       }
+//     });
+//   }
+// });
+// newww................................
+t(".filter-active").imagesLoaded(function () {
+  if (t(".filter-active").length > 0) {
+    var e = t(".filter-active").isotope({
+      itemSelector: ".filter-item",
+      filter: "*",
+      masonry: {},
+    });
+
+    t(".filter-menu-active, ul").on("click", "[data-filter]", function (ev) {
+      ev.preventDefault();
+
+      var $this = t(this);
+      var filter = $this.attr("data-filter");
+
+      // Apply Isotope filter
+      e.isotope({ filter: filter });
+
+      // Remove all previous active classes
+      t(".filter-menu-active button, ul .category, ul li.category, .tab-btn").removeClass("active");
+
+      // Add active to the clicked li and/or a element
+      if ($this.closest("li").length) {
+        $this.closest("li").addClass("active");
+      } else {
+        $this.addClass("active");
+      }
+
+      // ✅ If this item is inside a dropdown, add 'active' to its .tab-btn
+      var $tabWrapper = $this.closest(".tab-wrapper");
+      if ($tabWrapper.length) {
+        $tabWrapper.find(".tab-btn").addClass("active");
+      }
+    });
+  }
+});
+
+
 })(jQuery);
 
 

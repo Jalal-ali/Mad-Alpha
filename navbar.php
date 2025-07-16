@@ -129,7 +129,7 @@
         <div class="widget footer-widget">
           <div class="th-widget-about">
             <div class="about-logo">
-              <a href="index.html"
+              <a href="index.php"
                 ><span
                   data-mask-src="assets/logo/imgi_1_LOGO.png"
                   class="logo-mask"
@@ -272,7 +272,7 @@
       <div class="th-menu-area text-center">
         <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
         <div class="mobile-logo">
-          <a href="index.html"
+          <a href="index.php"
             ><span data-mask-src="assets/logo/imgi_1_LOGO.png" class="logo-mask"></span
             ><img class="logo-img" src="assets/logo/imgi_1_LOGO.png" alt="Mad-Alpha"
           /></a>
@@ -323,7 +323,7 @@
             <div class="row align-items-center justify-content-between">
               <div class="col-auto">
                 <div class="header-logo">
-                  <a href="index.html"
+                  <a href="index.php"
                     ><span
                       data-mask-src="assets/logo/imgi_1_LOGO.png"
                       class="logo-mask"

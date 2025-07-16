@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-<!-- Mirrored from html.themeholy.com/bame/demo/tournament.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Jun 2025 19:32:32 GMT -->
 
 <head>
   <meta charset="utf-8" />
@@ -10,70 +9,12 @@
   <meta name="description" content="Bame - Esports & Gaming HTML Template" />
   <meta name="keywords" content="Bame - Esports & Gaming HTML Template" />
   <meta name="robots" content="INDEX,FOLLOW" />
-  <meta
-    name="viewport"
-    content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-  <link
-    rel="apple-touch-icon"
-    sizes="57x57"
-    href="assets/img/favicons/apple-icon-57x57.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="60x60"
-    href="assets/img/favicons/apple-icon-60x60.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="72x72"
-    href="assets/img/favicons/apple-icon-72x72.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="76x76"
-    href="assets/img/favicons/apple-icon-76x76.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="114x114"
-    href="assets/img/favicons/apple-icon-114x114.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="120x120"
-    href="assets/img/favicons/apple-icon-120x120.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="144x144"
-    href="assets/img/favicons/apple-icon-144x144.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="152x152"
-    href="assets/img/favicons/apple-icon-152x152.png" />
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="assets/img/favicons/apple-icon-180x180.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="192x192"
-    href="assets/img/favicons/android-icon-192x192.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="assets/img/favicons/favicon-32x32.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="96x96"
-    href="assets/img/favicons/favicon-96x96.png" />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="assets/img/favicons/favicon-16x16.png" />
-  <link rel="manifest" href="assets/img/favicons/manifest.json" />
+<link rel="icon" href="assets/img/feature/" type="image/png">
+
   <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta
+  <!-- <meta
     name="msapplication-TileImage"
-    content="assets/img/favicons/ms-icon-144x144.png" />
+    content="assets/img/favicons/ms-icon-144x144.png" /> -->
   <meta name="theme-color" content="#ffffff" />
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -93,7 +34,7 @@
     // heading funcs 
     $(document).ready(function() {
       // When a filter button is clicked
-      $('.tab-btn').click(function() {
+      $('.category').click(function() {
         // Get the heading text from data attribute
         var newHeading = $(this).data('heading');
 
@@ -118,7 +59,7 @@
       overflow: hidden;
     }
 
-    .masked-img {
+    .masked-img  {
       /* position: absolute; */
       width: 100%;
       height: 100%;
@@ -127,9 +68,135 @@
       -webkit-mask-image: url('assets/img/game/game_card3_bg.jpg');
       mask-size: 100% 100%;
       -webkit-mask-size: 100% 100%;
+      rotate: 0.4deg;
     }
 
-    /* tab buttons dropdown style  */
+    /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
+    .game-filter-btn .tab-wrapper .tab-btn {
+      background: var(--title-color) !important;
+      border: 0 !important;
+      font-size: 18px !important;
+      font-weight: 600 !important;
+      color: var(--body-color) !important;
+      font-family: var(--title-font) !important;
+      letter-spacing: 0.1em !important;
+      padding: 15px 45px !important;
+      -webkit-clip-path: polygon(15px 0%,
+          calc(100% - 15px) 0%,
+          100% 15px,
+          100% calc(100% - 15px),
+          calc(100% - 15px) 100%,
+          15px 100%,
+          0% calc(100% - 15px),
+          0% 15px) !important;
+      clip-path: polygon(15px 0%,
+          calc(100% - 15px) 0%,
+          100% 15px,
+          100% calc(100% - 15px),
+          calc(100% - 15px) 100%,
+          15px 100%,
+          0% calc(100% - 15px),
+          0% 15px) !important;
+    }
+
+    .game-filter-btn .tab-wrapper .tab-btn.active,
+    .game-filter-btn .tab-wrapper .tab-btn:hover {
+      background: var(--theme-color) !important;
+      color: var(--title-color) !important;
+    }
+
+    .tab-wrapper {
+      position: relative;
+    }
+
+    .tab-btn {
+      padding: 10px 18px;
+      background-color: transparent;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      width: 100%;
+      flex: 1 1 100%;
+      padding: 0 7px;
+      margin: 4px auto;
+    }
+
+    .tab-wrapper:hover .dropdown {
+      max-height: max-content;
+      border-radius: 19px;
+      -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      border: 0.175rem solid var(--theme-color);
+
+      /* adjust as needed */
+    }
+
+    /* Optional dropdown styling */
+    .dropdown ul {
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+      /* background: var(--black-color2); */
+      /* background-color: gray; */
+      border-radius: 0 0 6px 6px;
+    }
+
+    .dropdown li {
+      padding: 8px 16px;
+    }
+
+    .dropdown li a {
+      color: var(--white-color);
+      text-decoration: none;
+      display: block;
+    }
+
+
+    .dropdown li:hover {
+      color: var(--black-color) !important;
+      font-weight: 500;
+      /* color: var(--black-color); */
+      /*font-family: var(--title-font);
+       letter-spacing: 0.1em;
+      padding: 15px 45px; */
+      background: var(--theme-color);
+      -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      padding: 8px 16px;
+
+    }
+
+    .filter-menu-active .active {
+      color: var(--black-color) !important;
+      font-weight: 500;
+      /* color: var(--black-color); */
+      /*font-family: var(--title-font);
+       letter-spacing: 0.1em;
+      padding: 15px 45px; */
+      background: var(--theme-color);
+      -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
+      padding: 8px 16px;
+
+    }
+
+    .filter-menu-active li.active a {
+      color: var(--black-color) !important;
+      font-weight: 500;
+    }
+
+    .dropdown li a:hover {
+      color: var(--black-color);
+      /* font-weight: 500; */
+    }
   </style>
 </head>
 
@@ -191,7 +258,7 @@
             class="sec-btn custom-anim-right wow animated"
             data-wow-duration="1.5s"
             data-wow-delay="0.2s">
-            <a href="contact.html" class="th-btn">See All <i class="fa-solid fa-arrow-right ms-2"></i></a>
+            <a href="portfolio.php" class="th-btn">See All <i class="fa-solid fa-arrow-right ms-2"></i></a>
           </div>
         </div>
       </div>
@@ -204,78 +271,123 @@
         <div class="col-lg-auto">
           <div class="title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-            <div style="border-radius: 2px;" class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
-              <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Logo Design">
-                Stream design
-              </button><ul style="position: absolute;" class="sub-menu">
-                <li><a href="tournament.html">Tournament</a></li>
-                <li>
-                  <a href="tournament-details.html">Tournament Details</a>
-                </li>
-              </ul>
 
-              <button data-filter=".web" class="tab-btn" type="button" data-heading="Web development">
-                Web Development
-              </button>
-              <button data-filter=".design" class="tab-btn" type="button" data-heading="UI/UX Design">
-                UI/UX Design
-              </button>
-              <button data-filter=".branding" class="tab-btn" type="button" data-heading="Brandings">
-                Branding
-              </button>
+            <div class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+              <!-- tab-wrappers ...  -->
+              <div class="tab-wrapper">
+                <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Stream Design">Stream Design</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category active" data-filter=".logo" data-heading="Logo designs">
+                      <a href="javascript:void(0)">Logo designs</a>
+                    </li>
+                    <li class="category" data-filter=".web" data-heading="overlay designs">
+                      <a href="javascript:void(0)">Overlay designs</a>
+                    </li>
+                    <li class="category" data-filter=".branding" data-heading="emotes">
+                      <a href="javascript:void(0)">Emotes</a>
+                    </li>
+                    <li class="category" data-filter=".design" data-heading="sub badges">
+                      <a href="javascript:void(0)">Sub badges</a>
+                    </li>
+                    <li class="category" data-filter=".logo" data-heading="banner">
+                      <a href="javascript:void(0)">Banner</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">2D models</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">3D models</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Custom Gaming room">Custom Gaming room</button>
+                <!-- <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Ebook">Ebook</button>
+                <!-- <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Websites">Websites</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Shopify</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Wordpress</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Ui/Ux</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Application">Application</button>
+                <!-- <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Architecture Engineering">Architecture Engineering</button>
+                <!-- <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                  </ul>
+                </div> -->
+              </div>
+              <div class="tab-wrapper">
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Animations">Animations</button>
+                <div class="dropdown">
+                  <ul class="filter-menu-active">
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Logo intros</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom animations</a></li>
+                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Product Animations</a></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- tab-wrapper ended ...  -->
             </div>
-            <!-- Tab buttons with dropdowns -->
-            <!-- <div style="border-radius: 2px;" class="tab-container game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+            <!-- tab-buttons ended ...  -->
 
-              <div class="tab-group">
-                <button class="tab-btn">Stream Design</button>
-                <div class="dropdown">
-                  <ul>
-                    <li><a href="#">Overlay</a></li>
-                    <li><a href="#">Alerts</a></li>
-                    <li><a href="#">Screens</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="tab-group">
-                <button class="tab-btn">Web Development</button>
-                <div class="dropdown">
-                  <ul>
-                    <li><a href="#">Landing Page</a></li>
-                    <li><a href="#">E-commerce</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="tab-group">
-                <button class="tab-btn">UI/UX Design</button>
-                <div class="dropdown">
-                  <ul>
-                    <li><a href="#">Wireframe</a></li>
-                    <li><a href="#">Prototype</a></li>
-                    <li><a href="#">Figma</a></li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="tab-group">
-                <button class="tab-btn">Branding</button>
-                <div class="dropdown">
-                  <ul>
-                    <li><a href="#">Logo</a></li>
-                    <li><a href="#">Color Palette</a></li>
-                    <li><a href="#">Typography</a></li>
-                  </ul>
-                </div>
-              </div>
-
-            </div> -->
-
-
-            <!-- ....  -->
-            <h2 class="sec-title main-heading">Logo Design</h2>
+            <!-- Add other tab-wrapper blocks similarly -->
+            <h2 style=" color :var(--smoke-color);
+            letter-spacing: 1px;
+            filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Stream Design</h2>
           </div>
         </div>
       </div>
@@ -283,84 +395,84 @@
         <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img" />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
@@ -569,14 +681,14 @@
         <div
           class="footer-logo bg-repeat"
           data-bg-src="assets/img/bg/jiji-bg.png">
-          <a href="index.html"><span
+          <a href="index.php"><span
               data-mask-src="assets/img/logo.svg"
               class="logo-mask"></span>
             <img src="assets/img/logo.svg" alt="Bame" /></a>
         </div>
         <div class="footer-links">
           <ul>
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.php">HOME</a></li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="tournament.html">TOURNAMENT</a></li>
             <li><a href="blog.html">BLOG</a></li>
@@ -667,7 +779,7 @@
               class="copyright-text bg-repeat"
               data-bg-src="assets/img/bg/jiji-bg.png">
               <i class="fal fa-copyright"></i> Copyright 2024
-              <a href="index.html">Bame.</a> All Rights Reserved.
+              <a href="index.php">Bame.</a> All Rights Reserved.
             </p>
           </div>
         </div>

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
-  <!-- Mirrored from html.themeholy.com/bame/demo/game-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Jun 2025 19:32:41 GMT -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Bame - Esports & Gaming HTML Template - Game Details</title>
+    <title>Bame - Esports & Gaming HTML Template - Tournament</title>
     <meta name="author" content="Bame" />
     <meta name="description" content="Bame - Esports & Gaming HTML Template" />
     <meta name="keywords" content="Bame - Esports & Gaming HTML Template" />
@@ -98,260 +97,431 @@
     <link rel="stylesheet" href="assets/css/app.min.css" />
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".filter-active").isotope({
+          filter: ".logo",
+        });
+      });
+      // heading funcs
+      $(document).ready(function () {
+        // When a filter button is clicked
+        $(".tab-btn").click(function () {
+          // Get the heading text from data attribute
+          var newHeading = $(this).data("heading");
+
+          // Update the heading text
+          $(".main-heading").text(newHeading);
+
+          // Optional: Add animation
+          $(".sec-title").addClass("animate__animated animate__fadeIn");
+          setTimeout(function () {
+            $(".sec-title").removeClass("animate__animated animate__fadeIn");
+          }, 500);
+        });
+      });
+      
+    </script>
     <style>
-      .policy-list {
-        list-style: none;
-        padding-left: 0;
-        margin-bottom: 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .policy-list li {
+      .game-card-img-mask {
         position: relative;
-        padding-left: 24px;
-        font-size: 16px;
-        line-height: 1.5;
-        color: rgb(146, 143, 143);
-        font: var(--title-font);
-        font-weight: 300;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        /* Adjust based on your mask aspect ratio */
+        overflow: hidden;
       }
 
-      .policy-list li::before {
-        content: "";
-        position: absolute;
-        top: 0.5em;
-        left: 0;
-        width: 10px;
-        height: 10px;
-        border: 2px solid var(--theme-color);
-        border-radius: 50%;
-        background: transparent;
+      .masked-img {
+        /* position: absolute; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        mask-image: url("assets/img/game/game_card3_bg.jpg");
+        -webkit-mask-image: url("assets/img/game/game_card3_bg.jpg");
+        mask-size: 100% 100%;
+        -webkit-mask-size: 100% 100%;
       }
 
-      /* Responsive: 2 per row on tablet */
-      @media (max-width: 1024px) {
-        .policy-list li {
-          flex: 1 1 calc(50% - 40px);
-        }
-      }
+      /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
+      /* Remove clip-path from game-filter-btn */
+      
 
-      /* Responsive: 1 per row on mobile */
-      @media (max-width: 600px) {
-        .policy-list li {
-          flex: 1 1 100%;
-        }
-      }
-      .alt_title {
-        color: var(--theme-color);
-        font-family: var(--title-font);
-      }
+     .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown span {
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 10;
+  top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
     </style>
   </head>
-  <body>
-     <!-- cursor  -->
-  <div class="cursor-animation cursor-image"></div>
-  <!-- pre loader  -->
-  <div class="preloader">
-    <button class="th-btn preloaderCls">CANCEL PRELOADER</button>
-    <div class="preloader-inner"><span class="loader"></span></div>
-  </div>
 
-  <?php
+  <body>
+    <!-- cursor  -->
+    <div class="cursor-animation cursor-image"></div>
+    <!-- pre loader  -->
+    <div class="preloader">
+      <button class="th-btn preloaderCls">CANCEL PRELOADER</button>
+      <div class="preloader-inner"><span class="loader"></span></div>
+    </div>
+
+    <?php
   include 'navbar.php';
   ?>
+
     <!-- top section  -->
     <div class="breadcumb-wrapper" data-bg-src="assets/img/bg/breadcumb-bg.jpg">
       <div class="container">
-        <div class="breadcumb-content">
-          <h1 class="breadcumb-title">PRIVACY POLICY</h1>
+        <div class="col-lg-auto">
+          <div
+            class="title-area custom-anim-left wow animated"
+            data-wow-duration="1.5s"
+            data-wow-delay="0.2s"
+          >
+            <h2 class="sec-title">
+              Our portfolio design at its best <span class="text-theme">!</span>
+            </h2>
+            <span class="sub-title style2"
+              >Looking for design inspiration? Browse our portfolio to see our
+              creative grind.</span
+            >
+            <button id="tab1-btn" class="th-btn style-border">
+              <span class="btn-border">
+                Get In Touch <i class="fa-solid fa-arrow-right ms-2"></i>
+              </span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Main section  -->
-    <section class="space">
+    <!-- main section  -->
+    <section class="game-area-2 space-top overflow-hidden">
       <div class="container">
-        <!-- OUR PRIVACY POLICY section  -->
-        <div class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              OUR PRIVACY POLICY
-            </h2>
+        <div
+          class="row justify-content-between align-items-center text-lg-start text-center"
+        >
+          <div class="col-lg-auto">
+            <div
+              class="title-area custom-anim-left wow animated"
+              data-wow-duration="1.5s"
+              data-wow-delay="0.2s"
+            >
+              <h2 class="sec-title">
+                OUR RECENT PROJECTS <span class="text-theme">!</span>
+              </h2>
+              <span class="sub-title style2"
+                >Seeking design inpiration?<br />
+                Explore our portfolio to delve into our creative journey.</span
+              >
+            </div>
           </div>
-          <ul class="policy-list">
-            <li>
-              Only image references, text references, and design commissions of
-              the to-be-drawn characters will be accepted at this time.
-            </li>
-            <li>
-              You as the commissioner are responsible for the quality of your
-              references. Please make sure your requests and references are
-              up-to-date, clear, and concise, or you might not receive an
-              accurate depiction of your character.
-            </li>
-            <li>
-              We, the artist, have not started your request, you can amend the
-              request by submitting the provided form again with all the
-              required information. You, as the commissioner, are responsible
-              for providing all of the information for your request in one form.
-            </li>
-            <li>
-              Completed commissions are not permitted to be edited or colored by
-              another artist, including the commissioner. Cropping for profile
-              pictures is allowed as the one exception.
-            </li>
-            <li>
-              We, the artist, will not be held accountable to correct or adjust
-              commissions due to unclear or undefined information provided by
-              the commissioner in the order form. We, the artist, will be
-              accountable to correct or adjust commissions where we have failed
-              to follow provided reference material and requests.
-            </li>
-            <li>
-              If artwork needs additional edits and the fault lies in the
-              provided reference material by the commissioner, edits may be
-              requested without an additional fee.
-            </li>
-          </ul>
-        </div>
-        <!-- disclaimer section  -->
-        <div style="margin-top: 5rem" class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              DISCLAIMER
-            </h2>
+          <div class="col-lg-auto d-flex justify-content-center">
+            <div
+              class="sec-btn custom-anim-right wow animated"
+              data-wow-duration="1.5s"
+              data-wow-delay="0.2s"
+            >
+              <a href="contact.html" class="th-btn"
+                >See All <i class="fa-solid fa-arrow-right ms-2"></i
+              ></a>
+            </div>
           </div>
-          <ul class="policy-list">
-            <li>
-              We reserve the right to refund a commission at any time if we feel
-              we are unable to complete the request.
-            </li>
-            <li>
-              We reserve the right to update or clarify any of these conditions
-              at any time or as needed to better protect myself as the artist
-              and you as the commissioner from misunderstanding or wrongful
-              harm.
-            </li>
-          </ul>
-        </div>
-        <!-- Payment section  -->
-        <div style="margin-top: 5rem" class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              PAYMENT
-            </h2>
-            <h4 class="alt_title">USD CURRENCY</h4>
-          </div>
-          <ul class="policy-list">
-            <li>
-              We, the artist, require payment of
-              <span class="text-theme">30%</span> upfront before we start
-              drawing.
-            </li>
-            <li>
-              If we, the artist, have not started your request, you can amend
-              the request by submitting the provided form again with all the
-              required information. You, as the commissioner, are responsible
-              for providing all of the information for your request in one form.
-            </li>
-            <li>
-              If you make a payment below <span class="text-theme">30%</span>,
-              the prices will increase; if you make more than
-              <span class="text-theme">50%</span> payment, you will get an
-              additional discount.
-            </li>
-            <li>
-              Even though we are a SFW artist, all commissioned work must be
-              ordered by persons who are <span class="text-theme">18+</span> and
-              can legally agree to these terms.
-            </li>
-          </ul>
-        </div>
-        <!-- invoice section  -->
-        <div style="margin-top: 5rem" class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              INVOICE CONTRACT
-            </h2>
-          </div>
-          <ul class="policy-list">
-            <li>
-              You are agreeing to pay the price for the artist to perform a
-              service to produce your request.
-            </li>
-            <li>
-              Once you pay the invoice, you agree to all terms and conditions
-              listed here, and the work is bound by contract refunds and time
-              frame.
-            </li>
-            <li>Refunds are not offered for contracted work.</li>
-            <li>
-              If we, the artist, are unable to complete the request, a refund
-              will be provided.
-            </li>
-            <li>
-              The time frame for completion is between
-              <span class="text-theme">2 to 6</span> weeks.
-            </li>
-            <li>
-              If 8 weeks pass and no work has been completed by the artist, this
-              is a breach of contract. The client can ask for a full refund at
-              this time or continue to wait for the art of their choice.
-            </li>
-          </ul>
-        </div>
-        <!-- WIPS section  -->
-        <div style="margin-top: 5rem" class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              WIPS <span class="alt_title">(WORK IN PROGRESS SCREEN-CAPS)</span>
-            </h2>
-          </div>
-          <div class="checklist list-two-column">
-            <ul>
-              <li>
-                <i class="far fa-shield-check"></i>You will be provided with a
-                WIP preview at every stage of the project.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- ART AND ARTISTIC section  -->
-        <div style="margin-top: 5rem" class="team-about-card">
-          <div class="title-area mb-0">
-            <h2 class="sec-title" style="margin-bottom: 10px !important">
-              ART AND ARTISTIC RIGHTS
-            </h2>
-          </div>
-          <ul class="policy-list">
-            <li>
-              We, the artist, reserve all artistic rights to commissioned work.
-              We, the artist, may use artwork in online or physical galleries,
-              portfolios, printed material, any form of publication, or
-              distribution with credit to the commissioner for commission
-              credits unless the commission is purchased as a work for hire at
-              the time of the initial order.
-            </li>
-            <li>
-              You, as the commissioner, may use commissioned work for personal
-              display, pending artist credits/gallery links are posted with the
-              display back to the artist. (i.e., online icons, online
-              signatures, layouts, wallpapers, social sites, etc.)
-            </li>
-            <li>
-              We, as the artist, will deliver the final product of the
-              commission to the person who purchased the artwork when it is
-              completed. Public posts of the artwork by the artist will credit
-              the commissioner and whom the piece depicts.
-            </li>
-          </ul>
         </div>
       </div>
     </section>
+    <!-- projs section  -->
+    <section class="game-area-3 overflow-hidden">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-auto">
+            <div
+              class="title-area custom-anim-top wow"
+              data-wow-duration="1.5s"
+              data-wow-delay="0.2s"
+            >
+              <!-- tab buttons -->
+
+              
+
+              <div
+                style="border-radius: 2px; padding-bottom: 5rem;"
+                class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow"
+              >
+                <!-- <button
+                  data-filter=".logo"
+                  class="tab-btn active"
+                  type="button"
+                  data-heading="Logo Design"
+                >
+                  Logo Design
+                </button> -->
+                <div class="dropdown">
+                  <button class="tab-btn active" type="button">
+                    Mouse over me
+                  </button>
+                  <div style="z-index: 20 ;" class="dropdown-content">
+                    <p>Hello World!</p>
+                  </div>
+                </div>
+                <button
+                  data-filter=".web"
+                  class="tab-btn"
+                  type="button"
+                  data-heading="Web development"
+                >
+                  Web Development
+                </button>
+                <button
+                  data-filter=".design"
+                  class="tab-btn"
+                  type="button"
+                  data-heading="UI/UX Design"
+                >
+                  UI/UX Design
+                </button>
+                <button
+                  data-filter=".branding"
+                  class="tab-btn"
+                  type="button"
+                  data-heading="Brandings"
+                >
+                  Branding
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="sec-title main-heading self-center">Logo Design</h2>
+        <div class="row gy-4 filter-active">
+          <div
+            class="col-lg-4 col-md-6 filter-item logo"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/1.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item logo"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/2.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item logo"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/3.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 filter-item web" style="display: block">
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/4.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 filter-item web" style="display: block">
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/5.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 filter-item web" style="display: block">
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/1.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item design"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/2.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item design"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/3.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item design"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/4.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item branding"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/5.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item branding"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/3.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 filter-item branding"
+            style="display: block"
+          >
+            <div
+              class="game-card style3"
+              data-mask-src="assets/img/game/game_card3_bg.jpg"
+            >
+              <div>
+                <img
+                  src="assets/img/Projects/1.png"
+                  alt="game image"
+                  class="masked-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="overflow-hidden position-relative z-index-common"
+      data-bg-src="assets/img/bg/about-bg2.png"
+    >
+      <div class="gr-bg1 space-top"></div>
+    </section>
     <!-- contact section  -->
-    <section class="space">
+    <section class="spac">
       <div
         class="contact-sec-1 bg-repeat overflow-hidden space"
         data-bg-src="assets/img/bg/jiji-bg2.png"
@@ -559,7 +729,7 @@
         </div>
       </div>
     </section>
-    <!-- footer  -->
+
     <footer class="footer-wrapper footer-layout1">
       <div class="container">
         <div class="footer-top text-center">
@@ -713,5 +883,4 @@
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
-  <!-- Mirrored from html.themeholy.com/bame/demo/game-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 24 Jun 2025 19:32:42 GMT -->
 </html>
