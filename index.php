@@ -178,9 +178,10 @@
     }
 
     .dropdown li a {
-      color: var(--white-color);
-      text-decoration: none;
-      display: block;
+          color: #ebebeb;
+    text-decoration: none;
+    display: block;
+    font-size: small;
     }
 
 
@@ -363,23 +364,23 @@
             <div class="game-filter-btn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
-                <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Stream Design">Stream Design</button>
+                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category active" data-filter=".logo" data-heading="Logo designs">
-                      <a href="javascript:void(0)">Logo designs</a>
+                    <li class="category active" data-filter=".logo" data-heading="Logo Designs">
+                      <a href="javascript:void(0)">Logo Designs</a>
                     </li>
-                    <li class="category" data-filter=".web" data-heading="overlay designs">
-                      <a href="javascript:void(0)">Overlay designs</a>
+                    <li class="category" data-filter=".web" data-heading="Overlay Designs">
+                      <a href="javascript:void(0)">Overlay Designs</a>
                     </li>
-                    <li class="category" data-filter=".branding" data-heading="emotes">
+                    <li class="category" data-filter=".branding" data-heading="Emotes">
                       <a href="javascript:void(0)">Emotes</a>
                     </li>
-                    <li class="category" data-filter=".design" data-heading="sub badges">
-                      <a href="javascript:void(0)">Sub badges</a>
+                    <li class="category" data-filter=".design" data-heading="Sub Badges">
+                      <a href="javascript:void(0)">Sub Badges</a>
                     </li>
-                    <li class="category" data-filter=".logo" data-heading="banner">
-                      <a href="javascript:void(0)">Banner</a>
+                    <li class="category" data-filter=".logo" data-heading="banners">
+                      <a href="javascript:void(0)">Banners</a>
                     </li>
                   </ul>
                 </div>
@@ -388,8 +389,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">2D models</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">3D models</a></li>
+                    <li class="category " data-filter=".branding" data-heading="2D Models"><a href="javascript:void(0)">2D Models</a></li>
+                    <li class="category " data-filter=".branding" data-heading="3D Models"><a href="javascript:void(0)">3D Models</a></li>
                   </ul>
                 </div>
               </div>
@@ -397,8 +398,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Printable Designs"><a href="javascript:void(0)">Printable Designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Product Designs"><a href="javascript:void(0)">Product Designs</a></li>
                   </ul>
                 </div>
               </div>
@@ -415,8 +416,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Reference Sheet"><a href="javascript:void(0)">Reference Sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Physical Fursuit"><a href="javascript:void(0)">Physical Fursuit</a></li>
                   </ul>
                 </div>
               </div>
@@ -433,10 +434,10 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Websites">Websites</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Shopify</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Wordpress</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Ui/Ux</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Custom"><a href="javascript:void(0)">Custom</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Shopify"><a href="javascript:void(0)">Shopify</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Wordpress"><a href="javascript:void(0)">Wordpress</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Ui/Ux"><a href="javascript:void(0)">Ui/Ux</a></li>
                   </ul>
                 </div>
               </div>
@@ -462,9 +463,9 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Animations">Animations</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Logo intros</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom animations</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Product Animations</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Logo Intros"><a href="javascript:void(0)">Logo Intros</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Custom Animations"><a href="javascript:void(0)">Custom Animations</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Product Animations"><a href="javascript:void(0)">Product Animations</a></li>
                   </ul>
                 </div>
               </div>
@@ -1423,96 +1424,96 @@
   </div>
 
   <script>
-      const image = document.getElementById("rotatable");
-      let isDragging = false;
-      let startX, startY;
-      let rotateX = 20,
-        rotateY = 20; // Slight initial angle for better 3D effect
+    const image = document.getElementById("rotatable");
+    let isDragging = false;
+    let startX, startY;
+    let rotateX = 20,
+      rotateY = 20; // Slight initial angle for better 3D effect
 
-      // Prevent default drag behavior
-      image.addEventListener("dragstart", (e) => {
-        e.preventDefault();
-      });
+    // Prevent default drag behavior
+    image.addEventListener("dragstart", (e) => {
+      e.preventDefault();
+    });
 
-      // Mouse down event - start rotation
-      image.addEventListener("mousedown", (e) => {
-        isDragging = true;
-        startX = e.clientX;
-        startY = e.clientY;
-        image.style.cursor = "grabbing";
-        image.style.transition = "none"; // Disable transition during drag
-      });
+    // Mouse down event - start rotation
+    image.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      image.style.cursor = "grabbing";
+      image.style.transition = "none"; // Disable transition during drag
+    });
 
-      // Mouse move event - rotate image
-      document.addEventListener("mousemove", (e) => {
-        if (!isDragging) return;
+    // Mouse move event - rotate image
+    document.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
 
-        const moveX = e.clientX - startX;
-        const moveY = e.clientY - startY;
+      const moveX = e.clientX - startX;
+      const moveY = e.clientY - startY;
 
-        rotateY += moveX / 3;
-        rotateX -= moveY / 3;
+      rotateY += moveX / 3;
+      rotateX -= moveY / 3;
 
-        // Limit vertical rotation for more natural movement
-        rotateX = Math.max(-60, Math.min(60, rotateX));
+      // Limit vertical rotation for more natural movement
+      rotateX = Math.max(-60, Math.min(60, rotateX));
 
-        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-        // Update start position for smoother continuous rotation
-        startX = e.clientX;
-        startY = e.clientY;
-      });
+      // Update start position for smoother continuous rotation
+      startX = e.clientX;
+      startY = e.clientY;
+    });
 
-      // Mouse up event - stop rotation
-      document.addEventListener("mouseup", () => {
-        if (isDragging) {
-          isDragging = false;
-          image.style.cursor = "grab";
-          image.style.transition = "transform 0.5s ease-out";
-        }
-      });
+    // Mouse up event - stop rotation
+    document.addEventListener("mouseup", () => {
+      if (isDragging) {
+        isDragging = false;
+        image.style.cursor = "grab";
+        image.style.transition = "transform 0.5s ease-out";
+      }
+    });
 
-      // Touch support for mobile devices
-      image.addEventListener("touchstart", (e) => {
-        isDragging = true;
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        image.style.transition = "none";
-        e.preventDefault();
-      });
+    // Touch support for mobile devices
+    image.addEventListener("touchstart", (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      image.style.transition = "none";
+      e.preventDefault();
+    });
 
-      document.addEventListener("touchmove", (e) => {
-        if (!isDragging) return;
+    document.addEventListener("touchmove", (e) => {
+      if (!isDragging) return;
 
-        const moveX = e.touches[0].clientX - startX;
-        const moveY = e.touches[0].clientY - startY;
+      const moveX = e.touches[0].clientX - startX;
+      const moveY = e.touches[0].clientY - startY;
 
-        rotateY += moveX / 3;
-        rotateX -= moveY / 3;
+      rotateY += moveX / 3;
+      rotateX -= moveY / 3;
 
-        rotateX = Math.max(-60, Math.min(60, rotateX));
+      rotateX = Math.max(-60, Math.min(60, rotateX));
 
-        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
 
-        startX = e.touches[0].clientX;
-        startY = e.touches[0].clientY;
-        e.preventDefault();
-      });
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      e.preventDefault();
+    });
 
-      document.addEventListener("touchend", () => {
-        if (isDragging) {
-          isDragging = false;
-          image.style.transition = "transform 0.5s ease-out";
-        }
-      });
+    document.addEventListener("touchend", () => {
+      if (isDragging) {
+        isDragging = false;
+        image.style.transition = "transform 0.5s ease-out";
+      }
+    });
 
-      // Add an event listener for when the flip animation ends
-      image.addEventListener("animationend", () => {
-        // Remove the flip animation after it's completed
-        image.style.animation = "none"; // Remove the animation
-        image.style.transition = "transform 0.5s ease-out"; // Allow smooth rotation after the flip
-      });
-    </script>
+    // Add an event listener for when the flip animation ends
+    image.addEventListener("animationend", () => {
+      // Remove the flip animation after it's completed
+      image.style.animation = "none"; // Remove the animation
+      image.style.transition = "transform 0.5s ease-out"; // Allow smooth rotation after the flip
+    });
+  </script>
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>

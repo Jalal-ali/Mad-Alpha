@@ -175,10 +175,11 @@
       padding: 8px 16px;
     }
 
-    .dropdown li a {
-      color: var(--white-color);
-      text-decoration: none;
-      display: block;
+   .dropdown li a {
+          color: #ebebeb;
+    text-decoration: none;
+    display: block;
+    font-size: small;
     }
 
 
@@ -286,13 +287,13 @@
       </div>
     </div>
   </section>
-  <!-- projs section  -->
+ <!-- projs section  -->
   <section class="game-area-3 overflow-hidden projects-sec-v2"
     data-bg-src="assets/img/bg/tournament-sec2-bg.png">
     <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
         <img src="assets/img/bg/tournament-sec1-bg.png" alt="img" />
       </div> -->
-    <div class="container">
+    <div class="container py-20">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
           <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -300,23 +301,23 @@
             <div class="game-filter-btn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
-                <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Stream Design">Stream Design</button>
+                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category active" data-filter=".logo" data-heading="Logo designs">
-                      <a href="javascript:void(0)">Logo designs</a>
+                    <li class="category active" data-filter=".logo" data-heading="Logo Designs">
+                      <a href="javascript:void(0)">Logo Designs</a>
                     </li>
-                    <li class="category" data-filter=".web" data-heading="overlay designs">
-                      <a href="javascript:void(0)">Overlay designs</a>
+                    <li class="category" data-filter=".web" data-heading="Overlay Designs">
+                      <a href="javascript:void(0)">Overlay Designs</a>
                     </li>
-                    <li class="category" data-filter=".branding" data-heading="emotes">
+                    <li class="category" data-filter=".branding" data-heading="Emotes">
                       <a href="javascript:void(0)">Emotes</a>
                     </li>
-                    <li class="category" data-filter=".design" data-heading="sub badges">
-                      <a href="javascript:void(0)">Sub badges</a>
+                    <li class="category" data-filter=".design" data-heading="Sub Badges">
+                      <a href="javascript:void(0)">Sub Badges</a>
                     </li>
-                    <li class="category" data-filter=".logo" data-heading="banner">
-                      <a href="javascript:void(0)">Banner</a>
+                    <li class="category" data-filter=".logo" data-heading="banners">
+                      <a href="javascript:void(0)">Banners</a>
                     </li>
                   </ul>
                 </div>
@@ -325,8 +326,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">2D models</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">3D models</a></li>
+                    <li class="category " data-filter=".branding" data-heading="2D Models"><a href="javascript:void(0)">2D Models</a></li>
+                    <li class="category " data-filter=".branding" data-heading="3D Models"><a href="javascript:void(0)">3D Models</a></li>
                   </ul>
                 </div>
               </div>
@@ -334,8 +335,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Printable Designs"><a href="javascript:void(0)">Printable Designs</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Product Designs"><a href="javascript:void(0)">Product Designs</a></li>
                   </ul>
                 </div>
               </div>
@@ -352,8 +353,8 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Reference Sheet"><a href="javascript:void(0)">Reference Sheet</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Physical Fursuit"><a href="javascript:void(0)">Physical Fursuit</a></li>
                   </ul>
                 </div>
               </div>
@@ -370,10 +371,10 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Websites">Websites</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Shopify</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Wordpress</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Ui/Ux</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Custom"><a href="javascript:void(0)">Custom</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Shopify"><a href="javascript:void(0)">Shopify</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Wordpress"><a href="javascript:void(0)">Wordpress</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Ui/Ux"><a href="javascript:void(0)">Ui/Ux</a></li>
                   </ul>
                 </div>
               </div>
@@ -399,9 +400,9 @@
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Animations">Animations</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Logo intros</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Custom animations</a></li>
-                    <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Product Animations</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Logo Intros"><a href="javascript:void(0)">Logo Intros</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Custom Animations"><a href="javascript:void(0)">Custom Animations</a></li>
+                    <li class="category " data-filter=".branding" data-heading="Product Animations"><a href="javascript:void(0)">Product Animations</a></li>
                   </ul>
                 </div>
               </div>
@@ -409,92 +410,93 @@
             </div>
             <!-- tab-buttons ended ...  -->
 
-            <!-- Add other tab-wrapper blocks similarly -->
+            <!-- heading  -->
             <h2 style=" color :var(--smoke-color);
             letter-spacing: 1px;
             filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Stream Design</h2>
           </div>
         </div>
       </div>
+      <!-- project images section  -->
       <div class="row gy-4 filter-active">
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item logo shadow-bg" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
