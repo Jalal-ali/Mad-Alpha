@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Author Info -->
   <meta name="author" content="Mad Alpha" />
-  <title>Mad-α | Policy</title>
+  <title>Mad-&#945 | Policy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link

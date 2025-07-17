@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Author Info -->
   <meta name="author" content="Mad Alpha" />
-  <title>Mad-α | Home</title>
+  <title>Mad-&#945 | Home</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -19,6 +19,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
+      $('.filter-active').isotope({
+        filter: '*', // Make sure nothing is shown initially
+        hiddenStyle: {
+          opacity: 0 // or display: 'none' depending on your needs
+        }
+      });
+
+      // Then apply the filter to show only the logos
       $('.filter-active').isotope({
         filter: '.logo'
       });
@@ -62,6 +70,29 @@
       -webkit-mask-size: 100% 100%;
       rotate: 0.4deg;
     }
+
+    .projects-sec-v2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      /* padding-top: calc(110px + 20px); */
+    }
+
+    .projects-sec-v2:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: -webkit-linear-gradient(top,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      background: linear-gradient(180deg,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      z-index: -1;
+    }
+
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
     .game-filter-btn .tab-wrapper .tab-btn {
@@ -119,6 +150,7 @@
       flex: 1 1 100%;
       padding: 0 7px;
       margin: 4px auto;
+
     }
 
     .tab-wrapper:hover .dropdown {
@@ -266,14 +298,17 @@
     </div>
   </section>
   <!-- projs section  -->
-  <section class="game-area-3 overflow-hidden">
+  <section class="game-area-3 overflow-hidden projects-sec-v2"
+    data-bg-src="assets/img/bg/tournament-sec2-bg.png">
+    <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
+        <img src="assets/img/bg/tournament-sec1-bg.png" alt="img" />
+      </div> -->
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
-          <div class="title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+          <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-
-            <div class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+            <div class="game-filter-btn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
                 <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Stream Design">Stream Design</button>
@@ -483,8 +518,7 @@
   <!-- pricing section  -->
   <section
     class="pricing-sec-v2 space-bottom"
-    data-bg-src="assets/img/bg/tournament-sec2-bg.png"
-    >
+    data-bg-src="assets/img/bg/tournament-sec2-bg.png">
     <div class="col-lg-auto">
       <div
         class="title-area custom-anim-left wow animated"
@@ -938,9 +972,13 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-1.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
+                          <!-- <img
+                            src="assets/img/icon/review-user.svg"
+                            alt="img" /> -->
                         </div>
                         <h3 class="testi-card_name">DEMIAN MARTIN</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->
@@ -966,9 +1004,10 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-2.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
                         </div>
                         <h3 class="testi-card_name">JOHN SMITH</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->
@@ -993,9 +1032,10 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-3.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
                         </div>
                         <h3 class="testi-card_name">JANE DOE</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->
@@ -1022,9 +1062,10 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-1.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
                         </div>
                         <h3 class="testi-card_name">DEMIAN MARTIN</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->
@@ -1050,9 +1091,10 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-2.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
                         </div>
                         <h3 class="testi-card_name">JOHN SMITH</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->
@@ -1077,9 +1119,10 @@
                     <div class="testi-card_profile">
                       <div class="testi-card_content">
                         <div class="testi-card_avater">
-                          <img
-                            src="assets/img/testimonial/testi1-3.png"
-                            alt="img" />
+                          <svg style=" fill: var(--theme-color)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 
+                            13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                          </svg>
                         </div>
                         <h3 class="testi-card_name">JANE DOE</h3>
                         <!-- <span class="testi-card_desig">Video Gamer</span> -->

@@ -6344,7 +6344,7 @@ a.text-theme:hover,
   background: linear-gradient(
     96deg,
     var(--theme-color) 0%,
-    var(--theme-color2) 100%
+    #0bfff17a 100%
   );
   position: absolute;
   bottom: 0;

@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Author Info -->
   <meta name="author" content="Mad Alpha" />
-  <title>Mad-α | Portfolio</title>
+  <title>Mad-&#945 | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -70,7 +70,6 @@
       -webkit-mask-size: 100% 100%;
       rotate: 0.4deg;
     }
-
     .projects-sec-v2 {
       position: relative;
       z-index: 1;

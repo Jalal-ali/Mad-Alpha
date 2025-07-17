@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Author Info -->
   <meta name="author" content="Mad Alpha" />
-  <title>Mad-α | Testimonials</title>
+  <title>Mad-&#945 | Testimonials</title>
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -48,6 +48,28 @@
       background-color: #232f3624;
       overflow: hidden;
     }
+      .testimonials-sec-v2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      /* padding-top: calc(110px + 20px); */
+    }
+
+    .testimonials-sec-v2:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: -webkit-linear-gradient(top,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      background: linear-gradient(180deg,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      z-index: -1;
+    }
+
   </style>
 </head>
 
