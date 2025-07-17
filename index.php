@@ -428,7 +428,7 @@
         </div>
       </div>
       <div class="row gy-4 filter-active">
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item logo shadow-bg" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
