@@ -221,6 +221,29 @@
       color: var(--black-color);
       /* font-weight: 500; */
     }
+    /* ----------------------------3d character anim -----------------  */
+       .character {
+            text-align: center;
+            transform-style: preserve-3d;
+        }
+        
+        .rotatable-image {
+            width: 48rem;
+    height: max-content;
+            object-fit: cover;
+            cursor: grab;
+            transition: transform 0.1s ease-out;
+            user-select: none;
+            -webkit-user-drag: none; /* Prevent dragging in WebKit browsers */
+            /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
+            /* border-radius: 5px; */
+        }
+        
+        .instructions {
+            margin-top: 20px;
+            color: #666;
+            user-select: none;
+        }
   </style>
 </head>
 
@@ -244,9 +267,9 @@
     <div class="container-fluid">
       <div class="hero-style2">
         <div class="hero-title-thumb">
-          <!-- top character 1  -->
+          <!-- top character img  -->
           <div class="character">
-            <img src="assets/img/hero/CHARACTER.png" alt="img" />
+            <img id="rotatable" class="rotatable-image" src="assets/img/hero/CHARACTER.png" alt="Rotatable Image">
           </div>
           <!-- top img 2  -->
           <div
@@ -1368,6 +1391,90 @@
           "></path>
     </svg>
   </div>
+
+  <script>
+        const image = document.getElementById('rotatable');
+        let isDragging = false;
+        let startX, startY;
+        let rotateX = 20, rotateY = 20; // Slight initial angle for better 3D effect
+        
+        // Prevent default drag behavior
+        image.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+        
+        // Mouse down event - start rotation
+        image.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startX = e.clientX;
+            startY = e.clientY;
+            image.style.cursor = 'grabbing';
+            image.style.transition = 'none';
+        });
+        
+        // Mouse move event - rotate image
+        document.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            
+            const moveX = e.clientX - startX;
+            const moveY = e.clientY - startY;
+            
+            rotateY += moveX / 3;
+            rotateX -= moveY / 3;
+            
+            // Limit vertical rotation for more natural movement
+            rotateX = Math.max(-60, Math.min(60, rotateX));
+            
+            image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            // Update start position for smoother continuous rotation
+            startX = e.clientX;
+            startY = e.clientY;
+        });
+        
+        // Mouse up event - stop rotation
+        document.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                image.style.cursor = 'grab';
+                image.style.transition = 'transform 0.5s ease-out';
+            }
+        });
+        
+        // Touch support for mobile devices
+        image.addEventListener('touchstart', (e) => {
+            isDragging = true;
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            image.style.transition = 'none';
+            e.preventDefault();
+        });
+        
+        document.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+            
+            const moveX = e.touches[0].clientX - startX;
+            const moveY = e.touches[0].clientY - startY;
+            
+            rotateY += moveX / 3;
+            rotateX -= moveY / 3;
+            
+            rotateX = Math.max(-60, Math.min(60, rotateX));
+            
+            image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            e.preventDefault();
+        });
+        
+        document.addEventListener('touchend', () => {
+            if (isDragging) {
+                isDragging = false;
+                image.style.transition = 'transform 0.5s ease-out';
+            }
+        });
+    </script>
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>
