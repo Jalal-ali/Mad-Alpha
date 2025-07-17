@@ -2,7 +2,7 @@
 <html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="assets/logo/imgi_1_LOGO.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Author Info -->
@@ -19,6 +19,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
+      $('.filter-active').isotope({
+        filter: '*', // Make sure nothing is shown initially
+        hiddenStyle: {
+          opacity: 0 // or display: 'none' depending on your needs
+        }
+      });
+
+      // Then apply the filter to show only the logos
       $('.filter-active').isotope({
         filter: '.logo'
       });
@@ -51,7 +59,7 @@
       overflow: hidden;
     }
 
-    .masked-img  {
+    .masked-img {
       /* position: absolute; */
       width: 100%;
       height: 100%;
@@ -61,6 +69,28 @@
       mask-size: 100% 100%;
       -webkit-mask-size: 100% 100%;
       rotate: 0.4deg;
+    }
+
+    .projects-sec-v2 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      /* padding-top: calc(110px + 20px); */
+    }
+
+    .projects-sec-v2:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: -webkit-linear-gradient(top,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      background: linear-gradient(180deg,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      z-index: -1;
     }
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
@@ -119,7 +149,7 @@
       flex: 1 1 100%;
       padding: 0 7px;
       margin: 4px auto;
-      
+
     }
 
     .tab-wrapper:hover .dropdown {
@@ -258,14 +288,17 @@
     </div>
   </section>
   <!-- projs section  -->
-  <section class="game-area-3 overflow-hidden">
+  <section class="game-area-3 overflow-hidden projects-sec-v2"
+    data-bg-src="assets/img/bg/tournament-sec2-bg.png">
+    <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
+        <img src="assets/img/bg/tournament-sec1-bg.png" alt="img" />
+      </div> -->
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
-          <div class="title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+          <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-
-            <div class="game-filter-btn filter-menu filter-menu-active custom-anim-top wow">
+            <div class="game-filter-btn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
                 <button data-filter=".logo" class="tab-btn active" type="button" data-heading="Stream Design">Stream Design</button>
@@ -668,7 +701,7 @@
     </div>
   </section>
 
-    <!-- footer  -->
+  <!-- footer  -->
   <?php
   include 'footer.php';
   ?>

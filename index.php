@@ -483,7 +483,8 @@
   <!-- pricing section  -->
   <section
     class="pricing-sec-v2 space-bottom"
-    data-bg-src="assets/img/bg/tournament-sec2-bg.png">
+    data-bg-src="assets/img/bg/tournament-sec2-bg.png"
+    >
     <div class="col-lg-auto">
       <div
         class="title-area custom-anim-left wow animated"

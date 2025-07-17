@@ -20101,30 +20101,13 @@ span.select2-selection.select2-selection--single:focus {
 }
 
 .game-filter-btn {
-  background: var(--black-color2);
-  padding: 12px;
-  gap: 12px;
-  -webkit-clip-path: polygon(
-    18px 0%,
-    calc(100% - 18px) 0%,
-    100% 18px,
-    100% calc(100% - 18px),
-    calc(100% - 18px) 100%,
-    18px 100%,
-    0% calc(100% - 18px),
-    0% 18px
-  );
-  clip-path: polygon(
-    18px 0%,
-    calc(100% - 18px) 0%,
-    100% 18px,
-    100% calc(100% - 18px),
-    calc(100% - 18px) 100%,
-    18px 100%,
-    0% calc(100% - 18px),
-    0% 18px
-  );
-  margin-bottom: 50px;
+    background: #afafaf12;
+    padding: 12px;
+    gap: 12px;
+    -webkit-clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
+    clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
+    margin-bottom: 50px;
+    z-index: -1;
 }
 
 .game-filter-btn .tab-btn {
