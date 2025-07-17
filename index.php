@@ -221,29 +221,58 @@
       color: var(--black-color);
       /* font-weight: 500; */
     }
+
     /* ----------------------------3d character anim -----------------  */
-       .character {
-            text-align: center;
-            transform-style: preserve-3d;
-        }
-        
-        .rotatable-image {
-            width: 48rem;
-    height: max-content;
-            object-fit: cover;
-            cursor: grab;
-            transition: transform 0.1s ease-out;
-            user-select: none;
-            -webkit-user-drag: none; /* Prevent dragging in WebKit browsers */
-            /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
-            /* border-radius: 5px; */
-        }
-        
-        .instructions {
+    .character {
+      text-align: center;
+      transform-style: preserve-3d;
+      perspective: 1200px;
+
+    }
+
+    .rotatable-image {
+      width: 48rem;
+      height: max-content;
+      object-fit: cover;
+      cursor: grab;
+      transition: transform 0.1s ease-out;
+      user-select: none;
+      -webkit-user-drag: none;
+      /* Prevent dragging in WebKit browsers */
+      /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
+      /* border-radius: 5px; */
+      animation: flip 4s ease-in-out forwards;
+    }
+
+    /* Keyframes for the flip animation */
+    @keyframes flip {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      25% {
+        transform: rotateY(90deg);
+      }
+
+      50% {
+        transform: rotateY(180deg);
+      }
+
+      75% {
+        transform: rotateY(270deg);
+      }
+
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+
+
+    /* .instructions {
             margin-top: 20px;
             color: #666;
             user-select: none;
-        }
+        } */
   </style>
 </head>
 
@@ -326,7 +355,7 @@
     <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
         <img src="assets/img/bg/tournament-sec1-bg.png" alt="img" />
       </div> -->
-    <div class="container">
+    <div class="container py-20">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
           <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
@@ -443,13 +472,14 @@
             </div>
             <!-- tab-buttons ended ...  -->
 
-            <!-- Add other tab-wrapper blocks similarly -->
+            <!-- heading  -->
             <h2 style=" color :var(--smoke-color);
             letter-spacing: 1px;
             filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Stream Design</h2>
           </div>
         </div>
       </div>
+      <!-- project images section  -->
       <div class="row gy-4 filter-active">
         <div class="col-lg-4 col-md-6 filter-item logo shadow-bg" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
@@ -458,77 +488,77 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item logo" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item web" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item design" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 filter-item branding" style="display: block;">
+        <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
               <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
@@ -1393,87 +1423,95 @@
   </div>
 
   <script>
-        const image = document.getElementById('rotatable');
-        let isDragging = false;
-        let startX, startY;
-        let rotateX = 20, rotateY = 20; // Slight initial angle for better 3D effect
-        
-        // Prevent default drag behavior
-        image.addEventListener('dragstart', (e) => {
-            e.preventDefault();
-        });
-        
-        // Mouse down event - start rotation
-        image.addEventListener('mousedown', (e) => {
-            isDragging = true;
-            startX = e.clientX;
-            startY = e.clientY;
-            image.style.cursor = 'grabbing';
-            image.style.transition = 'none';
-        });
-        
-        // Mouse move event - rotate image
-        document.addEventListener('mousemove', (e) => {
-            if (!isDragging) return;
-            
-            const moveX = e.clientX - startX;
-            const moveY = e.clientY - startY;
-            
-            rotateY += moveX / 3;
-            rotateX -= moveY / 3;
-            
-            // Limit vertical rotation for more natural movement
-            rotateX = Math.max(-60, Math.min(60, rotateX));
-            
-            image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            
-            // Update start position for smoother continuous rotation
-            startX = e.clientX;
-            startY = e.clientY;
-        });
-        
-        // Mouse up event - stop rotation
-        document.addEventListener('mouseup', () => {
-            if (isDragging) {
-                isDragging = false;
-                image.style.cursor = 'grab';
-                image.style.transition = 'transform 0.5s ease-out';
-            }
-        });
-        
-        // Touch support for mobile devices
-        image.addEventListener('touchstart', (e) => {
-            isDragging = true;
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-            image.style.transition = 'none';
-            e.preventDefault();
-        });
-        
-        document.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            
-            const moveX = e.touches[0].clientX - startX;
-            const moveY = e.touches[0].clientY - startY;
-            
-            rotateY += moveX / 3;
-            rotateX -= moveY / 3;
-            
-            rotateX = Math.max(-60, Math.min(60, rotateX));
-            
-            image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-            
-            startX = e.touches[0].clientX;
-            startY = e.touches[0].clientY;
-            e.preventDefault();
-        });
-        
-        document.addEventListener('touchend', () => {
-            if (isDragging) {
-                isDragging = false;
-                image.style.transition = 'transform 0.5s ease-out';
-            }
-        });
+      const image = document.getElementById("rotatable");
+      let isDragging = false;
+      let startX, startY;
+      let rotateX = 20,
+        rotateY = 20; // Slight initial angle for better 3D effect
+
+      // Prevent default drag behavior
+      image.addEventListener("dragstart", (e) => {
+        e.preventDefault();
+      });
+
+      // Mouse down event - start rotation
+      image.addEventListener("mousedown", (e) => {
+        isDragging = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        image.style.cursor = "grabbing";
+        image.style.transition = "none"; // Disable transition during drag
+      });
+
+      // Mouse move event - rotate image
+      document.addEventListener("mousemove", (e) => {
+        if (!isDragging) return;
+
+        const moveX = e.clientX - startX;
+        const moveY = e.clientY - startY;
+
+        rotateY += moveX / 3;
+        rotateX -= moveY / 3;
+
+        // Limit vertical rotation for more natural movement
+        rotateX = Math.max(-60, Math.min(60, rotateX));
+
+        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+        // Update start position for smoother continuous rotation
+        startX = e.clientX;
+        startY = e.clientY;
+      });
+
+      // Mouse up event - stop rotation
+      document.addEventListener("mouseup", () => {
+        if (isDragging) {
+          isDragging = false;
+          image.style.cursor = "grab";
+          image.style.transition = "transform 0.5s ease-out";
+        }
+      });
+
+      // Touch support for mobile devices
+      image.addEventListener("touchstart", (e) => {
+        isDragging = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        image.style.transition = "none";
+        e.preventDefault();
+      });
+
+      document.addEventListener("touchmove", (e) => {
+        if (!isDragging) return;
+
+        const moveX = e.touches[0].clientX - startX;
+        const moveY = e.touches[0].clientY - startY;
+
+        rotateY += moveX / 3;
+        rotateX -= moveY / 3;
+
+        rotateX = Math.max(-60, Math.min(60, rotateX));
+
+        image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        e.preventDefault();
+      });
+
+      document.addEventListener("touchend", () => {
+        if (isDragging) {
+          isDragging = false;
+          image.style.transition = "transform 0.5s ease-out";
+        }
+      });
+
+      // Add an event listener for when the flip animation ends
+      image.addEventListener("animationend", () => {
+        // Remove the flip animation after it's completed
+        image.style.animation = "none"; // Remove the animation
+        image.style.transition = "transform 0.5s ease-out"; // Allow smooth rotation after the flip
+      });
     </script>
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>
