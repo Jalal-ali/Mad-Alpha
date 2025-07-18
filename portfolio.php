@@ -48,6 +48,8 @@
         }, 500);
       });
     });
+    
+
   </script>
   <style>
     .game-card-img-mask {
@@ -70,6 +72,7 @@
       -webkit-mask-size: 100% 100%;
       rotate: 0.4deg;
     }
+
     .projects-sec-v2 {
       position: relative;
       z-index: 1;
@@ -93,7 +96,7 @@
     }
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
-    .game-filter-btn .tab-wrapper .tab-btn {
+    .game-filter-btnn .tab-wrapper .tab-btn {
       background: var(--title-color) !important;
       border: 0 !important;
       font-size: 18px !important;
@@ -120,8 +123,18 @@
           0% 15px) !important;
     }
 
-    .game-filter-btn .tab-wrapper .tab-btn.active,
-    .game-filter-btn .tab-wrapper .tab-btn:hover {
+    .game-filter-btnn {
+      background: #afafaf12;
+      padding: 12px;
+      gap: 12px;
+      /* -webkit-clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
+    clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px); */
+      margin-bottom: 50px;
+      z-index: -1;
+    }
+
+    .game-filter-btnn .tab-wrapper .tab-btn.active,
+    .game-filter-btnn .tab-wrapper .tab-btn:hover {
       background: var(--theme-color) !important;
       color: var(--title-color) !important;
     }
@@ -141,15 +154,20 @@
     }
 
     .dropdown {
+      position: absolute;
+      z-index: 4;
+      top: 58px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: max-height 1.3s ease;
       width: 100%;
       flex: 1 1 100%;
       padding: 0 7px;
-      margin: 4px auto;
-
+      margin: 1px auto;
+      backdrop-filter: blur(4px);
+      background: #0000000f;
     }
+    
 
     .tab-wrapper:hover .dropdown {
       max-height: max-content;
@@ -175,11 +193,11 @@
       padding: 8px 16px;
     }
 
-   .dropdown li a {
-          color: #ebebeb;
-    text-decoration: none;
-    display: block;
-    font-size: small;
+    .dropdown li a {
+      color: #ebebeb;
+      text-decoration: none;
+      display: block;
+      font-size: 13.5px;
     }
 
 
@@ -287,7 +305,7 @@
       </div>
     </div>
   </section>
- <!-- projs section  -->
+  <!-- projs section  -->
   <section class="game-area-3 overflow-hidden projects-sec-v2"
     data-bg-src="assets/img/bg/tournament-sec2-bg.png">
     <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
@@ -296,12 +314,11 @@
     <div class="container py-20">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
-          <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+          <div class="mt-30 pb-25 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-            <div class="game-filter-btn filter-menu filter-menu-active">
+            <div class="game-filter-btnn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
-                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category active" data-filter=".logo" data-heading="Logo Designs">
@@ -321,51 +338,53 @@
                     </li>
                   </ul>
                 </div>
+                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
                 <div class="dropdown">
+
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="2D Models"><a href="javascript:void(0)">2D Models</a></li>
                     <li class="category " data-filter=".branding" data-heading="3D Models"><a href="javascript:void(0)">3D Models</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="Printable Designs"><a href="javascript:void(0)">Printable Designs</a></li>
                     <li class="category " data-filter=".branding" data-heading="Product Designs"><a href="javascript:void(0)">Product Designs</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Custom Gaming room">Custom Gaming room</button>
                 <!-- <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
                   </ul>
                 </div> -->
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Custom Gaming room">Custom Gaming room</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="Reference Sheet"><a href="javascript:void(0)">Reference Sheet</a></li>
                     <li class="category " data-filter=".branding" data-heading="Physical Fursuit"><a href="javascript:void(0)">Physical Fursuit</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Ebook">Ebook</button>
                 <!-- <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
                   </ul>
                 </div> -->
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Ebook">Ebook</button>
               </div>
               <div class="tab-wrapper">
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Websites">Websites</button>
