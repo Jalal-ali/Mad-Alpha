@@ -48,8 +48,6 @@
         }, 500);
       });
     });
-    
-
   </script>
   <style>
     .game-card-img-mask {
@@ -164,10 +162,11 @@
       flex: 1 1 100%;
       padding: 0 7px;
       margin: 1px auto;
-      backdrop-filter: blur(4px);
-      background: #0000000f;
+      backdrop-filter: blur(3px);
+      background: #3836364d;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
+
 
     .tab-wrapper:hover .dropdown {
       max-height: max-content;
