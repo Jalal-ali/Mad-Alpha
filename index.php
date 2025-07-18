@@ -159,7 +159,6 @@
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       border: 0.175rem solid var(--theme-color);
-
       /* adjust as needed */
     }
 
@@ -178,7 +177,7 @@
     }
 
     .dropdown li a {
-          color: #ebebeb;
+    color: #ebebeb;
     text-decoration: none;
     display: block;
     font-size: small;
@@ -224,7 +223,7 @@
     }
 
     /* ----------------------------3d character anim -----------------  */
-    .character {
+    /* .character {
       text-align: center;
       transform-style: preserve-3d;
       perspective: 1200px;
@@ -239,11 +238,26 @@
       transition: transform 0.1s ease-out;
       user-select: none;
       -webkit-user-drag: none;
-      /* Prevent dragging in WebKit browsers */
-      /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); */
-      /* border-radius: 5px; */
       animation: flip 4s ease-in-out forwards;
-    }
+    } */
+              .character {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            perspective: 1000px;
+        }
+        
+        .rotatable-image {
+            width: 50rem;
+            height: 100%;
+            object-fit: contain;
+            transform-style: preserve-3d;
+            transition: transform 0.1s linear;
+            will-change: transform;
+      /* animation: flip 4s ease-in-out forwards; */
+
+            /* filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4)); */
+        }
 
     /* Keyframes for the flip animation */
     @keyframes flip {
@@ -267,13 +281,16 @@
         transform: rotateY(360deg);
       }
     }
+/* ----------------------------------intro video --------------------------- */
+    video::-webkit-media-controls {
+            display: none !important;  /* Hides the default controls for WebKit browsers */
+        }
 
-
-    /* .instructions {
-            margin-top: 20px;
-            color: #666;
-            user-select: none;
-        } */
+        video {
+            width: 100%; /* Set the width of the video */
+            max-width: 600px; /* Optional: Limit the max width */
+            display: block; /* Remove any unwanted space below the video */
+        }
   </style>
 </head>
 
@@ -309,7 +326,7 @@
             <span
               class="title-img-mask"
               data-mask-src="assets/img/hero/MAD-ALPHA.png"></span>
-            <img src="assets/img/hero/MAD-ALPHA.png" alt="img" />
+            <img src="assets/img/hero/MAD-ALPHA-hero-title.png" alt="img" />
           </div>
         </div>
         <div
@@ -749,21 +766,37 @@
       <!-- Add more  -->
     </div>
   </section>
+
+  <!-- ------------------video section ---------------  -->
   <div
-    class="video-area-1 overflow-hidden"
+    class="video-area-1 overflow-hidden "
     style="
         background-image: url('assets/img/bg/video-sec2-bg.png');
         background-image: url('assets/img/bg/video-sec2-bg-shape.png');
       ">
-    <div class="container">
+      <video style="
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    /* -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important;
+    clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important; */
+" width="500" height="240" loop autoplay muted >
+  <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+    <!-- <div class="container">
       <div class="text-center">
         <a
           href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"
           class="play-btn style4 popup-video"><i class="fa-sharp fa-solid fa-play"></i></a>
       </div>
-    </div>
+    </div> -->
   </div>
-  <section class="">
+  <!-- discord community section  -->
+  <section class="my-5">
     <div class="container z-index-common">
       <div class="cta-wrap2">
         <div
@@ -1005,6 +1038,9 @@
                   class="mask-icon"
                   data-mask-src="assets/img/bg/section-title-bg.svg"></span> </span>REVIEWS</span>
             <h2 class="sec-title mb-0">Loved by our customer worldwide</h2>
+             <div class="btn-wrap justify-content-center my-5">
+          <a href="javascript:void(0)" class="th-btn">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>              
+        </div>
           </div>
           <div class="slider-area testi-slider1">
             <div
@@ -1192,11 +1228,12 @@
                 </div>
                 <!-- review cards ended -->
               </div>
-
+             
+              
               <div class="slider-pagination"></div>
             </div>
             <button
-              data-slider-prev="#testiSlide1"
+            data-slider-prev="#testiSlide1"
               class="slider-arrow style2 slider-prev">
               <i class="far fa-arrow-left"></i>
             </button>
@@ -1206,6 +1243,7 @@
               <i class="far fa-arrow-right"></i>
             </button>
           </div>
+          
         </div>
       </div>
     </div>
@@ -1424,95 +1462,80 @@
   </div>
 
   <script>
-    const image = document.getElementById("rotatable");
-    let isDragging = false;
-    let startX, startY;
-    let rotateX = 20,
-      rotateY = 20; // Slight initial angle for better 3D effect
-
-    // Prevent default drag behavior
-    image.addEventListener("dragstart", (e) => {
-      e.preventDefault();
-    });
-
-    // Mouse down event - start rotation
-    image.addEventListener("mousedown", (e) => {
-      isDragging = true;
-      startX = e.clientX;
-      startY = e.clientY;
-      image.style.cursor = "grabbing";
-      image.style.transition = "none"; // Disable transition during drag
-    });
-
-    // Mouse move event - rotate image
-    document.addEventListener("mousemove", (e) => {
-      if (!isDragging) return;
-
-      const moveX = e.clientX - startX;
-      const moveY = e.clientY - startY;
-
-      rotateY += moveX / 3;
-      rotateX -= moveY / 3;
-
-      // Limit vertical rotation for more natural movement
-      rotateX = Math.max(-60, Math.min(60, rotateX));
-
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-      // Update start position for smoother continuous rotation
-      startX = e.clientX;
-      startY = e.clientY;
-    });
-
-    // Mouse up event - stop rotation
-    document.addEventListener("mouseup", () => {
-      if (isDragging) {
-        isDragging = false;
-        image.style.cursor = "grab";
-        image.style.transition = "transform 0.5s ease-out";
-      }
-    });
-
-    // Touch support for mobile devices
-    image.addEventListener("touchstart", (e) => {
-      isDragging = true;
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-      image.style.transition = "none";
-      e.preventDefault();
-    });
-
-    document.addEventListener("touchmove", (e) => {
-      if (!isDragging) return;
-
-      const moveX = e.touches[0].clientX - startX;
-      const moveY = e.touches[0].clientY - startY;
-
-      rotateY += moveX / 3;
-      rotateX -= moveY / 3;
-
-      rotateX = Math.max(-60, Math.min(60, rotateX));
-
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-      startX = e.touches[0].clientX;
-      startY = e.touches[0].clientY;
-      e.preventDefault();
-    });
-
-    document.addEventListener("touchend", () => {
-      if (isDragging) {
-        isDragging = false;
-        image.style.transition = "transform 0.5s ease-out";
-      }
-    });
-
-    // Add an event listener for when the flip animation ends
-    image.addEventListener("animationend", () => {
-      // Remove the flip animation after it's completed
-      image.style.animation = "none"; // Remove the animation
-      image.style.transition = "transform 0.5s ease-out"; // Allow smooth rotation after the flip
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+            const character = document.querySelector('.character');
+            const image = document.getElementById('rotatable');
+            const loading = document.querySelector('.loading');
+            
+            // Remove loading text when image loads
+            image.onload = () => {
+                loading.style.display = 'none';
+            };
+            
+            // Fallback in case image fails to load
+            setTimeout(() => {
+                loading.style.display = 'none';
+            }, 3000);
+            
+            // 3D effect parameters
+            const maxRotation = 135; // Maximum tilt angle
+            const perspectiveDepth = 1000; // Strength of 3D effect
+            const movementFactor = 0.1; // How much the image follows cursor
+            const scaleAmount = 1.03; // Hover scale effect
+            
+            // Get character center position
+            const getCenter = () => {
+                const rect = character.getBoundingClientRect();
+                return {
+                    x: rect.left + rect.width / 2,
+                    y: rect.top + rect.height / 2
+                };
+            };
+            
+            // Mouse move handler
+            const handleMouseMove = (e) => {
+                const center = getCenter();
+                const x = e.clientX - center.x;
+                const y = e.clientY - center.y;
+                
+                // Calculate rotation based on mouse position
+                const rotateY = (x / (character.offsetWidth / 2)) * maxRotation;
+                const rotateX = -(y / (character.offsetHeight / 2)) * maxRotation;
+                
+                // Apply 3D transformation
+                image.style.transform = `
+                    perspective(${perspectiveDepth}px)
+                    rotateX(${rotateX}deg)
+                    rotateY(${rotateY}deg)
+                    scale(${scaleAmount})
+                `;
+                
+                // Parallax effect for depth
+                const parallaxX = x * movementFactor * 0.1;
+                const parallaxY = y * movementFactor * 0.1;
+                image.style.transform += `translateX(${parallaxX}px) translateY(${parallaxY}px)`;
+            };
+            
+            // Reset on mouse leave
+            const handleMouseLeave = () => {
+                image.style.transform = `
+                    perspective(${perspectiveDepth}px)
+                    rotateX(0)
+                    rotateY(0)
+                    scale(1)
+                `;
+            };
+            
+            // Event listeners
+            character.addEventListener('mousemove', handleMouseMove);
+            character.addEventListener('mouseleave', handleMouseLeave);
+            
+            // Handle window resize
+            window.addEventListener('resize', () => {
+                // Recalculate center position on resize
+                getCenter();
+            });
+        });
   </script>
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>

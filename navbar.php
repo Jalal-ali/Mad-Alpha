@@ -121,7 +121,7 @@
         </div>
       </div>
     </div>
-    <div class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
+    <!-- <div class="sidemenu-wrapper sidemenu-info d-none d-lg-block">
       <div class="sidemenu-content">
         <button class="closeButton sideMenuCls">
           <i class="far fa-times"></i>
@@ -259,7 +259,7 @@
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="popup-search-box d-none d-lg-block">
       <button class="searchClose"><i class="fal fa-times"></i></button>
       <form action="#">
@@ -356,12 +356,12 @@
                   <button type="button" class="simple-icon searchBoxToggler">
                     <i class="far fa-search"></i>
                   </button>
-                  <button type="button" class="simple-icon sideMenuInfo">
+                  <!-- <button type="button" class="simple-icon sideMenuInfo">
                     <i class="fa-solid fa-bars"></i>
-                  </button>
-                  <div class="d-xxl-block d-none">
+                  </button> -->
+                  <div style="margin-bottom: 5px;" class="d-xxl-block d-none">
                     <a href="contact.php" class="th-btn"
-                      ><i class="fa-brands fa-twitch me-1"></i>Live Streaming</a
+                      > PAY NOW <i class="ml-10 fa-solid fa-credit-card"></i></a
                     >
                   </div>
                 </div>

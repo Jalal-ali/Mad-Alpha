@@ -23191,7 +23191,7 @@ span.select2-selection.select2-selection--single:focus {
   mask-size: cover;
   -webkit-mask-position: bottom;
   mask-position: bottom;
-  padding: 182px 0 416px;
+  /* padding-bottom: 20px; */
   background-attachment: fixed;
 }
 
@@ -25324,5 +25324,8 @@ span.select2-selection.select2-selection--single:focus {
   object-fit: cover !important; /* Controls how image fills the space (see options below) */
   object-position: center !important; /* Centers the image within the frame */
   padding-top: 10px;
+}
+.justify-between{
+  justify-content: space-between;
 }
 
