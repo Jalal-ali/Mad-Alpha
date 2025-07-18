@@ -164,7 +164,7 @@
       margin: 1px auto;
       backdrop-filter: blur(3px);
       background: #3836364d;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 13px 20px rgba(0, 0, 0, 0.1);
     }
 
 
