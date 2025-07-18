@@ -95,7 +95,7 @@
 
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
-    .game-filter-btn .tab-wrapper .tab-btn {
+    .game-filter-btnn .tab-wrapper .tab-btn {
       background: var(--title-color) !important;
       border: 0 !important;
       font-size: 18px !important;
@@ -122,11 +122,39 @@
           0% 15px) !important;
     }
 
-    .game-filter-btn .tab-wrapper .tab-btn.active,
-    .game-filter-btn .tab-wrapper .tab-btn:hover {
+    .game-filter-btnn {
+      background: #afafaf12;
+      padding: 12px;
+      gap: 12px;
+      /* -webkit-clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
+    clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px); */
+      margin-bottom: 50px;
+      z-index: -1;
+    }
+
+    .game-filter-btnn .tab-wrapper .tab-btn.active {
       background: var(--theme-color) !important;
       color: var(--title-color) !important;
     }
+
+   .game-filter-btnn .tab-wrapper .tab-btn:hover {
+  filter: drop-shadow(2px 2px 3px var(--theme-color));
+  position: relative; /* Needed for the pseudo-element */
+  z-index: 1; /* Ensures the stroke appears above other elements */
+}
+
+/* Add stroke using pseudo-element */
+.game-filter-btnn .tab-wrapper .tab-btn:hover::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 3px solid var(--theme-color);
+    border-radius: 29px 0px;
+  pointer-events: none; /* Allows clicks to pass through */
+}
 
     .tab-wrapper {
       position: relative;
@@ -143,15 +171,21 @@
     }
 
     .dropdown {
+      position: absolute;
+      z-index: 4;
+      top: 58px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.3s ease;
+      transition: max-height 1.3s ease;
       width: 100%;
       flex: 1 1 100%;
       padding: 0 7px;
-      margin: 4px auto;
-
+      margin: 1px auto;
+      backdrop-filter: blur(3px);
+      background: #3836364d;
+      box-shadow: 0px 0px 13px 20px rgba(0, 0, 0, 0.1);
     }
+
 
     .tab-wrapper:hover .dropdown {
       max-height: max-content;
@@ -159,6 +193,7 @@
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       border: 0.175rem solid var(--theme-color);
+
       /* adjust as needed */
     }
 
@@ -177,10 +212,10 @@
     }
 
     .dropdown li a {
-    color: #ebebeb;
-    text-decoration: none;
-    display: block;
-    font-size: small;
+      color: #ebebeb;
+      text-decoration: none;
+      display: block;
+      font-size: 13.5px;
     }
 
 
@@ -240,24 +275,22 @@
       -webkit-user-drag: none;
       animation: flip 4s ease-in-out forwards;
     } */
-              .character {
-            position: relative;
-            width: 300px;
-            height: 500px;
-            perspective: 1000px;
-        }
-        
-        .rotatable-image {
+    .character {
+      position: relative;
+      /* width: 300px; */
+      height: auto;
+      perspective: 1900px;
+      animation: flip 4s ease-in-out forwards;
+    }
+
+    /* .rotatable-image {
             width: 50rem;
             height: 100%;
             object-fit: contain;
             transform-style: preserve-3d;
             transition: transform 0.1s linear;
             will-change: transform;
-      /* animation: flip 4s ease-in-out forwards; */
-
-            /* filter: drop-shadow(0 20px 30px rgba(0,0,0,0.4)); */
-        }
+        } */
 
     /* Keyframes for the flip animation */
     @keyframes flip {
@@ -281,16 +314,21 @@
         transform: rotateY(360deg);
       }
     }
-/* ----------------------------------intro video --------------------------- */
-    video::-webkit-media-controls {
-            display: none !important;  /* Hides the default controls for WebKit browsers */
-        }
 
-        video {
-            width: 100%; /* Set the width of the video */
-            max-width: 600px; /* Optional: Limit the max width */
-            display: block; /* Remove any unwanted space below the video */
-        }
+    /* ----------------------------------intro video --------------------------- */
+    video::-webkit-media-controls {
+      display: none !important;
+      /* Hides the default controls for WebKit browsers */
+    }
+
+    video {
+      width: 100%;
+      /* Set the width of the video */
+      max-width: 600px;
+      /* Optional: Limit the max width */
+      display: block;
+      /* Remove any unwanted space below the video */
+    }
   </style>
 </head>
 
@@ -316,7 +354,7 @@
         <div class="hero-title-thumb">
           <!-- top character img  -->
           <div class="character">
-            <img id="rotatable" class="rotatable-image" src="assets/img/hero/CHARACTER.png" alt="Rotatable Image">
+            <img id="rotatable" src="assets/img/hero/CHARACTER.png" alt="Rotatable Image">
           </div>
           <!-- top img 2  -->
           <div
@@ -376,12 +414,11 @@
     <div class="container py-20">
       <div class="row justify-content-center text-center">
         <div class="col-lg-auto">
-          <div class="mt-30 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+          <div class="mt-30 pb-25 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-            <div class="game-filter-btn filter-menu filter-menu-active">
+            <div class="game-filter-btnn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
-                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category active" data-filter=".logo" data-heading="Logo Designs">
@@ -401,51 +438,53 @@
                     </li>
                   </ul>
                 </div>
+                <button data-filter=".logo" class="tab-btn active" type="button">Stream Design</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
                 <div class="dropdown">
+
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="2D Models"><a href="javascript:void(0)">2D Models</a></li>
                     <li class="category " data-filter=".branding" data-heading="3D Models"><a href="javascript:void(0)">3D Models</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Vtuber">Vtuber</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="Printable Designs"><a href="javascript:void(0)">Printable Designs</a></li>
                     <li class="category " data-filter=".branding" data-heading="Product Designs"><a href="javascript:void(0)">Product Designs</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="3D Designs">3D Designs</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Custom Gaming room">Custom Gaming room</button>
                 <!-- <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Printable designs</a></li>
                   </ul>
                 </div> -->
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Custom Gaming room">Custom Gaming room</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
                 <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="Reference Sheet"><a href="javascript:void(0)">Reference Sheet</a></li>
                     <li class="category " data-filter=".branding" data-heading="Physical Fursuit"><a href="javascript:void(0)">Physical Fursuit</a></li>
                   </ul>
                 </div>
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Fursuits">Fursuits</button>
               </div>
               <div class="tab-wrapper">
-                <button data-filter=".web" class="tab-btn" type="button" data-heading="Ebook">Ebook</button>
                 <!-- <div class="dropdown">
                   <ul class="filter-menu-active">
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Reference sheet</a></li>
                     <li class="category " data-filter=".branding" data-heading="models"><a href="javascript:void(0)">Physical fursuit</a></li>
                   </ul>
                 </div> -->
+                <button data-filter=".web" class="tab-btn" type="button" data-heading="Ebook">Ebook</button>
               </div>
               <div class="tab-wrapper">
                 <button data-filter=".web" class="tab-btn" type="button" data-heading="Websites">Websites</button>
@@ -586,6 +625,7 @@
       </div>
     </div>
   </section>
+
   <!-- pricing section  -->
   <section
     class="pricing-sec-v2 space-bottom"
@@ -774,7 +814,7 @@
         background-image: url('assets/img/bg/video-sec2-bg.png');
         background-image: url('assets/img/bg/video-sec2-bg-shape.png');
       ">
-      <video style="
+    <video style="
     max-width: 100%;
     height: auto;
     justify-self: center;
@@ -782,11 +822,11 @@
     display: flex;
     /* -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important;
     clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important; */
-" width="500" height="240" loop autoplay muted >
-  <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
+" width="500" height="240" loop autoplay muted>
+      <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+    </video>
     <!-- <div class="container">
       <div class="text-center">
         <a
@@ -1038,9 +1078,9 @@
                   class="mask-icon"
                   data-mask-src="assets/img/bg/section-title-bg.svg"></span> </span>REVIEWS</span>
             <h2 class="sec-title mb-0">Loved by our customer worldwide</h2>
-             <div class="btn-wrap justify-content-center my-5">
-          <a href="javascript:void(0)" class="th-btn">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>              
-        </div>
+            <div class="btn-wrap justify-content-center my-5">
+              <a href="javascript:void(0)" class="th-btn">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
+            </div>
           </div>
           <div class="slider-area testi-slider1">
             <div
@@ -1228,12 +1268,12 @@
                 </div>
                 <!-- review cards ended -->
               </div>
-             
-              
+
+
               <div class="slider-pagination"></div>
             </div>
             <button
-            data-slider-prev="#testiSlide1"
+              data-slider-prev="#testiSlide1"
               class="slider-arrow style2 slider-prev">
               <i class="far fa-arrow-left"></i>
             </button>
@@ -1243,7 +1283,7 @@
               <i class="far fa-arrow-right"></i>
             </button>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -1463,79 +1503,79 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-            const character = document.querySelector('.character');
-            const image = document.getElementById('rotatable');
-            const loading = document.querySelector('.loading');
-            
-            // Remove loading text when image loads
-            image.onload = () => {
-                loading.style.display = 'none';
-            };
-            
-            // Fallback in case image fails to load
-            setTimeout(() => {
-                loading.style.display = 'none';
-            }, 3000);
-            
-            // 3D effect parameters
-            const maxRotation = 135; // Maximum tilt angle
-            const perspectiveDepth = 1000; // Strength of 3D effect
-            const movementFactor = 0.1; // How much the image follows cursor
-            const scaleAmount = 1.03; // Hover scale effect
-            
-            // Get character center position
-            const getCenter = () => {
-                const rect = character.getBoundingClientRect();
-                return {
-                    x: rect.left + rect.width / 2,
-                    y: rect.top + rect.height / 2
-                };
-            };
-            
-            // Mouse move handler
-            const handleMouseMove = (e) => {
-                const center = getCenter();
-                const x = e.clientX - center.x;
-                const y = e.clientY - center.y;
-                
-                // Calculate rotation based on mouse position
-                const rotateY = (x / (character.offsetWidth / 2)) * maxRotation;
-                const rotateX = -(y / (character.offsetHeight / 2)) * maxRotation;
-                
-                // Apply 3D transformation
-                image.style.transform = `
+      const character = document.querySelector('.character');
+      const image = document.getElementById('rotatable');
+      const loading = document.querySelector('.loading');
+
+      // Remove loading text when image loads
+      image.onload = () => {
+        loading.style.display = 'none';
+      };
+
+      // Fallback in case image fails to load
+      setTimeout(() => {
+        loading.style.display = 'none';
+      }, 3000);
+
+      // 3D effect parameters
+      const maxRotation = 160; // Maximum tilt angle
+      const perspectiveDepth = 1900; // Strength of 3D effect
+      const movementFactor = 0.1; // How much the image follows cursor
+      const scaleAmount = 1.03; // Hover scale effect
+
+      // Get character center position
+      const getCenter = () => {
+        const rect = character.getBoundingClientRect();
+        return {
+          x: rect.left + rect.width / 2,
+          y: rect.top + rect.height / 2
+        };
+      };
+
+      // Mouse move handler
+      const handleMouseMove = (e) => {
+        const center = getCenter();
+        const x = e.clientX - center.x;
+        const y = e.clientY - center.y;
+
+        // Calculate rotation based on mouse position
+        const rotateY = (x / (character.offsetWidth / 2)) * maxRotation;
+        const rotateX = -(y / (character.offsetHeight / 2)) * maxRotation;
+
+        // Apply 3D transformation
+        image.style.transform = `
                     perspective(${perspectiveDepth}px)
                     rotateX(${rotateX}deg)
                     rotateY(${rotateY}deg)
                     scale(${scaleAmount})
                 `;
-                
-                // Parallax effect for depth
-                const parallaxX = x * movementFactor * 0.1;
-                const parallaxY = y * movementFactor * 0.1;
-                image.style.transform += `translateX(${parallaxX}px) translateY(${parallaxY}px)`;
-            };
-            
-            // Reset on mouse leave
-            const handleMouseLeave = () => {
-                image.style.transform = `
+
+        // Parallax effect for depth
+        const parallaxX = x * movementFactor * 0.1;
+        const parallaxY = y * movementFactor * 0.1;
+        image.style.transform += `translateX(${parallaxX}px) translateY(${parallaxY}px)`;
+      };
+
+      // Reset on mouse leave
+      const handleMouseLeave = () => {
+        image.style.transform = `
                     perspective(${perspectiveDepth}px)
                     rotateX(0)
                     rotateY(0)
                     scale(1)
                 `;
-            };
-            
-            // Event listeners
-            character.addEventListener('mousemove', handleMouseMove);
-            character.addEventListener('mouseleave', handleMouseLeave);
-            
-            // Handle window resize
-            window.addEventListener('resize', () => {
-                // Recalculate center position on resize
-                getCenter();
-            });
-        });
+      };
+
+      // Event listeners
+      character.addEventListener('mousemove', handleMouseMove);
+      character.addEventListener('mouseleave', handleMouseLeave);
+
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        // Recalculate center position on resize
+        getCenter();
+      });
+    });
   </script>
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>

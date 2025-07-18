@@ -94,6 +94,7 @@
     }
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
+    /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
     .game-filter-btnn .tab-wrapper .tab-btn {
       background: var(--title-color) !important;
       border: 0 !important;
@@ -131,11 +132,29 @@
       z-index: -1;
     }
 
-    .game-filter-btnn .tab-wrapper .tab-btn.active,
-    .game-filter-btnn .tab-wrapper .tab-btn:hover {
+    .game-filter-btnn .tab-wrapper .tab-btn.active {
       background: var(--theme-color) !important;
       color: var(--title-color) !important;
     }
+
+   .game-filter-btnn .tab-wrapper .tab-btn:hover {
+  filter: drop-shadow(2px 2px 3px var(--theme-color));
+  position: relative; /* Needed for the pseudo-element */
+  z-index: 1; /* Ensures the stroke appears above other elements */
+}
+
+/* Add stroke using pseudo-element */
+.game-filter-btnn .tab-wrapper .tab-btn:hover::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 3px solid var(--theme-color);
+    border-radius: 29px 0px;
+  pointer-events: none; /* Allows clicks to pass through */
+}
 
     .tab-wrapper {
       position: relative;
