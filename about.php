@@ -473,8 +473,8 @@
     </section>
 
     <!-- img with content section lft/ryt  -->
-    <section class="container space">
-      <div style="justify-content: space-between;" class="row no-gutters gy-80">
+    <section class="container ">
+      <div style="justify-content: space-around;" class="row no-gutters gy-80">
         <div class="col-xl-6 self-center">
           <div class="team-about-card custom-anim-left wow">
             <div class="title-area mb-0">
