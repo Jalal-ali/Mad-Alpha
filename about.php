@@ -500,8 +500,8 @@
         <div class="col-xl-5">
           <div class="img">
             <img
-              class="animated-img"
-              src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png"
+              class="pulse-fade"
+              src="assets/img/mockup/mockup.png"
               alt="team image"
             />
           </div>

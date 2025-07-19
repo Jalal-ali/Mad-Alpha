@@ -19,15 +19,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $(document).ready(function() {
+      // Initialize Isotope
       $('.filter-active').isotope({
-        filter: '*', // Make sure nothing is shown initially
+        itemSelector: '.filter-item', // Matches your item container class
+        layoutMode: 'fitRows', // or 'masonry' if you prefer
         hiddenStyle: {
-          opacity: 0 // or display: 'none' depending on your needs
-        }
-      });
-
-      // Then apply the filter to show only the logos
-      $('.filter-active').isotope({
+          opacity: 0,
+          transform: 'scale(0.8)'
+        },
+        visibleStyle: {
+          opacity: 1,
+          transform: 'scale(1)'
+        },
+        transitionDuration: '0.6s',
+        // Initially show only logo items
         filter: '.logo'
       });
     });
@@ -94,7 +99,6 @@
     }
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
-    /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
     .game-filter-btnn .tab-wrapper .tab-btn {
       background: var(--title-color) !important;
       border: 0 !important;
@@ -137,24 +141,27 @@
       color: var(--title-color) !important;
     }
 
-   .game-filter-btnn .tab-wrapper .tab-btn:hover {
-  filter: drop-shadow(2px 2px 3px var(--theme-color));
-  position: relative; /* Needed for the pseudo-element */
-  z-index: 1; /* Ensures the stroke appears above other elements */
-}
+    .game-filter-btnn .tab-wrapper .tab-btn:hover {
+      filter: drop-shadow(2px 2px 3px var(--theme-color));
+      position: relative;
+      /* Needed for the pseudo-element */
+      z-index: 1;
+      /* Ensures the stroke appears above other elements */
+    }
 
-/* Add stroke using pseudo-element */
-.game-filter-btnn .tab-wrapper .tab-btn:hover::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border: 3px solid var(--theme-color);
-    border-radius: 29px 0px;
-  pointer-events: none; /* Allows clicks to pass through */
-}
+    /* Add stroke using pseudo-element */
+    .game-filter-btnn .tab-wrapper .tab-btn:hover::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border: 3px solid var(--theme-color);
+      border-radius: 29px 0px;
+      pointer-events: none;
+      /* Allows clicks to pass through */
+    }
 
     .tab-wrapper {
       position: relative;
@@ -193,11 +200,8 @@
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       border: 0.175rem solid var(--theme-color);
-
-      /* adjust as needed */
     }
 
-    /* Optional dropdown styling */
     .dropdown ul {
       margin: 0;
       padding: 10px 0;
@@ -212,25 +216,28 @@
     }
 
     .dropdown li a {
-      color: #ebebeb;
+      color: #dfdfdf;
       text-decoration: none;
       display: block;
-      font-size: 13.5px;
+      font-size: 16px;
+      font-family: 'Rajdhani';
+      font-weight: 600;
     }
 
 
     .dropdown li:hover {
-      color: var(--black-color) !important;
-      font-weight: 500;
-      /* color: var(--black-color); */
-      /*font-family: var(--title-font);
-       letter-spacing: 0.1em;
-      padding: 15px 45px; */
+      transition-duration: 8ms;
       background: var(--theme-color);
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       padding: 8px 16px;
 
+    }
+
+    /* style of the anchor when li is hovered */
+    .dropdown li:hover a {
+      color: var(--black-color2);
+      font-weight: bold;
     }
 
     .filter-menu-active .active {
@@ -248,13 +255,8 @@
     }
 
     .filter-menu-active li.active a {
-      color: var(--black-color) !important;
-      font-weight: 500;
-    }
-
-    .dropdown li a:hover {
-      color: var(--black-color);
-      /* font-weight: 500; */
+      color: var(--black-color2);
+      font-weight: bold;
     }
   </style>
 </head>
@@ -450,7 +452,7 @@
             <!-- heading  -->
             <h2 style=" color :var(--smoke-color);
             letter-spacing: 1px;
-            filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Stream Design</h2>
+            filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Logo Designs</h2>
           </div>
         </div>
       </div>

@@ -4138,6 +4138,13 @@ hr.title-line {
 .th-social a.discord {
   color: #324897;
 }
+.th-social a.twitch {
+  color: #6441A4;
+}
+.th-social a.whatsapp {
+  color: #25c743;
+}
+
 
 .th-social a.instagram i {
   background: -webkit-linear-gradient(
@@ -25328,4 +25335,17 @@ span.select2-selection.select2-selection--single:focus {
 .justify-between{
   justify-content: space-between;
 }
+@keyframes pulseFade {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
 
+.pulse-fade {
+  animation: pulseFade 6s ease-in-out infinite;
+}

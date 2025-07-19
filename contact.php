@@ -69,7 +69,7 @@
       <div class="col-xl-5 ">
         <div class="img self-center">
           <img
-            src="./assets/img/gallery/gallery_1_3.jpg"
+            src="./assets/img/mockup/madalpha-mockup.png"
             alt="team image"
             style="border-radius: 50px;
               padding: 20px;" />
