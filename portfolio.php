@@ -183,7 +183,7 @@
       top: 58px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1.3s ease;
+      /* transition: max-height 1.3s ease; */
       width: 100%;
       flex: 1 1 100%;
       padding: 0 7px;
@@ -196,6 +196,8 @@
 
     .tab-wrapper:hover .dropdown {
       max-height: max-content;
+       transition: max-height 0.3s ease;
+
       border-radius: 19px;
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
