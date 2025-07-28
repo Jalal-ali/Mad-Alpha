@@ -199,13 +199,13 @@
       cursor: pointer;
     }
 
-    .dropdown {
+     .dropdown {
       position: absolute;
       z-index: 4;
-      top: 58px;
+      top: 56px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 1.3s ease;
+      /* transition: max-height 1.3s ease; */
       width: 100%;
       flex: 1 1 100%;
       padding: 0 7px;
@@ -378,9 +378,9 @@
       <div class="hero-style2">
         <div class="hero-title-thumb">
           <!-- top character img  -->
-          <div class="character">
+          <!-- <div class="character">
             <img id="rotatable" src="assets/img/hero/CHARACTER.png" alt="Rotatable Image">
-          </div>
+          </div> -->
           <!-- top img 2  -->
           <div
             class="title-img title-img-1 custom-anim-top wow animated"
@@ -389,7 +389,7 @@
             <span
               class="title-img-mask"
               data-mask-src="assets/img/hero/MAD-ALPHA.png"></span>
-            <img src="assets/img/hero/MAD-ALPHA-hero-title.png" alt="img" />
+            <img src="assets/3d animation/mad-alpha-banner.png" alt="img" />
           </div>
         </div>
         <div
@@ -1526,7 +1526,7 @@
     </svg>
   </div>
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
       const character = document.querySelector('.character');
       const image = document.getElementById('rotatable');
@@ -1601,7 +1601,7 @@
         getCenter();
       });
     });
-  </script>
+  </script> -->
   <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
   <script src="assets/js/app.min.js"></script>
   <script src="assets/js/main.js"></script>

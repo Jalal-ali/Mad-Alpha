@@ -148,7 +148,7 @@
             class="copyright-text bg-repeat"
             data-bg-src="assets/img/bg/jiji-bg.png">
             <i class="fal fa-copyright"></i> Copyright 2025
-            <a href="index.php">Mad-Alpha.</a> All Rights Reserved.
+            <a href="index.php">Mad-Alpha Designers.</a> <br /> All Rights Reserved.
           </p>
         </div>
       </div>

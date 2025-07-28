@@ -25349,3 +25349,6 @@ span.select2-selection.select2-selection--single:focus {
 .pulse-fade {
   animation: pulseFade 6s ease-in-out infinite;
 }
+.sized-img{
+      max-width: 18rem !important;
+}

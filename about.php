@@ -171,7 +171,7 @@
               </h2>
             </div>
             <p class="about-card_text mt-30 mb-25">
-              At <span class="text-theme">Mad Alpha Designer</span>, we’re firm
+              At <span class="text-theme">Mad Alpha Designers</span>, we’re firm
               believers that within every challenge lies an opportunity waiting
               to be seized. With a team of imaginative minds and adept
               troubleshooters, we’re committed to pushing boundaries and
@@ -195,7 +195,7 @@
           <div class="img">
             <img
               class="animated-img"
-              src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png"
+              src="assets/img/updated-pics/Layer 2.png"
               alt="team image"
             />
           </div>
@@ -219,7 +219,7 @@
             </h2>
           </div>
           <p class="about-card_text mt-30 mb-25">
-            At <span class="text-theme">Mad Alpha Designer</span>, we're
+            At <span class="text-theme">Mad Alpha Designers</span>, we're
             dedicated to propelling businesses forward through our expertly
             crafted design solutions. Specializing in the art of visual
             storytelling, we bring your brand’s essence to life with stunning
@@ -361,7 +361,7 @@
               </h2>
             </div>
             <p class="about-card_text mt-30 mb-25">
-              At <span class="text-theme">Mad Alpha Designer</span>, we embody
+              At <span class="text-theme">Mad Alpha Designers</span>, we embody
               the intersection of creativity and innovation, a collective of
               visionary designers dedicated to transcending the conventional.
               Our core mission is to craft digital experiences that not only
@@ -375,9 +375,9 @@
               Designer is your partner in crafting the extraordinary, where
               every design is a step towards redefining the future.
             </p>
-            <a href="contact.html" class="th-btn">
+            <!-- <a href="contact.html" class="th-btn">
               LIVE CHAT<i class="fa-solid fa-arrow-right ms-2"></i
-            ></a>
+            ></a> -->
           </div>
         </div>
       </div>
@@ -397,7 +397,7 @@
               </h2>
             </div>
             <p class="about-card_text mt-30 mb-25">
-              At <span class="text-theme">Mad Alpha Designer</span>, we embody
+              At <span class="text-theme">Mad Alpha Designers</span>, we embody
               the intersection of creativity and innovation, a collective of
               visionary designers dedicated to transcending the conventional.
               Our core mission is to craft digital experiences that not only
@@ -411,17 +411,17 @@
               Designer is your partner in crafting the extraordinary, where
               every design is a step towards redefining the future.
             </p>
-            <a href="contact.html" class="th-btn">
+            <!-- <a href="contact.html" class="th-btn">
               LIVE CHAT<i class="fa-solid fa-arrow-right ms-2"></i
-            ></a>
+            ></a> -->
           </div>
         </div>
         <!-- img  -->
         <div class="col-xl-5">
-          <div class="img">
+           <div class="im">
             <img
               class="animated-img"
-              src="https://madalphadesigners.com/assets/images/UI/packages-about-img3.png"
+              src="assets/img/updated-pics/layer 14 updated.png"
               alt="team image"
             />
           </div>
@@ -449,7 +449,7 @@
               </h2>
             </div>
             <p class="about-card_text mt-30 mb-25">
-              Our strength at<span class="text-theme"> Mad Alpha Designer</span>
+              Our strength at<span class="text-theme"> Mad Alpha Designers</span>
               lies in our ability to blend creativity with strategy, a synergy
               that fuels our approach to digital design. Our team consists of
               seasoned designers, creative strategists, and technological
@@ -464,9 +464,9 @@
               change is constant, our unwavering focus on innovation and quality
               stands us apart as leaders in digital design.
             </p>
-            <a href="contact.html" class="th-btn">
+            <!-- <a href="contact.html" class="th-btn">
               LIVE CHAT<i class="fa-solid fa-arrow-right ms-2"></i
-            ></a>
+            ></a> -->
           </div>
         </div>
       </div>

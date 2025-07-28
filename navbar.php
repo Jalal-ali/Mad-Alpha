@@ -320,7 +320,7 @@
       <div class="sticky-wrapper">
         <div class="menu-area">
           <div class="container">
-            <div class="row align-items-center justify-content-between">
+            <div  class="row align-items-center justify-content-between">
               <div class="col-auto">
                 <div class="header-logo">
                   <a href="index.php"
@@ -351,15 +351,15 @@
                   </button>
                 </div>
               </div>
-              <div class="col-auto d-none d-xl-block">
+              <div class="col-2 d-xl-block ">
                 <div class="header-button">
-                  <button type="button" class="simple-icon searchBoxToggler">
+                  <!-- <button type="button" class="simple-icon searchBoxToggler">
                     <i class="far fa-search"></i>
-                  </button>
+                  </button> -->
                   <!-- <button type="button" class="simple-icon sideMenuInfo">
                     <i class="fa-solid fa-bars"></i>
                   </button> -->
-                  <div style="margin-bottom: 5px;" class="d-xxl-block d-none">
+                  <div style="margin-bottom: 5px;"  class="d-xxl-block d-non">
                     <a href="contact.php" class="th-btn"
                       > PAY NOW <i class="ml-10 fa-solid fa-credit-card"></i></a
                     >

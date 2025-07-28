@@ -180,7 +180,7 @@
     .dropdown {
       position: absolute;
       z-index: 4;
-      top: 58px;
+      top: 56px;
       max-height: 0;
       overflow: hidden;
       /* transition: max-height 1.3s ease; */
@@ -201,7 +201,7 @@
       border-radius: 19px;
       -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
       clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
-      border: 0.175rem solid var(--theme-color);
+          border: 0.175rem solid var(--theme-color);
     }
 
     .dropdown ul {
@@ -316,14 +316,14 @@
               Explore our portfolio to delve into our creative journey.</span>
           </div>
         </div>
-        <div class="col-lg-auto d-flex justify-content-center">
+        <!-- <div class="col-lg-auto d-flex justify-content-center">
           <div
             class="sec-btn custom-anim-right wow animated"
             data-wow-duration="1.5s"
             data-wow-delay="0.2s">
             <a href="portfolio.php" class="th-btn">See All <i class="fa-solid fa-arrow-right ms-2"></i></a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
