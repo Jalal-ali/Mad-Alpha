@@ -195,7 +195,7 @@
           <div class="img">
             <img
               class="animated-img"
-              src="assets/img/updated-pics/Layer 2.png"
+              src="assets/img/updated-pics/Layer 2 new.png"
               alt="team image"
             />
           </div>
