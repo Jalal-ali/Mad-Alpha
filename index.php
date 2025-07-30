@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
- 
+
   <style>
     .game-card-img-mask {
       position: relative;
@@ -321,33 +321,32 @@
     }
   </style>
   <script>
- $(document).ready(function () {
-  // Open popup
-  $('.open-review-popup').on('click', function () {
-    $('.review-popup-overlay').fadeIn();
-  });
+    $(document).ready(function() {
+      // Open popup
+      $('.open-review-popup').on('click', function() {
+        $('.review-popup-overlay').fadeIn();
+      });
 
-  // Close popup
-  $('.close-review-popup').on('click', function () {
-    $('.review-popup-overlay').fadeOut();
-  });
+      // Close popup
+      $('.close-review-popup').on('click', function() {
+        $('.review-popup-overlay').fadeOut();
+      });
 
-  // Optional: close when clicking outside popup-content
-  $('.review-popup-overlay').on('click', function (e) {
-    if ($(e.target).is('.review-popup-overlay')) {
-      $(this).fadeOut();
-    }
-  });
+      // Optional: close when clicking outside popup-content
+      $('.review-popup-overlay').on('click', function(e) {
+        if ($(e.target).is('.review-popup-overlay')) {
+          $(this).fadeOut();
+        }
+      });
 
-  // Optional: Handle form submission
-  $('#popupForm').on('submit', function (e) {
-    e.preventDefault();
-    alert('Form submitted!');
-    $('.review-popup-overlay').fadeOut();
-    // Add SMTP or AJAX code here
-  });
-});
-
+      // Optional: Handle form submission
+      $('#popupForm').on('submit', function(e) {
+        e.preventDefault();
+        alert('Form submitted!');
+        $('.review-popup-overlay').fadeOut();
+        // Add SMTP or AJAX code here
+      });
+    });
   </script>
 </head>
 
@@ -1114,29 +1113,37 @@
       </div>
     </div>
   </div>
-<!-- Popup Modal -->
+  <!-- Popup Modal -->
   <div class="review-popup-overlay " style="display: none;">
-  <div class="popup-content">
-    <span class="close-review-popup">&times;</span>
-    <form id="popupForm">
-  <h3 class="text-center widget_title">Contact Us</h3>
+    <div class="popup-content">
+      <span class="close-review-popup">&times;</span>
+      <form action="#" id="popupForm">
+        <div class="form-group">
 
-  <input type="text" name="name" placeholder="Your Name" required /><br /><br />
-  <input type="email" name="email" placeholder="Your Email" required /><br /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
+          <h3 class="text-center widget_title">Contact Us</h3>
 
-  <!-- ✅ Image Upload Input -->
-  <input type="file" id="imageUpload" name="image" accept="image/*" class="file-input" /><br /><br />
+          <input type="text" name="name" placeholder="Your Name" required /><br /><br />
+          <!-- <input type="email" name="email" placeholder="Your Email" required /><br /><br /> -->
+          <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
 
-  <div class="btn-wrap justify-content-center">
-    <a href="javascript:void(0)" class="th-btn open-review-popup">
-      ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i>
-    </a>
+          <!-- ✅ Image Upload Input -->
+          <input
+            type="file"
+            accept="image/*"
+            class="form-control file-input items-center"
+            id="image-upload" /><br />
+
+          <div class="btn-wrap justify-content-center">
+            <a href="javascript:void(0)" class="th-btn open-review-popup">
+              ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i>
+            </a>
+          </div>
+        </div>
+      </form>
+
+
+    </div>
   </div>
-</form>
-
-  </div>
-</div>
   <!-- feedback section  -->
   <section
     class="testi-sec-1 overflow-hidden space-top faded-sec"
@@ -1364,7 +1371,7 @@
   </section>
 
   <!-- contact section  -->
-    <?php
+  <?php
   include 'contact-form.php';
   ?>
 
