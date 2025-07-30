@@ -1115,18 +1115,26 @@
     </div>
   </div>
 <!-- Popup Modal -->
-  <div class="review-popup-overlay gr-bg1" style="display: none;">
+  <div class="review-popup-overlay " style="display: none;">
   <div class="popup-content">
     <span class="close-review-popup">&times;</span>
     <form id="popupForm">
-      <h3 class="text-center widget_title">Contact Us</h3>
-      <input type="text" name="name" placeholder="Your Name" required /><br /><br />
-      <input type="email" name="email" placeholder="Your Email" required /><br /><br />
-      <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
-      <div class="btn-wrap justify-content-center">
-              <a href="javascript:void(0)" class="th-btn open-review-popup">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
-            </div>
-    </form>
+  <h3 class="text-center widget_title">Contact Us</h3>
+
+  <input type="text" name="name" placeholder="Your Name" required /><br /><br />
+  <input type="email" name="email" placeholder="Your Email" required /><br /><br />
+  <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
+
+  <!-- ✅ Image Upload Input -->
+  <input type="file" id="imageUpload" name="image" accept="image/*" class="file-input" /><br /><br />
+
+  <div class="btn-wrap justify-content-center">
+    <a href="javascript:void(0)" class="th-btn open-review-popup">
+      ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i>
+    </a>
+  </div>
+</form>
+
   </div>
 </div>
   <!-- feedback section  -->

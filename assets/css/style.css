@@ -25022,15 +25022,19 @@ input.file-input::file-selector-button {
   z-index: 9999;
 }
 
-.popup-content {
-  position: relative;
-  max-width: 400px;
-  width: 90%;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+.popup-content  {
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 16px;
+    background: #30364091;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    color: #fff;
 }
+
 
 .close-popup {
   position: absolute;
