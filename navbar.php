@@ -359,8 +359,8 @@
                   <!-- <button type="button" class="simple-icon sideMenuInfo">
                     <i class="fa-solid fa-bars"></i>
                   </button> -->
-                  <div style="margin-bottom: 5px;"  class="d-xxl-block d-non">
-                    <a href="contact.php" class="th-btn"
+                  <div style="margin-bottom: 5px;"  class="d-xxl-block mob-hide">
+                    <a href="payment.php" class="th-btn"
                       > PAY NOW <i class="ml-10 fa-solid fa-credit-card"></i></a
                     >
                   </div>

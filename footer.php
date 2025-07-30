@@ -116,18 +116,18 @@
                     <path class="cls-1" d="M72.19,0l8.37,11.74L122.88,0Zm-44,91.38L51.08,69,37.3,54.19,28.18,91.38ZM68.7,0,56.46,11l20.59.77L68.7,0ZM21.11,0l4.42,9,24.23,1.51L21.11,0Zm13,46.73L52,13.33,0,10.52,34.09,46.73Zm2.08,2.11L53.08,67,71.73,48.72l5.79-34L54.79,13.51,36.17,48.84Zm0,0Z" />
                   </svg>
                 </a>
-                <a title="Whatsapp"
-                  class="whatsapp" href="javascript:void(0)"><i class="fa-brands fa-whatsapp"></i></a>
+                <!-- <a title="Whatsapp"
+                  class="whatsapp" href="javascript:void(0)"><i class="fa-brands fa-whatsapp"></i></a> -->
                 <a title="YouTube"
-                  class="youtube" href="javascript:void(0)">
+                  class="youtube" href="www.youtube.com/@MADAlphaDesigners">
                   <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a title="Upwork"
+                <!-- <a title="Upwork"
                   class="upwork" href="javascript:void(0)">
                   <svg width="22" height="22" fill="#14A800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 512">
                     <path d="M494.7 295.6c-50.3 0-83.5-38.9-92.8-53.9c11.9-95.3 46.8-125.4 92.8-125.4c45.5 0 80.9 36.4 80.9 89.7s-35.4 89.7-80.9 89.7zm0-237.8c-81.9 0-127.8 53.4-141 108.4c-14.9-28-25.9-65.5-34.5-100.3H206v141c0 51.1-23.3 89-68.8 89s-71.6-37.8-71.6-89l.5-141H.8v141c0 41.1 13.3 78.4 37.6 105.1c25 27.5 59.2 41.8 98.8 41.8c78.8 0 133.8-60.4 133.8-146.9V112.1c8.2 31.2 27.8 91.1 65.3 143.6l-35 199.4h66.4l23.1-141.3c7.6 6.3 15.7 12 24.2 17c22.2 14 47.7 21.9 73.9 22.8c0 0 4 .2 6.1 .2c81.2 0 145.9-62.9 145.9-147.8s-64.8-148.1-146-148.1z" />
                   </svg>
-                </a>
+                </a> -->
               </div>
             </div>
           </div>

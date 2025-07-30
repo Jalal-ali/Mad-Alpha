@@ -769,12 +769,18 @@
 // newww................................
 t(".filter-active").imagesLoaded(function () {
   if (t(".filter-active").length > 0) {
+    // 🟡 Get initial active filter from the first active button or li
+    var $initialActive = t(".filter-menu-active .active[data-filter]").first();
+    var initialFilter = $initialActive.attr("data-filter") || "*";
+
+    // 🟢 Initialize Isotope with the active filter
     var e = t(".filter-active").isotope({
       itemSelector: ".filter-item",
-      filter: "*",
+      filter: initialFilter,
       masonry: {},
     });
 
+    // 🔵 Click event for filters
     t(".filter-menu-active, ul").on("click", "[data-filter]", function (ev) {
       ev.preventDefault();
 
@@ -787,14 +793,14 @@ t(".filter-active").imagesLoaded(function () {
       // Remove all previous active classes
       t(".filter-menu-active button, ul .category, ul li.category, .tab-btn").removeClass("active");
 
-      // Add active to the clicked li and/or a element
+      // Add active class to clicked element
       if ($this.closest("li").length) {
         $this.closest("li").addClass("active");
       } else {
         $this.addClass("active");
       }
 
-      // ✅ If this item is inside a dropdown, add 'active' to its .tab-btn
+      // If inside .tab-wrapper, activate related .tab-btn too
       var $tabWrapper = $this.closest(".tab-wrapper");
       if ($tabWrapper.length) {
         $tabWrapper.find(".tab-btn").addClass("active");
@@ -804,6 +810,75 @@ t(".filter-active").imagesLoaded(function () {
 });
 
 
+// packages filter 
+$(document).ready(function () {
+  // Wait until all images in .filter-active are loaded
+  $(".filter-active").imagesLoaded(function () {
+    if ($(".filter-active").length > 0) {
+      // Get the initial active filter from the button with 'active' class
+      var $initialActive = $(".game-filter-btnn .tab-btn.active, .game-filter-btnn .category.active");
+      var initialFilter = $initialActive.attr("data-filter") || "*";
+
+      // Initialize Isotope with the active filter
+      var $iso = $(".filter-active").isotope({
+        itemSelector: ".filter-item",
+        filter: initialFilter,
+        masonry: {},
+      });
+
+      // Set initial heading
+      var initHeading = $initialActive.data("heading");
+      if (initHeading) {
+        $(".main-heading").text(initHeading);
+      }
+
+      // Filter buttons click handler
+      $(".game-filter-btnn").on("click", "[data-filter]", function (e) {
+        e.preventDefault();
+
+        var $this = $(this);
+        var filter = $this.attr("data-filter");
+
+        // Apply Isotope filter
+        $iso.isotope({ filter: filter });
+
+        // Toggle active class
+        $(".game-filter-btnn .tab-btn, .game-filter-btnn .category").removeClass("active");
+        $this.addClass("active");
+
+        // Update heading
+        var newHeading = $this.data("heading");
+        if (newHeading) {
+          $(".main-heading").text(newHeading);
+        }
+      });
+    }
+  });
+});
+
+
+// packages filter ended 
+
+
 })(jQuery);
+
+// floating button func 
+  $(document).ready(function () {
+    $('.main-fab').on('click', function () {
+      $('.fab-wrapper').toggleClass('open');
+      $('.child-fab').each(function (index) {
+        $(this).delay(index * 100).animate({
+          opacity: 1,
+          bottom: '+=20'
+        }, 200).css('transform', 'translateY(0)');
+      });
+
+      if (!$('.fab-wrapper').hasClass('open')) {
+        $('.child-fab').stop().animate({
+          opacity: 0
+        }, 100).css('transform', 'translateY(0)');
+      }
+    });
+  });
 
 

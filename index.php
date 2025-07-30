@@ -17,43 +17,7 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script>
-      $(document).ready(function() {
-  // Initialize Isotope
-  $('.filter-active').isotope({
-    itemSelector: '.filter-item', // Matches your item container class
-    layoutMode: 'fitRows', // or 'masonry' if you prefer
-    hiddenStyle: {
-      opacity: 0,
-      transform: 'scale(0.8)'
-    },
-    visibleStyle: {
-      opacity: 1,
-      transform: 'scale(1)'
-    },
-    transitionDuration: '0.6s',
-    // Initially show only logo items
-    filter: '.logo'
-  });
-});
-    // heading funcs 
-    $(document).ready(function() {
-      // When a filter button is clicked
-      $('.category').click(function() {
-        // Get the heading text from data attribute
-        var newHeading = $(this).data('heading');
-
-        // Update the heading text
-        $('.main-heading').text(newHeading);
-
-        // Optional: Add animation
-        $('.sec-title').addClass('animate__animated animate__fadeIn');
-        setTimeout(function() {
-          $('.sec-title').removeClass('animate__animated animate__fadeIn');
-        }, 500);
-      });
-    });
-  </script>
+ 
   <style>
     .game-card-img-mask {
       position: relative;
@@ -97,6 +61,7 @@
           #0b0e13 100%);
       z-index: -1;
     }
+
     .faded-sec {
       position: relative;
       z-index: 1;
@@ -105,19 +70,19 @@
     }
 
     .faded-sec:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: -webkit-linear-gradient(bottom,
-      #0b0e13 0%,
-      rgba(11, 14, 19, 0.94) 46.17%,
-      #0b0e13 100%);
-  background: linear-gradient(0deg,
-      #0b0e13 0%,
-      rgba(11, 14, 19, 0.94) 46.17%,
-      #0b0e13 100%);
-  z-index: -1;
-}
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: -webkit-linear-gradient(bottom,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      background: linear-gradient(0deg,
+          #0b0e13 0%,
+          rgba(11, 14, 19, 0.94) 46.17%,
+          #0b0e13 100%);
+      z-index: -1;
+    }
 
 
     /*----------------------------------- tab buttons dropdown style ----------------------------------------- */
@@ -199,7 +164,7 @@
       cursor: pointer;
     }
 
-     .dropdown {
+    .dropdown {
       position: absolute;
       z-index: 4;
       top: 56px;
@@ -355,9 +320,71 @@
       /* Remove any unwanted space below the video */
     }
   </style>
+  <script>
+ $(document).ready(function () {
+  // Open popup
+  $('.open-review-popup').on('click', function () {
+    $('.review-popup-overlay').fadeIn();
+  });
+
+  // Close popup
+  $('.close-review-popup').on('click', function () {
+    $('.review-popup-overlay').fadeOut();
+  });
+
+  // Optional: close when clicking outside popup-content
+  $('.review-popup-overlay').on('click', function (e) {
+    if ($(e.target).is('.review-popup-overlay')) {
+      $(this).fadeOut();
+    }
+  });
+
+  // Optional: Handle form submission
+  $('#popupForm').on('submit', function (e) {
+    e.preventDefault();
+    alert('Form submitted!');
+    $('.review-popup-overlay').fadeOut();
+    // Add SMTP or AJAX code here
+  });
+});
+
+  </script>
 </head>
 
 <body>
+  <!-- Floating Action Button  -->
+  <div class="fab-wrapper">
+    <div class="fab-icon main-fab">
+      <i class="fas fa-plus"></i>
+    </div>
+    <!-- twitter-X  -->
+    <div class="fab-icon child-fab">
+      <a href="https://x.com/madalphadesigns?lang=en">
+        <svg width="22" height="22" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+        </svg>
+      </a>
+    </div>
+    <!-- freelancer  -->
+    <div class="fab-icon child-fab">
+      <a href="https://www.freelancer.com/u/madalphadesigns">
+        <svg id="Layer_1" data-name="Layer 1" width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 91.38">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #29b2fe;
+              }
+            </style>
+          </defs>
+          <title>freelancer</title>
+          <path class="cls-1" d="M72.19,0l8.37,11.74L122.88,0Zm-44,91.38L51.08,69,37.3,54.19,28.18,91.38ZM68.7,0,56.46,11l20.59.77L68.7,0ZM21.11,0l4.42,9,24.23,1.51L21.11,0Zm13,46.73L52,13.33,0,10.52,34.09,46.73Zm2.08,2.11L53.08,67,71.73,48.72l5.79-34L54.79,13.51,36.17,48.84Zm0,0Z" />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <!-- Floating Action Button ended -->
+
+
   <!-- cursor  -->
   <div class="cursor-animation cursor-image"></div>
   <!-- pre loader  -->
@@ -396,13 +423,13 @@
           class="btn-group custom-anim-top wow animated"
           data-wow-duration="1.2s"
           data-wow-delay="0.5s">
-          <a href="contact.html" class="th-btn style-border2"><span class="btn-border">CONTACT US <i class="fa-solid fa-arrow-right ms-2"></i></span></a>
+          <a href="contact.php" class="th-btn style-border2"><span class="btn-border">CONTACT US <i class="fa-solid fa-arrow-right ms-2"></i></span></a>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- main section  -->
+  <!-- project content section  -->
   <section class="game-area-2 space-top overflow-hidden">
     <div class="container">
       <div
@@ -430,7 +457,7 @@
       </div>
     </div>
   </section>
- <!-- projs section  -->
+  <!-- projs section  -->
   <section class="game-area-3 overflow-hidden projects-sec-v2"
     data-bg-src="assets/img/bg/tournament-sec2-bg.png">
     <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
@@ -896,7 +923,7 @@
               and needs of the gaming community.
             </p>
             <div class="btn-wrap justify-content-center">
-              <a href="javascript:void(0)" class="th-btn">JOIN COMMUNITY <i class="fa-solid fa-arrow-right ms-2"></i></a>
+              <a style="z-index: 30;" href="https://discord.gg/QbgRmkeu" class="th-btn">JOIN COMMUNITY <i class="fa-solid fa-arrow-right ms-2"></i></a>
               <!-- <a href="tournament.html" class="th-btn style-border">
                 <span class="btn-border">
                   CREATE TOURNAMENT
@@ -1087,7 +1114,21 @@
       </div>
     </div>
   </div>
-
+<!-- Popup Modal -->
+  <div class="review-popup-overlay gr-bg1" style="display: none;">
+  <div class="popup-content">
+    <span class="close-review-popup">&times;</span>
+    <form id="popupForm">
+      <h3 class="text-center widget_title">Contact Us</h3>
+      <input type="text" name="name" placeholder="Your Name" required /><br /><br />
+      <input type="email" name="email" placeholder="Your Email" required /><br /><br />
+      <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
+      <div class="btn-wrap justify-content-center">
+              <a href="javascript:void(0)" class="th-btn open-review-popup">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
+            </div>
+    </form>
+  </div>
+</div>
   <!-- feedback section  -->
   <section
     class="testi-sec-1 overflow-hidden space-top faded-sec"
@@ -1104,7 +1145,7 @@
                   data-mask-src="assets/img/bg/section-title-bg.svg"></span> </span>REVIEWS</span>
             <h2 class="sec-title mb-0">Loved by our customer worldwide</h2>
             <div class="btn-wrap justify-content-center my-5">
-              <a href="javascript:void(0)" class="th-btn">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
+              <a href="javascript:void(0)" class="th-btn open-review-popup">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
             </div>
           </div>
           <div class="slider-area testi-slider1">
@@ -1315,194 +1356,9 @@
   </section>
 
   <!-- contact section  -->
-  <section class="space">
-    <div
-      class="contact-sec-1 bg-repeat overflow-hidden space"
-      data-bg-src="assets/img/bg/jiji-bg2.png">
-      <div class="container-fluid p-0">
-        <div class="contact-wrap-1">
-          <div class="row justify-content-between">
-            <div class="col-xxl-5 col-xl-6">
-              <div
-                class="title-area custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s">
-                <h2 class="sec-title text-white">
-                  READY TO TAKE YOUR STREAMS IN THE RIGHT DIRECTION
-                  <span class="text-theme">?</span>
-                </h2>
-                <span class="sub-title style2">Our design consultants will provide a comprehensive
-                  approach to help drive your business success.</span>
-              </div>
-              <form
-                action="https://html.themeholy.com/bame/demo/mail.php"
-                method="POST"
-                class="ajax-contact pb-xl-0 space-bottom custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s">
-                <div class="row">
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name"
-                      id="name"
-                      placeholder="Your Name" />
-                    <i class="fal fa-user"></i>
-                  </div>
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      id="email"
-                      placeholder="Email Address" />
-                    <i class="fal fa-envelope"></i>
-                  </div>
-                  <div class="form-group style-border2 col-md-6">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="number"
-                      id="number"
-                      placeholder="Phone Number" />
-                    <i class="fal fa-phone"></i>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group style-border2">
-                      <select
-                        class="form-select"
-                        aria-label="Default select example">
-                        <option selected="selected">Subject</option>
-                        <option value="1">Esports</option>
-                        <option value="2">Tournament</option>
-                        <option value="3">Sports</option>
-                      </select>
-                      <i class="fal fa-angle-down"></i>
-                    </div>
-                  </div>
-                  <div class="col-12 form-group style-border2">
-                    <textarea
-                      placeholder="Write Massage...."
-                      class="form-control"></textarea>
-                    <i class="far fa-pencil"></i>
-                  </div>
-                  <div class="form-btn col-12">
-                    <button class="th-btn">
-                      Send Message
-                      <i class="fa-solid fa-arrow-right ms-2"></i>
-                    </button>
-                  </div>
-                </div>
-                <p class="form-messages mb-0 mt-3"></p>
-              </form>
-            </div>
-            <div class="col-xxl-5 col-xl-6">
-              <div
-                class="title-area custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s">
-                <span class="sub-title style2"># Common Questions About Our Company</span>
-                <h2 class="sec-title text-white">
-                  Frequently Asked Questions About Our Esports & Gaming Site
-                  <span class="text-theme">!</span>
-                </h2>
-              </div>
-              <div
-                class="accordion custom-anim-left wow animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0.2s"
-                id="faqAccordion">
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-1">
-                    <button
-                      class="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-1"
-                      aria-expanded="true"
-                      aria-controls="collapse-1">
-                      What game are you currently obsessed with, and why?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-1"
-                    class="accordion-collapse collapse show"
-                    aria-labelledby="collapse-item-1"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-2">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-2"
-                      aria-expanded="false"
-                      aria-controls="collapse-2">
-                      How do professional esports players train for
-                      tournaments?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-2"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="collapse-item-2"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-card">
-                  <div class="accordion-header" id="collapse-item-3">
-                    <button
-                      class="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#collapse-3"
-                      aria-expanded="false"
-                      aria-controls="collapse-3">
-                      What distinguishes a successful esports team from the
-                      rest?
-                    </button>
-                  </div>
-                  <div
-                    id="collapse-3"
-                    class="accordion-collapse collapse"
-                    aria-labelledby="collapse-item-3"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body">
-                      <p class="faq-text">
-                        The current meta in [popular game] heavily favors
-                        [specific characters/weapons/strategies]. This has led
-                        to a shift in gameplay dynamics, with players adapting
-                        their strategies to stay competitive.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <?php
+  include 'contact-form.php';
+  ?>
 
   <!-- footer  -->
   <?php
