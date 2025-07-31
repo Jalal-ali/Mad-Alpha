@@ -82,8 +82,8 @@
       });
 
       // Close popup
-      $('.close-popup, #image-popup').on('click', function(e) {
-        if (e.target !== this && !$(e.target).hasClass('close-popup')) return;
+      $('.close-img-popup, #image-popup').on('click', function(e) {
+        if (e.target !== this && !$(e.target).hasClass('close-img-popup')) return;
         $('#image-popup').fadeOut();
       });
     });
@@ -290,7 +290,7 @@
 
       <!-- Popup Modal -->
       <div id="image-popup" class="image-popup-overlay" style="display: none;">
-        <span class="close-popup">&times;</span>
+        <span class="close-img-popup">&times;</span>
         <img class="popup-img" src="" alt="Popup Image" />
       </div>
 
@@ -348,7 +348,7 @@
             <!-- <i class="far fa-image"></i> -->
           </div>
         </div>
-        <div class="form-group">
+        <div style="z-index: 1;" class="form-group">
           <button type="submit" class="th-btn">SUBMIT</button>
         </div>
       </form>

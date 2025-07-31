@@ -17,6 +17,9 @@
   <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+
 
   <style>
     .game-card-img-mask {
@@ -311,14 +314,25 @@
       /* Hides the default controls for WebKit browsers */
     }
 
-    video {
+    /* video {
       width: 100%;
-      /* Set the width of the video */
       max-width: 600px;
-      /* Optional: Limit the max width */
       display: block;
-      /* Remove any unwanted space below the video */
+    } */
+
+    .video-wrapper {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
     }
+  
+
+    .video-wrapper video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    display: block;
+}
   </style>
   <script>
     $(document).ready(function() {
@@ -859,7 +873,17 @@
   </section>
 
   <!-- ------------------video section ---------------  -->
-  <div
+   <div class="video-wrapper">
+  <video autoplay muted loop playsinline>
+    <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+
+  <!-- old  -->
+  <!-- <div
     class="video-area-1 overflow-hidden "
     style="
         background-image: url('assets/img/bg/video-sec2-bg.png');
@@ -871,13 +895,11 @@
     justify-self: center;
     align-self: center;
     display: flex;
-    /* -webkit-clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important;
-    clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px) !important; */
 " width="500" height="240" loop autoplay muted>
       <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
-    </video>
+    </video> -->
     <!-- <div class="container">
       <div class="text-center">
         <a
@@ -1113,38 +1135,32 @@
       </div>
     </div>
   </div>
-  <!-- Popup Modal -->
-  <div class="review-popup-overlay " style="display: none;">
-    <div class="popup-content">
-      <span class="close-review-popup">&times;</span>
-      <form action="#" id="popupForm">
-        <div class="form-group">
+  <!-------------------------------- feedback section  ---------------------------------------------------->
+  <!-- add review Popup Modal -->
+  <!-- Modal -->
+  <div id="customModal" class="custom-modal-overlay">
+    <div class="custom-modal-content">
+      <span class="custom-modal-close">&times;</span>
 
-          <h3 class="text-center widget_title">Contact Us</h3>
+      <form id="customModalForm">
+        <h3 class="widget_title text-center mb-5">Add Your Review</h3>
 
-          <input type="text" name="name" placeholder="Your Name" required /><br /><br />
-          <!-- <input type="email" name="email" placeholder="Your Email" required /><br /><br /> -->
-          <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
-
-          <!-- ✅ Image Upload Input -->
-          <input
-            type="file"
-            accept="image/*"
-            class="form-control file-input items-center"
-            id="image-upload" /><br />
-
-          <div class="btn-wrap justify-content-center">
-            <a href="javascript:void(0)" class="th-btn open-review-popup">
-              ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i>
-            </a>
-          </div>
+        <input type="text" name="name" placeholder="Your Name" required /><br /><br />
+        <textarea name="message" placeholder="Your Message" required></textarea><br /><br />
+        <input
+          type="file"
+          accept="image/*"
+          class="form-control file-input items-center"
+          id="image-upload" /><br />
+        <div class="btn-wrap justify-content-center">
+          <button class="th-btn open-review-popup items-center" type="submit">Add Review</button>
         </div>
       </form>
-
-
     </div>
   </div>
-  <!-- feedback section  -->
+
+
+  <!-- main feedback cards  -->
   <section
     class="testi-sec-1 overflow-hidden space-top faded-sec"
     id="testi-sec"
@@ -1160,7 +1176,7 @@
                   data-mask-src="assets/img/bg/section-title-bg.svg"></span> </span>REVIEWS</span>
             <h2 class="sec-title mb-0">Loved by our customer worldwide</h2>
             <div class="btn-wrap justify-content-center my-5">
-              <a href="javascript:void(0)" class="th-btn open-review-popup">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
+              <a href="javascript:void(0)" id="openModalBtn" class="th-btn open-review-popup">ADD REVIEW <i style="margin-bottom:3px;" class="fa-solid fa-plus ms-2"></i></a>
             </div>
           </div>
           <div class="slider-area testi-slider1">
@@ -1369,6 +1385,46 @@
       </div>
     </div>
   </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const modal = document.getElementById("customModal");
+      const openBtn = document.getElementById("openModalBtn");
+      const closeBtn = document.querySelector(".custom-modal-close");
+
+      // Open modal
+      openBtn.addEventListener("click", () => {
+        modal.classList.add("active");
+      });
+
+      // Close on "X"
+      closeBtn.addEventListener("click", () => {
+        modal.classList.remove("active");
+      });
+
+      // Close on outside click
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.remove("active");
+        }
+      });
+
+      // Close on ESC key
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          modal.classList.remove("active");
+        }
+      });
+
+      // Optional: handle form submit
+      const form = document.getElementById("customModalForm");
+      form.addEventListener("submit", function(e) {
+        e.preventDefault();
+        alert("Review submitted!");
+        modal.classList.remove("active");
+        form.reset();
+      });
+    });
+  </script>
 
   <!-- contact section  -->
   <?php
