@@ -118,7 +118,7 @@
                 </a>
                 <!-- <a title="Whatsapp"
                   class="whatsapp" href="javascript:void(0)"><i class="fa-brands fa-whatsapp"></i></a> -->
-                <a title="YouTube"
+                <a title="YouTube" class="youTube"
                   class="youtube" href="www.youtube.com/@MADAlphaDesigners">
                   <i class="fa-brands fa-youtube"></i>
                 </a>
