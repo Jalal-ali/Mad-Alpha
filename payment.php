@@ -77,7 +77,7 @@
           <input
             type="number"
             class="form-control"
-            placeholder="alternate contact (whatsapp/phone)" />
+            placeholder="alternate contact" />
           <!-- <div class="col-12 form-group">
             <textarea
               cols="20"
