@@ -351,7 +351,7 @@
                   </button>
                 </div>
               </div>
-              <div class="col-auto d-xl-block ">
+              <div class="col-auto d-lg-flex d-none">
                 <div class="header-button">
                   <!-- <button type="button" class="simple-icon searchBoxToggler">
                     <i class="far fa-search"></i>
@@ -359,7 +359,7 @@
                   <!-- <button type="button" class="simple-icon sideMenuInfo">
                     <i class="fa-solid fa-bars"></i>
                   </button> -->
-                  <div style="margin-bottom: 5px;"  class="d-lgflex d-none">
+                  <div style="margin-bottom: 5px;"  class="">
                     <a href="payment.php" class="th-btn"
                       > PAY NOW <i class="ml-10 fa-solid fa-credit-card"></i></a
                     >

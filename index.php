@@ -325,14 +325,14 @@
       height: 100vh;
       overflow: hidden;
     }
-  
+
 
     .video-wrapper video {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    display: block;
-}
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      display: block;
+    }
   </style>
   <script>
     $(document).ready(function() {
@@ -361,6 +361,21 @@
         // Add SMTP or AJAX code here
       });
     });
+    // project popup modal ---------------------
+     $(document).ready(function() {
+      // Image click shows popup
+      $('.popup-trigger').on('click', function() {
+        const src = $(this).attr('src');
+        $('.popup-img').attr('src', src);
+        $('#image-popup').fadeIn();
+      });
+
+      // Close popup
+      $('.close-img-popup, #image-popup').on('click', function(e) {
+        if (e.target !== this && !$(e.target).hasClass('close-img-popup')) return;
+        $('#image-popup').fadeOut();
+      });
+    }); 
   </script>
 </head>
 
@@ -372,7 +387,7 @@
     </div>
     <!-- twitter-X  -->
     <div class="fab-icon child-fab">
-      <a href="https://x.com/madalphadesigns?lang=en">
+      <a href="https://x.com/madalphadesigns?lang=en" target="_blank">
         <svg width="22" height="22" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
           <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
         </svg>
@@ -380,7 +395,7 @@
     </div>
     <!-- freelancer  -->
     <div class="fab-icon child-fab">
-      <a href="https://www.freelancer.com/u/madalphadesigns">
+      <a href="https://www.freelancer.com/u/madalphadesigns" target="_blank">
         <svg id="Layer_1" data-name="Layer 1" width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 122.88 91.38">
           <defs>
             <style>
@@ -395,6 +410,7 @@
       </a>
     </div>
   </div>
+
   <!-- Floating Action Button ended -->
 
 
@@ -606,90 +622,96 @@
         <div class="col-lg-4 col-md-6 filter-item logo shadow-bg" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <!-- Popup Modal -->
+  <div id="image-popup" class="image-popup-overlay" style="display: none;">
+    <span class="close-img-popup">&times;</span>
+    <img style="filter: drop-shadow(0 2px 6px #1e1e1e9e);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0) !important;" class="popup-img" src="" alt="Popup Image" />
+  </div>
 
   <!-- pricing section  -->
   <section
@@ -727,14 +749,14 @@
           <li class="shadow-list"><a href="#">CAMSCREEN</a> <span class="quantity">1X</span></li>
           <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
         </ul>
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
 
       <!-- SOLID PLAN  -->
@@ -756,14 +778,14 @@
           <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
         </ul>
 
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- BASIC PLAN  -->
 
@@ -786,14 +808,14 @@
             <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
 
       <!-- Professional PLAN  -->
@@ -821,14 +843,14 @@
             <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- Premium PLAN  -->
 
@@ -859,27 +881,28 @@
             <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">4X</span></li>
           </ul>
         </div>
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- Add more  -->
     </div>
   </section>
 
+
   <!-- ------------------video section ---------------  -->
-   <div class="video-wrapper">
-  <video autoplay muted loop playsinline>
-    <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
+  <div class="video-wrapper">
+    <video autoplay muted loop playsinline>
+      <source src="assets/img/video/Mad-Alpha-Intro.mp4" type="video/mp4">
       <source src="movie.ogg" type="video/ogg">
-    Your browser does not support the video tag.
-  </video>
-</div>
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
 
   <!-- old  -->
@@ -900,7 +923,7 @@
       <source src="movie.ogg" type="video/ogg">
       Your browser does not support the video tag.
     </video> -->
-    <!-- <div class="container">
+  <!-- <div class="container">
       <div class="text-center">
         <a
           href="https://www.youtube.com/watch?v=_sI_Ps7JSEk"

@@ -255,18 +255,33 @@
     </div>
   </div>
   <!-- main body   -->
-  <!-- projs section  -->
-  <section class="game-area-3 overflow-hidden projects-sec-v2"
+  
+   
+ 
+  <!-- pricing section  -->
+  <section
+    class="pricing-sec-v2 space-bottom faded-sec"
     data-bg-src="assets/img/bg/tournament-sec2-bg.png">
-    <!-- <div class="about-bg-img shape-mockup background-image" data-top="0" data-left="0">
-        <img src="assets/img/bg/tournament-sec1-bg.png" alt="img" />
-      </div> -->
-    <div class="container py-20">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-auto">
-          <div class="mt-30 pb-25 title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
+    <div class="col-lg-auto">
+      <div
+        class="title-area custom-anim-left wow animated"
+        data-wow-duration="1.5s"
+        data-wow-delay="0.2s">
+        <h2 class="sec-title">
+          PRICING PLAN THAT WORKS FOR EVERYONE
+          <span class="text-theme">!</span>
+        </h2>
+        <span style="padding: 0 1rem 0 1rem;" class="sub-title style2">We, at Mad Alpha Designers, excel in providing impeccable services
+          at very competitive rates!<br> Align your needs and jump right in to
+          have an experience of a lifetime!</span>
+      </div>
+    </div>
+
+    <!-- projs section  -->
+     <div class="col-lg-auto">
+          <div class="mt-30  title-area custom-anim-top wow" data-wow-duration="1.5s" data-wow-delay="0.2s">
             <!-- tab buttons -->
-            <div class="game-filter-btnn filter-menu filter-menu-active">
+            <div style="margin-bottom: 0;" class="game-filter-btnn filter-menu filter-menu-active">
               <!-- tab-wrappers ...  -->
               <div class="tab-wrapper">
                 <div class="dropdown">
@@ -385,30 +400,9 @@
             filter: drop-shadow(2px 1px 0.3px var(--theme-color));" class="sec-title main-heading self-center pt-5">Packages</h2>
           </div>
         </div>
-      </div>
-      
-    </div>
-  </section>
-   
- 
-  <!-- pricing section  -->
-  <section
-    class="pricing-sec-v2 space-bottom"
-    data-bg-src="assets/img/bg/tournament-sec2-bg.png">
-    <div class="col-lg-auto">
-      <div
-        class="title-area custom-anim-left wow animated"
-        data-wow-duration="1.5s"
-        data-wow-delay="0.2s">
-        <h2 class="sec-title">
-          PRICING PLAN THAT WORKS FOR EVERYONE
-          <span class="text-theme">!</span>
-        </h2>
-        <span style="padding: 0 1rem 0 1rem;" class="sub-title style2">We, at Mad Alpha Designers, excel in providing impeccable services
-          at very competitive rates!<br> Align your needs and jump right in to
-          have an experience of a lifetime!</span>
-      </div>
-    </div>
+  
+
+
     <div class="widget-grid">
       <!-- plan boxes  -->
 
@@ -427,14 +421,14 @@
           <li class="shadow-list"><a href="#">CAMSCREEN</a> <span class="quantity">1X</span></li>
           <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
         </ul>
-        <button
+         <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
 
       <!-- SOLID PLAN  -->
@@ -456,14 +450,14 @@
           <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
         </ul>
 
-        <button
+         <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- BASIC PLAN  -->
 
@@ -486,14 +480,14 @@
             <li class="shadow-list"><a href="#">CHATBOX</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
-        <button
+         <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
 
       <!-- Professional PLAN  -->
@@ -521,14 +515,14 @@
             <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">1X</span></li>
           </ul>
         </div>
-        <button
+         <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- Premium PLAN  -->
 
@@ -559,14 +553,14 @@
             <li class="shadow-list"><a href="#">ANIMATED OVERLAY</a> <span class="quantity">4X</span></li>
           </ul>
         </div>
-        <button
+        <a href="contact.php"
           id="tab1-btn"
           class="th-btn style-border"
           style="margin-top: 20px; width: 90%">
           <span class="btn-border get-quote">
             GET QUOTE <i class="fa-solid fa-arrow-right ms-2"></i>
           </span>
-        </button>
+        </a>
       </div>
       <!-- Add more  -->
     </div>

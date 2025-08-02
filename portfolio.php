@@ -225,6 +225,22 @@
       font-weight: bold;
     }
   </style>
+  <script>
+      $(document).ready(function() {
+      // Image click shows popup
+      $('.popup-trigger').on('click', function() {
+        const src = $(this).attr('src');
+        $('.popup-img').attr('src', src);
+        $('#image-popup').fadeIn();
+      });
+
+      // Close popup
+      $('.close-img-popup, #image-popup').on('click', function(e) {
+        if (e.target !== this && !$(e.target).hasClass('close-img-popup')) return;
+        $('#image-popup').fadeOut();
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -429,90 +445,97 @@
         <div class="col-lg-4 col-md-6 filter-item logo shadow-bg" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg logo" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg web" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/2.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg design" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/4.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/5.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/3.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 filter-item shadow-bg branding" style="display: block;">
           <div class="game-card style3" data-mask-src="assets/img/game/game_card3_bg.jpg">
             <div>
-              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img " />
+              <img src="assets/img/Projects/1.png" alt="game image" class="masked-img popup-trigger" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
+   <!-- Popup Modal -->
+      <div id="image-popup" class="image-popup-overlay" style="display: none;">
+        <span class="close-img-popup">&times;</span>
+        <img style="filter: drop-shadow(0 2px 6px #1e1e1e9e);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0) !important;" class="popup-img" src="" alt="Popup Image" />
+      </div>
+  
 
   <section
     class="overflow-hidden position-relative z-index-common"
